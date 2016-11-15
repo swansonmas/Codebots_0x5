@@ -1,0 +1,17 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Public" layout:style="BootstrapStyle" layout:pageLayout="BootstrapStyle/PublicView" homePage="sv1#area1#page1" landmarks="sv1#area1">
+  <OperationUnits>
+    <CreateUnit gr:x="45" gr:y="435" id="sv1#cru1" name="USERS" entity="User" gr:showAllParts="true"/>
+    <ModuleInstanceUnit gr:x="675" gr:y="200" id="sv1#miu1" moduleId="mov1#opm1" action="true">
+      <KOLink id="sv1#miu1#kln5" name="KOFlow5" to="sv1#area1#page9"/>
+    </ModuleInstanceUnit>
+    <CreateUnit gr:x="20" gr:y="230" id="sv1#cru2" name="student Group" entity="Group" linkOrder="sv1#cru2#ln4 sv1#cru2#ln12">
+      <Link id="sv1#cru2#ln4" name="Flow4" to="sv1#cru1" type="transport" validate="true">
+        <LinkParameter id="sv1#cru2#ln4#par9" name="oid_Group.oid(defaultGroup)" source="groupOIDArray" target="sv1#cru1.User2DefaultGroup.groupOID"/>
+      </Link>
+      <Link id="sv1#cru2#ln12" name="Flow12" to="sv1#cru3" type="transport" validate="true">
+        <LinkParameter id="sv1#cru2#ln12#par10" name="oid_oid" source="groupOIDArray" target="sv1#cru3.moduleOID"/>
+      </Link>
+    </CreateUnit>
+    <CreateUnit gr:x="45" gr:y="50" id="sv1#cru3" name="module" entity="Module"/>
+  </OperationUnits>
+</SiteView>

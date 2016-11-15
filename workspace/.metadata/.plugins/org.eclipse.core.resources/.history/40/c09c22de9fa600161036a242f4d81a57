@@ -1,0 +1,7 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="80" gr:y="170" id="sv3#area3" landmark="true" name="Groups" defaultPage="sv3#area3#page3">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="390" gr:y="170" id="sv3#area3#miu3" action="true" moduleId="mov1#opm4">
+      <OKLink id="sv3#area3#miu3#oln9" name="OKFlow9" to="sv3#area3#page3" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</Area>

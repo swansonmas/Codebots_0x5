@@ -1,0 +1,74 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area3#page3" name="Content" landmark="false" localized="false" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <DataUnit id="sv2#area3#page3#dau3" name="DETAILS" gr:x="25" gr:y="0" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att4 ent1#att8">
+      <Selector id="sv2#area3#page3#dau3#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area3#page3#dau3#su1#kcond1" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <EntryUnit gr:x="0" gr:y="150" id="sv2#area3#page3#enu3" name="Write a Comment" gr:showAllParts="true" entity="ent2" linkOrder="sv2#area3#page3#enu3#ln15">
+      <Field id="sv2#area3#page3#enu3#fld2" type="text" modifiable="true" name="Message" attribute="ent2#att10" contentType="text/plain"/>
+      <Link id="sv2#area3#page3#enu3#ln15" name="Flow15" to="sv2#area3#page3#pwu1" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
+    <PowerIndexUnit gr:x="170" gr:y="170" id="sv2#area3#page3#pwu1" name="Comments" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att10"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="4">
+        <layout:Unit unitId="sv2#area3#page3#enu3">
+          <layout:Field field="sv2#area3#page3#enu3#fld2"/>
+          <layout:Link link="sv2#area3#page3#enu3#ln15"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="8">
+        <layout:Unit unitId="sv2#area3#page3#dau3">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Attribute attribute="ent1#att8"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="4"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="8">
+        <layout:Unit unitId="sv2#area3#page3#pwu1">
+          <layout:Attribute attribute="ent2#att10"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

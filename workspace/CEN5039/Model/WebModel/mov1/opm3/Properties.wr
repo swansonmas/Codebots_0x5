@@ -1,0 +1,17 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="135" gr:y="295" id="mov1#opm3" name="Users">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm3#icu4" gr:x="30" gr:y="100">
+      <InputCollectorParameter id="mov1#opm3#icu4#icp13" name="groupOID"/>
+      <OKLink id="mov1#opm3#icu4#oln12" name="OKFlow12" to="mov1#opm3#dlu2" automaticCoupling="true"/>
+    </InputCollectorUnit>
+    <DeleteUnit gr:x="335" gr:y="85" id="mov1#opm3#dlu2" name="Delete group" entity="Group">
+      <Selector id="mov1#opm3#dlu2#su7" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm3#dlu2#su7#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm3#dlu2#oln11" name="OKFlow11" to="mov1#opm3#okcu3" automaticCoupling="true"/>
+      <KOLink id="mov1#opm3#dlu2#kln9" name="KOFlow9" to="mov1#opm3#kocu5" automaticCoupling="true"/>
+    </DeleteUnit>
+    <OKCollectorUnit gr:x="545" gr:y="50" id="mov1#opm3#okcu3" name="OK"/>
+    <KOCollectorUnit gr:x="545" gr:y="145" id="mov1#opm3#kocu5" name="KO"/>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,10 @@
+#?delimiters [%, %], [%=, %]
+[%setHTMLOutput()
+
+def dbId = "db1"
+def session = getDBSession(dbId)
+
+%]
+
+
+

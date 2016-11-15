@@ -1,0 +1,9 @@
+#?delimiters [%, %], [%=, %]
+[%setHTMLOutput()
+
+def dbId = "dbid"
+
+%]
+
+
+

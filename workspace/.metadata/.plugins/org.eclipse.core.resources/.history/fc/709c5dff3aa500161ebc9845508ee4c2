@@ -1,0 +1,87 @@
+#?delimiters [%, %], [%=, %]
+[%setHTMLOutput()
+
+//select the first unit in the cell
+def firstUnit = cell.selectSingleNode("layout:Unit[1]")
+ 
+//select the first attribute of the first unit in the cell
+def firstUnitFirstAttribute = firstUnit.selectSingleNode("layout:Attribute[1]")
+ 
+//select the second attribute of the first unit in the cell                                                
+//def firstUnitSecondAttribute = firstUnit.selectSingleNode("layout:Attribute[2]")
+ 
+//select the second unit in the cell                                                                                
+def secondUnit = cell.selectSingleNode("layout:Unit[2]")
+ 
+//select the first attribute of the second unit in the cell
+def secondUnitFirstAttribute = secondUnit.selectSingleNode("layout:Attribute[1]")
+ 
+//select the second attribute of the second unit in the cell                                                
+//def secondUnitSecondAttribute = secondUnit.selectSingleNode("layout:Attribute[2]")     
+
+%]
+ 
+<wr:Frame>
+
+	<div class="container">
+	<h3>
+		<wr:Label context="firstUnitFirstAttribute"/>  
+		
+		<wr:Value context="firstUnitFirstAttribute"/>
+		
+		
+	</h3>
+	<hr>
+		 <wr:Iterate var="attr" context="unit" select="layout:Attribute">
+								<wr:Visible>
+								<td class="<wr:StyleClass/> [%=attr["type"]%]">
+								[% if ((linkPosition == "on_row") && (!links.empty)) {%]
+									<wr:Visible position="'index'">
+										<wr:Visible context="unitLink" position="'index'">
+											<a href="<wr:URL context="unitLink"/>" class="<wr:StyleClass context="unitLink"/>" onclick="<wr:AjaxURL context="unitLink" />">
+										</wr:Visible>
+										<wr:Value/>
+										<wr:Visible context="unitLink" position="'index'">
+											</a>
+										</wr:Visible>
+									</wr:Visible>
+								[% } else {%]
+										<wr:Value/>
+								[% } %]
+								</td>
+								</wr:Visible>
+							</wr:Iterate>
+	</div>
+	
+	<!--This is a comment. Comments are not displayed in the browser-->
+	
+    <table>
+        <tr>
+            <th>
+                <wr:Label context="firstUnitFirstAttribute"/>
+            </th>
+            <td>
+                <wr:Value context="firstUnitFirstAttribute"/>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <wr:Label context="secondUnitFirstAttribute"/>
+            </th>
+            <td>
+                <wr:Value context="secondUnitFirstAttribute"/>
+            </td>
+        </tr>
+        
+        <tr>
+            <wr:Iterate var="l" context="firstUnit" select="layout:Link">
+                <td><wr:Link/></td>
+            </wr:Iterate>
+        </tr>
+        <tr>
+            <wr:Iterate var="l" context="secondUnit" select="layout:Link">
+                <td><wr:Link/></td>
+            </wr:Iterate>
+        </tr>
+    </table>
+</wr:Frame>

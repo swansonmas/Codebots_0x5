@@ -1,0 +1,5 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1015" gr:y="30" id="sv2#area4" name="NEW POST" landmark="true" defaultPage="sv2#area4#page5" layout:pageLayout="BootstrapStyle/BlogHome">
+  <OperationUnits>
+    <CreateUnit gr:x="50" gr:y="305" id="sv2#area4#cru7" name="Create7"/>
+  </OperationUnits>
+</Area>

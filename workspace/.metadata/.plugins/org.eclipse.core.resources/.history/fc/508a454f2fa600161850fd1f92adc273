@@ -1,0 +1,12 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="175" gr:y="240" id="mov1#opm4" name="Register">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm4#icu4" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm4#icu4#icp3" name="first name"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp4" name="last name"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp5" name="email"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp6" name="password"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp7" name="username"/>
+    </InputCollectorUnit>
+    <IsNotNullUnit gr:x="305" gr:y="100" id="mov1#opm4#inn1" name="User Exist ?" gr:showAllParts="true" emptyStringAsNull="false"/>
+  </OperationUnits>
+</OperationModule>

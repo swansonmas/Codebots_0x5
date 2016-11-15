@@ -1,0 +1,3 @@
+<SiteView xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Blog" layout:style="BootstrapStyle" layout:pageLayout="BootstrapStyle/BlogHome">
+  <OperationUnits/>
+</SiteView>

@@ -1,0 +1,29 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Blog" landmarks="sv2#area2 sv2#area3" homePage="sv2#area2#page2" layout:style="BootstrapStyle" layout:pageLayout="BootstrapStyle/BlogHome">
+  <OperationUnits>
+    <CreateUnit gr:x="345" gr:y="155" id="sv2#cru2" name="POSTS" entity="ent1" linkOrder="sv2#cru2#ln10">
+      <Link id="sv2#cru2#ln10" name="Flow10" to="sv2#scu1" type="transport" validate="true">
+        <LinkParameter id="sv2#cru2#ln10#par15" name="oid_postOID" source="ent1#att1Array" target="sv2#scu1.postOID"/>
+      </Link>
+    </CreateUnit>
+    <ScriptUnit gr:x="70" gr:y="260" id="sv2#scu1" name="Script1" linkOrder="sv2#scu1#ln9">
+      <ScriptUnitText xml:space="preserve">#input int postOID
+#output string Title
+
+import com.webratio.rtx.db.HibernateService
+
+def dbId = "db1"
+def session = getDBSession(dbId)
+
+//Retrieve title
+
+def query = session.createSQLQuery("SELECT * FROM APP.POST WHERE POSTOID:=postOID")
+
+def title = query.uniqueResult()
+
+return ["Title": title]</ScriptUnitText>
+      <Link id="sv2#scu1#ln9" name="Flow9" to="sv2#area2#page2#pwu3" type="transport" validate="true">
+        <LinkParameter id="sv2#scu1#ln9#par16" name="Title_PASSING" source="result(Title)" passing="true"/>
+      </Link>
+    </ScriptUnit>
+  </OperationUnits>
+</SiteView>

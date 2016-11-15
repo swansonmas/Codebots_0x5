@@ -1,0 +1,31 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="175" gr:y="240" id="mov1#opm4" name="Register">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm4#icu4" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm4#icu4#icp3" name="first name"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp4" name="last name"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp5" name="email"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp6" name="password"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp7" name="username"/>
+      <OKLink id="mov1#opm4#icu4#oln4" name="OKFlow4" to="mov1#opm4#inn1">
+        <LinkParameter id="mov1#opm4#icu4#oln4#par9" name="User Key_Input" source="mov1#opm4#icu4#icp8" target="mov1#opm4#inn1.isnotnull"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp8" name="User Key"/>
+    </InputCollectorUnit>
+    <IsNotNullUnit gr:x="305" gr:y="100" id="mov1#opm4#inn1" name="User Exist ?" gr:showAllParts="true" emptyStringAsNull="false">
+      <OKLink id="mov1#opm4#inn1#oln5" name="OKFlow5" to="mov1#opm4#mfu1" automaticCoupling="true"/>
+      <KOLink id="mov1#opm4#inn1#kln3" name="KOFlow3" to="mov1#opm4#cru4" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <ModifyUnit gr:x="460" gr:y="10" id="mov1#opm4#mfu1" name="Update User" entity="User">
+      <Selector id="mov1#opm4#mfu1#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm4#mfu1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm4#mfu1#oln6" name="OKFlow6" to="mov1#opm4#okcu1" automaticCoupling="true"/>
+      <KOLink id="mov1#opm4#mfu1#kln4" name="KOFlow4" to="mov1#opm4#kocu3" automaticCoupling="true"/>
+    </ModifyUnit>
+    <CreateUnit gr:x="475" gr:y="210" id="mov1#opm4#cru4" name="Create User" entity="User">
+      <OKLink id="mov1#opm4#cru4#oln7" name="OKFlow7" to="mov1#opm4#okcu1" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="610" gr:y="50" id="mov1#opm4#okcu1" name="Success"/>
+    <KOCollectorUnit gr:x="610" gr:y="190" id="mov1#opm4#kocu3" name="Failure"/>
+  </OperationUnits>
+</OperationModule>

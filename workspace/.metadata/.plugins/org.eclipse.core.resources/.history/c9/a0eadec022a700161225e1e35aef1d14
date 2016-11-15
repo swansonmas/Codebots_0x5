@@ -1,0 +1,13 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Public" layout:style="BootstrapStyle" layout:pageLayout="BootstrapStyle/PublicView" homePage="sv1#area1#page1" landmarks="sv1#area1">
+  <OperationUnits>
+    <CreateUnit gr:x="45" gr:y="435" id="sv1#cru1" name="USERS" entity="User" gr:showAllParts="true"/>
+    <ModuleInstanceUnit gr:x="675" gr:y="200" id="sv1#miu1" moduleId="mov1#opm1" action="true">
+      <KOLink id="sv1#miu1#kln5" name="KOFlow5" to="sv1#area1#page9"/>
+    </ModuleInstanceUnit>
+    <CreateUnit gr:x="35" gr:y="145" id="sv1#cru5" name="groupID" entity="Group"/>
+    <QueryUnit gr:x="40" gr:y="280" id="sv1#qu1" name="groupId" mode="select" language="HQL" db="db1" maxResults="1" linkOrder="sv1#qu1#ln14">
+      <Link id="sv1#qu1#ln14" name="Flow14" to="sv1#area1#page1#enu1" automaticCoupling="true" type="transport" validate="true"/>
+      <QueryText xml:space="preserve">SELECT </QueryText>
+    </QueryUnit>
+  </OperationUnits>
+</SiteView>

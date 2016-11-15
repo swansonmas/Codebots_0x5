@@ -1,0 +1,13 @@
+#?delimiters [%, %], [%=, %]
+[%
+setHTMLOutput()
+def blockFactor = unit["blockFactor"]
+def isSortable = unit["sortable"]
+def isScrollable = blockFactor != "" ? "true": "false"
+def checkable = "true" == unit["checkable"] && "true" != unit["distinct"]
+def firstLink = unit.selectSingleNode("layout:Link[contains(@link,'First')]")
+def previousLink = unit.selectSingleNode("layout:Link[contains(@link,'Previous')]")
+def blockLink = unit.selectSingleNode("layout:Link[contains(@link,'Block')]")
+def nextLink = unit.selectSingleNode("layout:Link[contains(@link,'Next')]")
+def lastLink = unit.selectSingleNode("layout:Link[contains(@link,'Last')]")
+%]

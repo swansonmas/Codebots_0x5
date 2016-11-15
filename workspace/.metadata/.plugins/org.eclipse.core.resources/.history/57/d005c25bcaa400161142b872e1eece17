@@ -1,0 +1,7 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Blog" landmarks="sv2#area2 sv2#area3" homePage="sv2#area2#page2" layout:style="BootstrapStyle" layout:pageLayout="BootstrapStyle/BlogHome">
+  <OperationUnits>
+    <CreateUnit gr:x="310" gr:y="30" id="sv2#cru2" name="POSTS" entity="ent1">
+      <Link id="sv2#cru2#ln3" name="Flow3" to="sv2#area2#page2#pwu1" automaticCoupling="true" type="transport" validate="true"/>
+    </CreateUnit>
+  </OperationUnits>
+</SiteView>

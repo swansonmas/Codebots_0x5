@@ -1,0 +1,13 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Public" layout:style="BootstrapStyle" layout:pageLayout="BootstrapStyle/PublicView" homePage="sv1#area1#page1" landmarks="sv1#area1">
+  <OperationUnits>
+    <CreateUnit gr:x="665" gr:y="65" id="sv1#cru1" name="USERS" entity="User" gr:showAllParts="true" linkOrder="sv1#cru1#ln4">
+      <Link id="sv1#cru1#ln4" name="Flow4" to="sv1#miu1" type="transport" validate="true">
+        <LinkParameter id="sv1#cru1#ln4#par35" name="password_PASSING" source="passwordArray" passing="true"/>
+        <LinkParameter id="sv1#cru1#ln4#par36" name="userName_PASSING" source="userNameArray" passing="true"/>
+      </Link>
+    </CreateUnit>
+    <ModuleInstanceUnit gr:x="675" gr:y="290" id="sv1#miu1" moduleId="mov1#opm1" action="true">
+      <KOLink id="sv1#miu1#kln5" name="KOFlow5" to="sv1#area1#page9"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</SiteView>

@@ -1,0 +1,8 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="260" gr:y="315" id="sv1#area1#page9" name="ERROR" layout:pageLayout="BootstrapStyle/ErrorPage">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#area1#page9#mssu2" name="Error Message">
+      <Message xml:space="preserve">There was an error with credentials
+Credentials do not match our database. Please go to the home page
+and try sign in again
+
+</Message>    </MultiMessageUnit>  </ContentUnits>  <layout:Grid containerType="grid">    <layout:Row>      <layout:Cell colspan="3"/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell colspan="6">        <layout:Unit unitId="sv1#area1#page9#mssu2"/>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell colspan="3"/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>  </layout:Grid></Page>

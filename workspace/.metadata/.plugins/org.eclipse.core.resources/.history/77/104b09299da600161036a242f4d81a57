@@ -1,0 +1,74 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area3#page3" name="Group Management">
+  <ContentUnits>
+    <SelectorUnit id="sv3#area3#page3#seu2" name="All modules" gr:x="0" gr:y="0" entity="Module" distinctAttributes="moduleOID moduleID moduleName">
+      <Link id="sv3#area3#page3#seu2#ln2" name="Flow2" to="sv3#area3#page3#enu7" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
+    <EntryUnit gr:x="175" gr:y="20" id="sv3#area3#page3#enu7" name="Groupd Form" entity="Group" linkOrder="sv3#area3#page3#enu7#ln20 sv3#area3#page3#enu7#ln21" gr:showAllParts="true">
+      <Link id="sv3#area3#page3#enu7#ln20" name="Flow20" to="sv3#area3#miu3" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv3#area3#page3#enu7#ln21" name="Flow21" to="sv3#area3#page3" automaticCoupling="true" type="normal" validate="true"/>
+      <SelectionField id="sv3#area3#page3#enu7#sfld1" name="module" type="string" role="Group2DefaultModule"/>
+      <MultiSelectionField id="sv3#area3#page3#enu7#msfld1" name="all modules" type="string" role="Group2Module"/>
+    </EntryUnit>
+    <IndexUnit gr:x="10" gr:y="165" id="sv3#area3#page3#inu1" name="List of Groups" entity="Group" linkOrder="sv3#area3#page3#inu1#ln10">
+      <Link id="sv3#area3#page3#inu1#ln10" name="Flow10" to="sv3#area3#page3#enu7" automaticCoupling="true" type="normal" validate="true"/>
+    </IndexUnit>
+    <SelectorUnit gr:x="155" gr:y="160" id="sv3#area3#page3#seu3" name="Associated Modules" entity="Module" gr:showAllParts="true" distinctAttributes="moduleName">
+      <Link id="sv3#area3#page3#seu3#ln18" name="Flow18" to="sv3#area3#page3#enu7" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area3#page3#enu7">
+          <layout:Link link="sv3#area3#page3#enu7#ln20"/>
+          <layout:Link link="sv3#area3#page3#enu7#ln21"/>
+          <layout:Field field="sv3#area3#page3#enu7#sfld1"/>
+          <layout:Field field="sv3#area3#page3#enu7#msfld1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area3#page3#inu1">
+          <layout:Link link="sv3#area3#page3#inu1#ln10"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

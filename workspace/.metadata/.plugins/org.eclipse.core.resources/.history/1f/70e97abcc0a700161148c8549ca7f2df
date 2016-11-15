@@ -1,0 +1,8 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area3" name="ALL POST" linkVisibilityPolicy="hide" landmark="false" protected="false" secure="false" layout:pageLayout="BootstrapStyle/BlogHome" gr:hide="false" gr:x="65" gr:y="30" landmarks="sv2#area3#page4" defaultPage="sv2#area3#page4">
+  <OperationUnits>
+    <CreateUnit id="sv2#area3#cru4" name="POSTS" gr:x="715" gr:y="0" entity="ent1">
+      <Link id="sv2#area3#cru4#ln2" name="Flow11" to="sv2#area3#page4#pwu3" type="transport" automaticCoupling="true" validate="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="45" gr:y="325" id="sv2#area3#cru3" name="Comments" entity="ent2"/>
+  </OperationUnits>
+</Area>
