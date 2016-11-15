@@ -1,2 +1,0 @@
-document.getElementsByClassName('navbar-nav')[0].innerHTML += "<li id='loginForm'><a href='#'>JOIN US</a></li>"
-document.getElementsByClassName('navbar-nav')[0].innerHTML += "<li id='loginForm'><a href='#'>SIGN IN</a></li>"

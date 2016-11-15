@@ -1,5 +1,0 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="85" gr:y="130" id="sv3#area3" landmark="true" name="Groups" defaultPage="sv3#area3#seu1">
-  <OperationUnits>
-    <SelectorUnit gr:x="0" gr:y="0" id="sv3#area3#seu1" name="All modules" entity="Module"/>
-  </OperationUnits>
-</Area>

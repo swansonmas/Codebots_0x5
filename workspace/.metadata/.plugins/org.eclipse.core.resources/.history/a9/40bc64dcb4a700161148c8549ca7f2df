@@ -1,5 +1,0 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Blog" protected="true" homePage="sv2#area3#page4" landmarks="sv2#area4 sv2#area2" layout:pageLayout="BootstrapStyle/BlogHome" layout:style="BootstrapStyle">
-  <OperationUnits>
-    <GetUnit gr:x="1225" gr:y="470" id="sv2#gtu2" name="current user"/>
-  </OperationUnits>
-</SiteView>

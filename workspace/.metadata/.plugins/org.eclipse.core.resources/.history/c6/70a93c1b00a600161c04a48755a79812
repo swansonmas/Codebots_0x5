@@ -1,8 +1,0 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Public" layout:style="BootstrapStyle" layout:pageLayout="BootstrapStyle/PublicView" homePage="sv1#area1#page1">
-  <OperationUnits>
-    <CreateUnit gr:x="280" gr:y="405" id="sv1#cru1" name="USERS" entity="User" gr:showAllParts="true"/>
-    <ModuleInstanceUnit gr:x="415" gr:y="215" id="sv1#miu1" moduleId="mov1#opm1" action="true">
-      <OKLink id="sv1#miu1#oln4" name="OKFlow3" to="sv1#area2#area4#page3" automaticCoupling="true"/>
-    </ModuleInstanceUnit>
-  </OperationUnits>
-</SiteView>
