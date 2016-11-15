@@ -1,17 +1,18 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="130" gr:y="285" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att5 User#att6" db:database="db1" db:table="user">
+  <Entity id="User" name="User" duration="persistent" gr:x="285" gr:y="305" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att5 User#att6 User#att13" db:database="db1" db:table="user">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="userName" id="userName" type="string" key="false" db:column="username"/>
     <Attribute name="password" id="password" type="password" key="false" db:column="password"/>
     <Attribute name="email" id="email" type="string" key="false" db:column="email"/>
-    <Attribute id="User#att6" name="Last_Name" type="string" key="false" db:column="last_name"/>
-    <Attribute id="User#att5" name="First_Name" type="string" key="false" db:column="first_name"/>
+    <Attribute id="User#att6" name="last_name" type="string" key="false" db:column="last_name"/>
+    <Attribute id="User#att5" name="first_name" type="string" key="false" db:column="first_name"/>
+    <Attribute id="User#att13" name="createdAt" type="date" db:column="createdat"/>
   </Entity>
-  <Entity id="Group" name="Group" duration="persistent" gr:x="360" gr:y="305" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
+  <Entity id="Group" name="Group" duration="persistent" gr:x="560" gr:y="335" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
   </Entity>
-  <Entity id="Module" name="Module" duration="persistent" gr:x="580" gr:y="290" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db1" db:table="module">
+  <Entity id="Module" name="Module" duration="persistent" gr:x="845" gr:y="320" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db1" db:table="module">
     <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
     <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
@@ -48,44 +49,77 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="385" gr:y="60" id="ent1" name="Post" duration="persistent" attributeOrder="ent1#att1 ent1#att12 ent1#att2 ent1#att3 ent1#att4 ent1#att8 ent1#att7" db:database="db1" db:table="post">
+  <Entity gr:x="290" gr:y="35" id="ent1" name="Post" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att4 ent1#att3 ent1#att21 ent1#att8" db:database="db1" db:table="post">
     <Attribute id="ent1#att1" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent1#att4" name="Description" type="text" key="false" contentType="text/html" db:column="description"/>
-    <Attribute id="ent1#att3" name="img" type="blob" contentType="image" key="false" db:column="img"/>
-    <Attribute id="ent1#att2" name="Title" type="string" key="false" db:column="title"/>
-    <Attribute id="ent1#att8" name="Time" type="timestamp" key="false" db:column="time"/>
-    <Attribute id="ent1#att7" name="userOid" type="integer" key="false" db:column="useroid"/>
-    <Attribute id="ent1#att12" name="Author" type="string" db:column="author"/>
+    <Attribute id="ent1#att4" name="description" type="text" key="false" contentType="text/html" db:column="description"/>
+    <Attribute id="ent1#att3" name="image" type="blob" contentType="image" key="false" db:column="image"/>
+    <Attribute id="ent1#att2" name="title" type="string" key="false" db:column="title"/>
+    <Attribute id="ent1#att8" name="createdAt" type="date" key="false" db:column="createdat"/>
+    <Attribute id="ent1#att21" name="status" type="string" db:column="status"/>
   </Entity>
-  <Relationship id="rel1" name="Post_User" sourceEntity="ent1" targetEntity="User" db:database="db1" db:table="post_user">
-    <RelationshipRole1 id="rel1#role1" name="PostToUser" maxCard="N">
-      <db:JoinColumn attribute="ent1#att1" name="post_oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel1#role2" name="UserToPost" maxCard="N">
-      <db:JoinColumn attribute="userOID" name="user_oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel2" name="User_Post" sourceEntity="User" targetEntity="ent1" gr:bendpoints="95,-61,-75,82" db:database="db1" db:table="user">
-    <RelationshipRole1 id="rel2#role3" name="UserToPost_2" maxCard="1">
-      <db:JoinColumn attribute="userOID" name="oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel2#role4" name="PostToUser_2" maxCard="N">
-      <db:JoinColumn attribute="ent1#att1" name="post_oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <db:Database id="db1" name="CEN5039" type="MySQL" url="jdbc:mysql://52.212.31.81:3306/freeapp106" username="freeapp106" password="Mzk0NUU2MUU=" cryptedPassword="true">
+  <db:Database id="db1" name="CEN5039" type="MySQL" url="jdbc:mysql://localhost:3306/SnapCampDB" username="SnapCampDBAdmin" cryptedPassword="true" password="U240UEM0bVAhIw==">
   </db:Database>
-  <Entity gr:x="660" gr:y="90" id="ent2" name="Comments" duration="persistent" attributeOrder="ent2#att9 ent2#att10 ent2#att11" db:database="db1" db:table="comments">
-    <Attribute id="ent2#att9" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent2#att11" name="useroID" type="integer" db:column="useroid"/>
-    <Attribute id="ent2#att10" name="comment" type="text" contentType="text/plain" db:column="comment"/>
-  </Entity>
-  <Relationship id="rel3" name="Comments_Post" sourceEntity="ent2" targetEntity="ent1" db:database="db1" db:table="post">
-    <RelationshipRole1 id="rel3#role5" name="CommentsToPost" maxCard="N">
-      <db:JoinColumn attribute="ent2#att9" name="comments_oid"/>
+  <Relationship id="rel4" name="User_Report" sourceEntity="User" targetEntity="ent1" db:database="db1" db:table="post">
+    <RelationshipRole1 id="rel4#role7" name="UserToReport" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel3#role6" name="PostToComments" maxCard="1">
+    <RelationshipRole2 id="rel4#role8" name="PostToUser" maxCard="1">
       <db:JoinColumn attribute="ent1#att1" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="35" gr:y="40" id="ent3" name="Location" duration="persistent" attributeOrder="ent3#att15 ent3#att16 ent3#att17 ent3#att18" db:database="db1" db:table="location">
+    <Attribute id="ent3#att15" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent3#att18" name="longitude" type="string" db:column="longitude"/>
+    <Attribute id="ent3#att17" name="latitude" type="string" db:column="latitude"/>
+    <Attribute id="ent3#att16" name="name" type="string" db:column="name"/>
+  </Entity>
+  <Relationship id="rel6" name="Location_Post" sourceEntity="ent3" targetEntity="ent1" db:database="db1" db:table="post">
+    <RelationshipRole1 id="rel6#role11" name="LocationToPost" maxCard="N">
+      <db:JoinColumn attribute="ent3#att15" name="location_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel6#role12" name="ReportToLocation" maxCard="1">
+      <db:JoinColumn attribute="ent1#att1" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="95" gr:y="235" id="ent4" name="Tag" duration="persistent" attributeOrder="ent4#att19 ent4#att20" db:database="db1" db:table="tags">
+    <Attribute id="ent4#att19" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent4#att20" name="title" type="string" db:column="title"/>
+  </Entity>
+  <Relationship id="rel7" name="Tags_Report" sourceEntity="ent4" targetEntity="ent1" db:database="db1" db:table="tags_report">
+    <RelationshipRole1 id="rel7#role13" name="TagsToReport" maxCard="N">
+      <db:JoinColumn attribute="ent4#att19" name="tags_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel7#role14" name="ReportToTags" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="post_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel8" name="Report_User" sourceEntity="ent1" targetEntity="User" gr:bendpoints="-13,134,-18,-146" db:database="db1" db:table="post">
+    <RelationshipRole1 id="rel8#role15" name="ReportToStaff" maxCard="1">
+      <db:JoinColumn attribute="ent1#att1" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel8#role16" name="UserToReport_2" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid_2"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="660" gr:y="100" id="ent6" name="Comment" duration="persistent" attributeOrder="ent6#att23 ent6#att24 ent6#att25" db:database="db1" db:table="comment">
+    <Attribute id="ent6#att23" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent6#att25" name="createdAt" type="date" db:column="createdat"/>
+    <Attribute id="ent6#att24" name="comment" type="text" contentType="text/html" db:column="comment"/>
+  </Entity>
+  <Relationship id="rel9" name="Post_Comment" sourceEntity="ent1" targetEntity="ent6" db:database="db1" db:table="comment">
+    <RelationshipRole1 id="rel9#role17" name="PostToComment" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="post_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel9#role18" name="CommentToPost" maxCard="1">
+      <db:JoinColumn attribute="ent6#att23" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel10" name="User_Comment" sourceEntity="User" targetEntity="ent6" db:database="db1" db:table="comment">
+    <RelationshipRole1 id="rel10#role19" name="UserToComment" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel10#role20" name="CommentToUser" maxCard="1">
+      <db:JoinColumn attribute="ent6#att23" name="oid"/>
     </RelationshipRole2>
   </Relationship>
 </DataModel>
