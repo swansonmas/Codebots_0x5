@@ -4,16 +4,31 @@
       <Selector id="sv2#area3#page3#dau3#su1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area3#page3#dau3#su1#kcond1" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
+      <Link id="sv2#area3#page3#dau3#ln15" name="Flow15" to="sv2#area3#page3#enu3" type="transport" validate="true">
+        <LinkParameter id="sv2#area3#page3#dau3#ln15#par12" name="oid_Key Condition [oid]" source="data.ent1#att1" target="sv2#area3#page3#enu3.ent6#att23"/>
+      </Link>
     </DataUnit>
-    <EntryUnit gr:x="0" gr:y="150" id="sv2#area3#page3#enu3" name="Write a Comment" gr:showAllParts="true" entity="ent2" linkOrder="sv2#area3#page3#enu3#ln18">
-      <Field id="sv2#area3#page3#enu3#fld2" type="text" modifiable="true" name="Comment:" attribute="ent2#att10" contentType="text/plain">
+    <EntryUnit gr:x="0" gr:y="150" id="sv2#area3#page3#enu3" name="Write a Comment" gr:showAllParts="true" linkOrder="sv2#area3#page3#enu3#ln18" entity="ent6">
+      <Field id="sv2#area3#page3#enu3#fld2" type="text" modifiable="true" name="Comment:" contentType="text/plain">
         <VRules>
           <MandatoryValidationRule id="sv2#area3#page3#enu3#fld2#mnd6" name="MandatoryComment"/>
         </VRules>
       </Field>
-      <Link id="sv2#area3#page3#enu3#ln18" name="Submit" to="sv2#area3#cru3" automaticCoupling="true" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWaitingDialog="true"/>
+      <Link id="sv2#area3#page3#enu3#ln18" name="Submit" to="sv2#area3#cru3" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWaitingDialog="true">
+        <LinkParameter id="sv2#area3#page3#enu3#ln18#par10" name="Comment:_comment" source="sv2#area3#page3#enu3#fld2" target="sv2#area3#cru3.ent6#att24"/>
+        <LinkParameter id="sv2#area3#page3#enu3#ln18#par11" name="Comment Object_Comment Object" source="entityBean" target="sv2#area3#cru3.entityBeans"/>
+        <LinkParameter id="sv2#area3#page3#enu3#ln18#par27" name="Key [oid]_Post.oid(CommentToPost)" source="key.ent6#att23" target="sv2#area3#cru3.rel9#role18.ent1#att1"/>
+      </Link>
     </EntryUnit>
-    <MultiDataUnit gr:x="175" gr:y="220" id="sv2#area3#page3#mdu1" name="Comments" entity="ent2" displayAttributes="ent2#att10"/>
+    <MultiDataUnit gr:x="165" gr:y="175" id="sv2#area3#page3#mdu1" name="Comments" entity="ent6" displayAttributes="ent6#att25 rel10#role20.userName ent6#att24"/>
+    <TimeUnit gr:x="130" gr:y="330" id="sv2#area3#page3#tmu1" name="Today">
+      <Link id="sv2#area3#page3#tmu1#ln14" name="Flow14" to="sv2#area3#cru3" type="transport" validate="true">
+        <LinkParameter id="sv2#area3#page3#tmu1#ln14#par9" name="Current/Input Date_createdAt" source="currentDate" target="sv2#area3#cru3.ent6#att25"/>
+      </Link>
+    </TimeUnit>
+    <GetUnit gr:x="145" gr:y="260" id="sv2#area3#page3#gtu1" name="Get Current User" contextParameters="UserCtxParam">
+      <Link id="sv2#area3#page3#gtu1#ln19" name="Flow19" to="sv2#area3#cru3" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -46,7 +61,9 @@
       <layout:Cell/>
       <layout:Cell colspan="7">
         <layout:Unit unitId="sv2#area3#page3#mdu1">
-          <layout:Attribute attribute="ent2#att10"/>
+          <layout:Attribute attribute="ent6#att25"/>
+          <layout:Attribute attribute="rel10#role20.userName"/>
+          <layout:Attribute attribute="ent6#att24"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

@@ -3,6 +3,6 @@
     <CreateUnit id="sv2#area3#cru4" name="POSTS" gr:x="770" gr:y="85" entity="ent1">
       <Link id="sv2#area3#cru4#ln2" name="Flow11" to="sv2#area3#page4#pwu3" type="transport" automaticCoupling="true" validate="true"/>
     </CreateUnit>
-    <CreateUnit gr:x="25" gr:y="360" id="sv2#area3#cru3" name="Comments" entity="ent2"/>
+    <CreateUnit gr:x="25" gr:y="360" id="sv2#area3#cru3" name="Comments" entity="ent6"/>
   </OperationUnits>
 </Area>
