@@ -1,0 +1,87 @@
+#?delimiters [%, %], [%=, %]
+[%setHTMLOutput()%]
+<div id="floating-panel">
+      <input id="latlng" type="text" value="26.6400778,-80.1468974">
+      <input id="submitGeocode" type="button" value="Reverse Geocode">
+ </div>
+ <div id="map" style="height:300px;"></div>
+<script>
+
+     function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 16
+        });
+        var infoWindow = new google.maps.InfoWindow({map: map});
+		var geocoder = new google.maps.Geocoder;
+		
+		 document.getElementById('submitGeocode').addEventListener('click', function() {
+          geocodeLatLng(geocoder, map, infoWindow);
+        });
+		
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+			
+			var latString = pos.lat;
+			var lngString = pos.lng;
+			var valueStr  = latString.toString() + ',' + lngString.toString();
+			var input = document.getElementById('latlng').value = valueStr;
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('You are here!');
+            map.setCenter(pos);
+            geocodeLatLng(geocoder, map, infoWindow);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
+	  
+	  function geocodeLatLng(geocoder, map, infoWindow) {
+        var input = document.getElementById('latlng').value;
+        var latlngStr = input.split(',', 2);
+        var latlng = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
+        geocoder.geocode({'location': latlng}, function(results, status) {
+          if (status === 'OK') {
+            if (results[1]) {
+              map.setZoom(16);
+              var marker = new google.maps.Marker({
+                position: latlng,
+                map: map,
+                animation: google.maps.Animation.BOUNCE
+              });
+              infoWindow.setContent(results[1].formatted_address);
+              infoWindow.open(map, marker);
+              document.getElementById('fld21').value = results[1].formatted_address;
+            } else {
+              window.alert('No results found');
+            }
+          } else {
+            window.alert('Geocoder failed due to: ' + status);
+          }
+        });
+      }
+	  
+	  
+	  
+     
+    </script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzbuYlcUG7G0vVSOLVSfBGHFGg-IBzCpM&callback=initMap">
+</script>
+
+

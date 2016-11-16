@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="370" gr:y="0" id="sv2#area2#page6" name="logout" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="315" gr:y="5" id="sv2#area4#page6" name="Logout" landmark="true">
   <ContentUnits>
-    <ModuleInstanceUnit gr:x="0" gr:y="0" id="sv2#area2#page6#miu5" action="true" moduleId="mov1#opm2"/>
+    <ModuleInstanceUnit gr:x="0" gr:y="0" id="sv2#area4#page6#miu2" action="true" moduleId="mov1#opm2"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>

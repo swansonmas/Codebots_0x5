@@ -30,10 +30,22 @@ create table `user` (
 -- Post [ent1]
 create table `post` (
    `oid`  integer  not null,
+   `time`  datetime,
    `description`  longtext,
    `img`  varchar(255),
    `title`  varchar(255),
-   `time`  datetime,
+   `author`  varchar(255),
+  primary key (`oid`)
+);
+
+
+-- Comments [ent2]
+create table `comments` (
+   `oid`  integer  not null,
+   `time`  varchar(255),
+   `comment`  varchar(255),
+   `author`  varchar(255),
+   `postoid`  varchar(255),
   primary key (`oid`)
 );
 
@@ -69,17 +81,12 @@ alter table `user_group`   add index fk_user_group_group (`group_oid`), add cons
 
 
 -- Post_User [rel1]
-create table `post_user` (
-   `post_oid`  integer not null,
-   `user_oid`  integer not null,
-  primary key (`post_oid`, `user_oid`)
-);
-alter table `post_user`   add index fk_post_user_post (`post_oid`), add constraint fk_post_user_post foreign key (`post_oid`) references `post` (`oid`);
-alter table `post_user`   add index fk_post_user_user (`user_oid`), add constraint fk_post_user_user foreign key (`user_oid`) references `user` (`oid`);
-
-
--- User_Post [rel2]
 alter table `user`  add column  `post_oid`  integer;
 alter table `user`   add index fk_user_post (`post_oid`), add constraint fk_user_post foreign key (`post_oid`) references `post` (`oid`);
+
+
+-- Post_Comments [rel2]
+alter table `comments`  add column  `post_oid`  integer;
+alter table `comments`   add index fk_comments_post (`post_oid`), add constraint fk_comments_post foreign key (`post_oid`) references `post` (`oid`);
 
 

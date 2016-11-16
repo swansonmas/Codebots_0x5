@@ -1,17 +1,37 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="135" gr:y="295" id="mov1#opm3" name="Users">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="75" gr:y="230" id="mov1#opm3" name="Register">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm3#icu4" gr:x="30" gr:y="100">
-      <InputCollectorParameter id="mov1#opm3#icu4#icp13" name="groupOID"/>
-      <OKLink id="mov1#opm3#icu4#oln12" name="OKFlow12" to="mov1#opm3#dlu2" automaticCoupling="true"/>
+    <InputCollectorUnit id="mov1#opm3#icu3" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm3#icu3#icp1" name="First Name"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp2" name="Last Name"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp3" name="email"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp4" name="password"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp5" name="userName"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp8" name="User Object"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp9" name="oid"/>
+      <OKLink id="mov1#opm3#icu3#oln5" name="OKFlow5" to="mov1#opm3#cru4">
+        <LinkParameter id="mov1#opm3#icu3#oln5#par53" name="email_email" source="mov1#opm3#icu3#icp3" target="mov1#opm3#cru4.email"/>
+        <LinkParameter id="mov1#opm3#icu3#oln5#par54" name="First Name_First Name" source="mov1#opm3#icu3#icp1" target="mov1#opm3#cru4.User#att12"/>
+        <LinkParameter id="mov1#opm3#icu3#oln5#par55" name="1_Group.oid(defaultGroup)" sourceValue="1" target="mov1#opm3#cru4.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov1#opm3#icu3#oln5#par56" name="Last Name_Last Name" source="mov1#opm3#icu3#icp2" target="mov1#opm3#cru4.User#att13"/>
+        <LinkParameter id="mov1#opm3#icu3#oln5#par57" name="oid_oid" source="mov1#opm3#icu3#icp9" target="mov1#opm3#cru4.userOID"/>
+        <LinkParameter id="mov1#opm3#icu3#oln5#par58" name="password_password" source="mov1#opm3#icu3#icp4" target="mov1#opm3#cru4.password"/>
+        <LinkParameter id="mov1#opm3#icu3#oln5#par59" name="User Object_User Object" source="mov1#opm3#icu3#icp8" target="mov1#opm3#cru4.entityBeans"/>
+        <LinkParameter id="mov1#opm3#icu3#oln5#par60" name="userName_userName" source="mov1#opm3#icu3#icp5" target="mov1#opm3#cru4.userName"/>
+      </OKLink>
     </InputCollectorUnit>
-    <DeleteUnit gr:x="335" gr:y="85" id="mov1#opm3#dlu2" name="Delete group" entity="Group">
-      <Selector id="mov1#opm3#dlu2#su7" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="mov1#opm3#dlu2#su7#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
-      </Selector>
-      <OKLink id="mov1#opm3#dlu2#oln11" name="OKFlow11" to="mov1#opm3#okcu3" automaticCoupling="true"/>
-      <KOLink id="mov1#opm3#dlu2#kln9" name="KOFlow9" to="mov1#opm3#kocu5" automaticCoupling="true"/>
-    </DeleteUnit>
-    <OKCollectorUnit gr:x="545" gr:y="50" id="mov1#opm3#okcu3" name="OK"/>
-    <KOCollectorUnit gr:x="545" gr:y="145" id="mov1#opm3#kocu5" name="KO"/>
+    <CreateUnit gr:x="350" gr:y="105" id="mov1#opm3#cru4" name="add user" entity="User">
+      <OKLink id="mov1#opm3#cru4#oln4" name="OKFlow4" to="mov1#opm3#okcu1" automaticCoupling="false">
+        <LinkParameter id="mov1#opm3#cru4#oln4#par48" name="password" source="passwordArray" target="mov1#opm3#okcu1#ocp6"/>
+        <LinkParameter id="mov1#opm3#cru4#oln4#par49" name="userName" source="userNameArray" target="mov1#opm3#okcu1#ocp7"/>
+      </OKLink>
+      <KOLink id="mov1#opm3#cru4#kln3" name="KOFlow3" to="mov1#opm3#kocu3" automaticCoupling="true"/>
+    </CreateUnit>
+    <KOCollectorUnit gr:x="560" gr:y="230" id="mov1#opm3#kocu3" name="Failure">
+      <OutputCollectorParameter id="mov1#opm3#kocu3#ocp8" name="Message" value="Submission failure"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit gr:x="560" gr:y="50" id="mov1#opm3#okcu1" name="Success">
+      <OutputCollectorParameter id="mov1#opm3#okcu1#ocp6" name="password"/>
+      <OutputCollectorParameter id="mov1#opm3#okcu1#ocp7" name="userName"/>
+    </OKCollectorUnit>
   </OperationUnits>
 </OperationModule>

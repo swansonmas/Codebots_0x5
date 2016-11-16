@@ -67,5 +67,3 @@ def emptyUnitMessage = params["empty-unit-message"]
 </c:otherwise>
 </c:choose>
 [% } %]   
-
-<script>$('.col-md-10')[1].childNodes[1].className = "img-responsive thumbnail";</script>

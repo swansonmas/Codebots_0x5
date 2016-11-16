@@ -68,8 +68,7 @@ def showPageTitle = params["show-page-title"] == "true"
 		<wr:Resources types="javascript"/>
 		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 		<link href="./BootstrapStyle/font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="./BootstrapStyle/css/BlogHome.css">
-		
+		<link rel="stylesheet" type="text/css" href="./BootstrapStyle/css/BlogHome.css">	
 	</head>
 <body class="bootstrap-[%= params["theme"] %]">
 <a href="#main-content" class="sr-only">Skip to main content</a>
@@ -88,7 +87,7 @@ def showPageTitle = params["show-page-title"] == "true"
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="[% if (homePage) {%]<wr:Id context="homePage"/>.do[% } else {%]index.jsp[% } %]">Home</a>
+				<a class="navbar-brand" href="[% if (homePage) {%]<wr:Id context="homePage"/>.do[% } else {%]index.jsp[% } %]"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
 			</div>
 			<div class="navbar-collapse collapse">		      
 	            <ul class="nav navbar-nav" role="menu">
@@ -306,6 +305,9 @@ def showPageTitle = params["show-page-title"] == "true"
 </div>
 </wr:PageForm>
 
-
+<script type="text/javascript">
+$('.navbar-nav').find('li')[1].childNodes[1].innerHTML = "<i class='fa fa-user' aria-hidden='true'></i>" + $('.navbar-nav').find('li')[1].childNodes[1].innerHTML;
+$('.navbar-nav').find('li')[0].childNodes[0].innerHTML = "<i class='fa fa-plus' aria-hidden='true'></i>" + $('.navbar-nav').find('li')[0].childNodes[0].innerHTML;
+</script>
 </body>
 </html>

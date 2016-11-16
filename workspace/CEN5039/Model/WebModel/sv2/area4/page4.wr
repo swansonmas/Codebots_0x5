@@ -1,0 +1,34 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area4#page4" name="Profile" landmark="true">
+  <ContentUnits>
+    <GetUnit gr:x="0" gr:y="5" id="sv2#area4#page4#gtu2" name="currentUser" contextParameters="UserCtxParam">
+      <Link id="sv2#area4#page4#gtu2#ln11" name="Flow11" to="sv2#area4#page4#dau3" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <DataUnit gr:x="170" gr:y="0" id="sv2#area4#page4#dau3" name="Profile" entity="User" displayAttributes="User#att12 User#att13 email">
+      <Selector id="sv2#area4#page4#dau3#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area4#page4#dau3#su3#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="7">
+        <layout:Unit unitId="sv2#area4#page4#dau3">
+          <layout:Attribute attribute="User#att12"/>
+          <layout:Attribute attribute="User#att13"/>
+          <layout:Attribute attribute="email"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

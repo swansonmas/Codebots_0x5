@@ -21,16 +21,31 @@ create table `user_2` (
    `username`  varchar(255),
    `password`  varchar(255),
    `email`  varchar(255),
+   `last_name`  varchar(255),
+   `first_name`  varchar(255),
   primary key (`oid`)
 );
 
 
 -- Post [ent1]
-create table `post` (
+create table `post_2` (
    `oid`  integer  not null,
-   `description`  varchar(255),
+   `time`  datetime,
+   `description`  longtext,
    `img`  varchar(255),
    `title`  varchar(255),
+   `author`  varchar(255),
+  primary key (`oid`)
+);
+
+
+-- Comments [ent2]
+create table `comments_2` (
+   `oid`  integer  not null,
+   `time`  varchar(255),
+   `comment`  varchar(255),
+   `author`  varchar(255),
+   `postoid`  varchar(255),
   primary key (`oid`)
 );
 
@@ -66,17 +81,12 @@ alter table `user_group_2`   add index fk_user_group_2_group_2 (`group_2_oid`), 
 
 
 -- Post_User [rel1]
-create table `post_user` (
-   `post_oid`  integer not null,
-   `user_2_oid`  integer not null,
-  primary key (`post_oid`, `user_2_oid`)
-);
-alter table `post_user`   add index fk_post_user_post (`post_oid`), add constraint fk_post_user_post foreign key (`post_oid`) references `post` (`oid`);
-alter table `post_user`   add index fk_post_user_user_2 (`user_2_oid`), add constraint fk_post_user_user_2 foreign key (`user_2_oid`) references `user_2` (`oid`);
+alter table `user_2`  add column  `post_2_oid`  integer;
+alter table `user_2`   add index fk_user_2_post_2 (`post_2_oid`), add constraint fk_user_2_post_2 foreign key (`post_2_oid`) references `post_2` (`oid`);
 
 
--- User_Post [rel2]
-alter table `user_2`  add column  `post_oid`  integer;
-alter table `user_2`   add index fk_user_2_post (`post_oid`), add constraint fk_user_2_post foreign key (`post_oid`) references `post` (`oid`);
+-- Post_Comments [rel2]
+alter table `comments_2`  add column  `post_2_oid`  integer;
+alter table `comments_2`   add index fk_comments_2_post_2 (`post_2_oid`), add constraint fk_comments_2_post_2 foreign key (`post_2_oid`) references `post_2` (`oid`);
 
 

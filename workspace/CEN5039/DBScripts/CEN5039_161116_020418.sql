@@ -30,12 +30,14 @@ create table `user` (
 -- Post [ent1]
 create table `post` (
    `oid`  integer  not null,
+   `time`  datetime,
    `description`  longtext,
    `img`  varchar(255),
    `title`  varchar(255),
-   `time`  datetime,
-   `useroid`  integer,
    `author`  varchar(255),
+   `status`  varchar(255),
+   `tag`  varchar(255),
+   `location`  varchar(255),
   primary key (`oid`)
 );
 
@@ -43,8 +45,11 @@ create table `post` (
 -- Comments [ent2]
 create table `comments` (
    `oid`  integer  not null,
-   `useroid`  integer,
+   `time`  datetime,
    `comment`  longtext,
+   `author`  varchar(255),
+   `postoid`  varchar(255),
+   `fk_comment`  integer,
   primary key (`oid`)
 );
 
@@ -80,22 +85,32 @@ alter table `user_group`   add index fk_user_group_group (`group_oid`), add cons
 
 
 -- Post_User [rel1]
-create table `post_user` (
-   `post_oid`  integer not null,
-   `user_oid`  integer not null,
-  primary key (`post_oid`, `user_oid`)
-);
-alter table `post_user`   add index fk_post_user_post (`post_oid`), add constraint fk_post_user_post foreign key (`post_oid`) references `post` (`oid`);
-alter table `post_user`   add index fk_post_user_user (`user_oid`), add constraint fk_post_user_user foreign key (`user_oid`) references `user` (`oid`);
-
-
--- User_Post [rel2]
 alter table `user`  add column  `post_oid`  integer;
 alter table `user`   add index fk_user_post (`post_oid`), add constraint fk_user_post foreign key (`post_oid`) references `post` (`oid`);
 
 
+-- Post_Comments [rel2]
+alter table `comments`  add column  `post_oid`  integer;
+alter table `comments`   add index fk_comments_post (`post_oid`), add constraint fk_comments_post foreign key (`post_oid`) references `post` (`oid`);
+
+
 -- Comments_Post [rel3]
-alter table `post`  add column  `comments_oid`  integer;
-alter table `post`   add index fk_post_comments (`comments_oid`), add constraint fk_post_comments foreign key (`comments_oid`) references `comments` (`oid`);
+create table `comments_post` (
+   `comments_oid`  integer not null,
+   `post_oid`  integer not null,
+  primary key (`comments_oid`, `post_oid`)
+);
+alter table `comments_post`   add index fk_comments_post_comments (`comments_oid`), add constraint fk_comments_post_comments foreign key (`comments_oid`) references `comments` (`oid`);
+alter table `comments_post`   add index fk_comments_post_post (`post_oid`), add constraint fk_comments_post_post foreign key (`post_oid`) references `post` (`oid`);
+
+
+-- Post_User_2 [rel4]
+create table `post_user_2` (
+   `post_oid`  integer not null,
+   `user_oid`  integer not null,
+  primary key (`post_oid`, `user_oid`)
+);
+alter table `post_user_2`   add index fk_post_user_2_post (`post_oid`), add constraint fk_post_user_2_post foreign key (`post_oid`) references `post` (`oid`);
+alter table `post_user_2`   add index fk_post_user_2_user (`user_oid`), add constraint fk_post_user_2_user foreign key (`user_oid`) references `user` (`oid`);
 
 

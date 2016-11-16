@@ -311,20 +311,20 @@ def printPagination() {
 </c:choose>
 [% } %]
 <script  type="text/javascript">
-	var descriptionAnchors = $('.col-md-12').find('a#ln7');
+	var descriptionAnchors = $('.col-md-12').find('a#ln17');
 	for(var i = 0; i < descriptionAnchors.length; i++){
 	
 	descriptionAnchors[i].className += ' btn-outline-primary';
 	}
 	
-	var descriptionAnchors = $('.col-md-12').find('a#ln8');
+	var descriptionAnchors = $('.col-md-12').find('a#ln18');
 	
 	for(var i = 0; i < descriptionAnchors.length; i++){
 	
 	descriptionAnchors[i].className += ' btn-outline-info';
 	}
 	
-	$('#page4_cell_30 .panel-default').find('.string').each(function(){$(this).css({"border-top": "1px solid #ddd", "margin-top": "1%" })})
+	$('#page2_cell_30 .panel-default').find('.string').each(function(){$(this).css({"border-top": "1px solid #ddd", "margin-top": "1%" })})
 	
 </script>
 

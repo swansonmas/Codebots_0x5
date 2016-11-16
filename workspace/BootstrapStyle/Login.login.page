@@ -16,6 +16,7 @@
 	<title>Login</title>
   	<link href="BootstrapStyle/dist/css/bootstrap.min.css" rel="stylesheet">
   	<link href="BootstrapStyle/css/app.css" rel="stylesheet">
+  	<script type="text/javascript" src="./BootstrapStyle/js/adjustPath.js"></script>
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 		<script src="BootstrapStyle/assets/js/html5shiv.js"></script>

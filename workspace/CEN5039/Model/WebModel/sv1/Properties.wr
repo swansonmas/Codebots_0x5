@@ -1,13 +1,18 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Public" layout:style="BootstrapStyle" layout:pageLayout="BootstrapStyle/PublicView" homePage="sv1#area1#page1" landmarks="sv1#area1">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Public" homePage="sv1#area1#page1" layout:style="BootstrapStyle" layout:pageLayout="BootstrapStyle/PublicView">
   <OperationUnits>
-    <CreateUnit gr:x="665" gr:y="65" id="sv1#cru1" name="USERS" entity="User" gr:showAllParts="true" linkOrder="sv1#cru1#ln4">
-      <Link id="sv1#cru1#ln4" name="Flow4" to="sv1#miu1" type="transport" validate="true">
-        <LinkParameter id="sv1#cru1#ln4#par35" name="password_PASSING" source="passwordArray" passing="true"/>
-        <LinkParameter id="sv1#cru1#ln4#par36" name="userName_PASSING" source="userNameArray" passing="true"/>
-      </Link>
-    </CreateUnit>
-    <ModuleInstanceUnit gr:x="675" gr:y="290" id="sv1#miu1" moduleId="mov1#opm1" action="true">
-      <KOLink id="sv1#miu1#kln5" name="KOFlow5" to="sv1#area1#page9"/>
+    <ModuleInstanceUnit gr:x="465" gr:y="215" id="sv1#miu1" action="true" moduleId="mov1#opm1">
+      <KOLink id="sv1#miu1#kln4" name="KOFlow4" to="sv1#area1#page1#mssu2">
+        <LinkParameter id="sv1#miu1#kln4#par1" name="Message_Shown Messages" source="mov1#opm1#kocu1#ocp1" target="sv1#area1#page1#mssu2.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="165" gr:y="415" id="sv1#miu4" action="true" moduleId="mov1#opm3">
+      <OKLink id="sv1#miu4#oln1" name="OKFlow1" to="sv1#miu1">
+        <LinkParameter id="sv1#miu4#oln1#par50" name="password_Password" source="mov1#opm3#okcu1#ocp6" target="sv1#miu1.mov1#opm1#icu1#icp6"/>
+        <LinkParameter id="sv1#miu4#oln1#par51" name="userName_Username" source="mov1#opm3#okcu1#ocp7" target="sv1#miu1.mov1#opm1#icu1#icp7"/>
+      </OKLink>
+      <KOLink id="sv1#miu4#kln5" name="KOFlow5" to="sv1#area1#page1#mssu2">
+        <LinkParameter id="sv1#miu4#kln5#par52" name="Message_Shown Messages" source="mov1#opm3#kocu3#ocp8" target="sv1#area1#page1#mssu2.shownMessages"/>
+      </KOLink>
     </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>

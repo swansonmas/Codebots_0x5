@@ -1,26 +1,59 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area2#page2" name="profile" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area2#page2" name="SnapCamp">
   <ContentUnits>
-    <DataUnit gr:x="0" gr:y="0" id="sv2#area2#page2#dau1" name="Details" entity="User" displayAttributes="email User#att5 User#att6" gr:showAllParts="true">
-      <Selector id="sv2#area2#page2#dau1#su4" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv2#area2#page2#dau1#su4#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
-      </Selector>
-    </DataUnit>
-    <GetUnit id="sv2#area2#page2#gtu3" name="current user" gr:x="230" gr:y="5" contextParameters="UserCtxParam">
-      <Link id="sv2#area2#page2#gtu3#ln13" name="Flow12" to="sv2#area2#page2#dau1" type="transport" validate="true">
-        <LinkParameter id="sv2#area2#page2#gtu3#ln13#par14" name="UserCtxParam.oid_KeyCondition3 [oid]" source="sv2#area2#page2#gtu3.UserCtxParam" target="sv2#area2#page2#dau1#su4#kcond3.userOID"/>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area2#page2#pwu1" name="Posts" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att3 ent1#att4 ent1#att5 ent1#att6" blockFactor="5" linkOrder="sv2#area2#page2#pwu1#ln8">
+      <Link id="sv2#area2#page2#pwu1#ln8" name="Full Detail" to="sv2#area5#page5#dau2" type="normal" validate="true" gr:bendpoints="-192,-38,273,-48">
+        <LinkParameter id="sv2#area2#page2#pwu1#ln8#par22" name="oid_KeyCondition2 [oid]" source="data[].ent1#att1" target="sv2#area5#page5#dau2#su2#kcond2.ent1#att1"/>
       </Link>
-    </GetUnit>
+      <SortAttribute attribute="ent1#att6" order="descending"/>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="210" gr:y="60" id="sv2#area2#page2#enu4" name="Categories" entity="ent1" gr:showAllParts="true" linkOrder="sv2#area2#page2#enu4#ln10">
+      <Field id="sv2#area2#page2#enu4#fld14" name="Keyword:" type="string" modifiable="true" attribute="ent1#att3"/>
+      <Link id="sv2#area2#page2#enu4#ln10" name="Search" to="sv2#area2#page2#pwu2" type="normal" validate="true" ajaxOpenWaitingDialog="true" ajaxEnabled="true">
+        <LinkParameter id="sv2#area2#page2#enu4#ln10#par43" name="Key [oid]_current oid" source="key.ent1#att1" target="sv2#area2#page2#pwu2.current.ent1#att1"/>
+        <LinkParameter id="sv2#area2#page2#enu4#ln10#par44" name="Keyword:_Name contains key" source="sv2#area2#page2#enu4#fld14" target="sv2#area2#page2#pwu2#su7#acond2"/>
+      </Link>
+    </EntryUnit>
+    <PowerIndexUnit gr:x="65" gr:y="270" id="sv2#area2#page2#pwu2" name="Results" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att3" linkOrder="sv2#area2#page2#pwu2#ln17 sv2#area2#page2#pwu2#ln18">
+      <Link id="sv2#area2#page2#pwu2#ln17" name="See all" to="sv2#area5#page5#dau2" automaticCoupling="true" type="normal" validate="true" ajaxOpenWindow="false" gr:bendpoints="-271,-153,314,112"/>
+      <Link id="sv2#area2#page2#pwu2#ln18" name="Description" to="sv2#area2#page2#dau5" automaticCoupling="true" type="normal" validate="true" ajaxOpenWaitingDialog="true"/>
+      <Selector id="sv2#area2#page2#pwu2#su7" defaultPolicy="fill" booleanOperator="or">
+        <AttributesCondition id="sv2#area2#page2#pwu2#su7#acond2" name="Name contains key" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="ent1#att3"/>
+      </Selector>
+      <SortAttribute attribute="ent1#att6" order="ascending"/>
+    </PowerIndexUnit>
+    <DataUnit gr:x="45" gr:y="130" id="sv2#area2#page2#dau5" name="Description" entity="ent1" displayAttributes="ent1#att5" linkOrder="sv2#area2#page2#dau5#ln20">
+      <Selector id="sv2#area2#page2#dau5#su6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area2#page2#dau5#su6#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#area2#page2#dau5#ln20" name="Full Detail" to="sv2#area5#page5#dau2" automaticCoupling="true" type="normal" validate="true" ajaxOpenWaitingDialog="true" gr:bendpoints="-222,-75,293,50"/>
+    </DataUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell colspan="5" rowspan="3">
+        <layout:Unit unitId="sv2#area2#page2#pwu1">
+          <layout:Link link="sv2#area2#page2#pwu1#ln8"/>
+          <layout:Link link="sv2#area2#page2#pwu1ent1#att6"/>
+          <layout:Link link="sv2#area2#page2#pwu1First"/>
+          <layout:Link link="sv2#area2#page2#pwu1Previous"/>
+          <layout:Link link="sv2#area2#page2#pwu1Block"/>
+          <layout:Link link="sv2#area2#page2#pwu1Next"/>
+          <layout:Link link="sv2#area2#page2#pwu1Last"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att6"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell colspan="6">
-        <layout:Unit unitId="sv2#area2#page2#dau1">
-          <layout:Attribute attribute="email"/>
-          <layout:Attribute attribute="User#att5"/>
-          <layout:Attribute attribute="User#att6"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="5">
+        <layout:Unit unitId="sv2#area2#page2#enu4">
+          <layout:Field field="sv2#area2#page2#enu4#fld14"/>
+          <layout:Link link="sv2#area2#page2#enu4#ln10"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -28,9 +61,102 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell colspan="3"/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="5">
+        <layout:Unit unitId="sv2#area2#page2#pwu2">
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Link link="sv2#area2#page2#pwu2#ln17"/>
+          <layout:Link link="sv2#area2#page2#pwu2#ln18"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="5">
+        <layout:Unit unitId="sv2#area2#page2#dau5">
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Link link="sv2#area2#page2#dau5#ln20"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <layout:UnitConfiguration unitType="PowerIndexUnit" layout:unitLayout="BootstrapStyle/BlogList"/>
 </Page>

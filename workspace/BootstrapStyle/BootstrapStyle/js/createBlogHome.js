@@ -60,23 +60,22 @@ for(var i = 0; i < textParagraphTags.length; i++){
 
 
 
-document.getElementsByClassName('grid_5')[2].childNodes[1].className += 'fixedMargingV2';
 
 
-var descriptionAnchors = $('.col-md-12').find('a#ln7');
+
+var descriptionAnchors = $('.col-md-12').find('a#ln17');
 for(var i = 0; i < descriptionAnchors.length; i++){
 
 descriptionAnchors[i].className += ' btn-outline-primary';
 }
 
-var descriptionAnchors = $('.col-md-12').find('a#ln8');
+var descriptionAnchors = $('.col-md-12').find('a#ln18');
 
 for(var i = 0; i < descriptionAnchors.length; i++){
 
 descriptionAnchors[i].className += ' btn-outline-info';
 }
 
-document.getElementsByClassName('col-md-offset-2')[0].childNodes[1].className= ' ';
 
 
 var timeElement = document.getElementsByClassName('timestamp');

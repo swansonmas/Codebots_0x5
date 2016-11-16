@@ -320,7 +320,7 @@ def showPageTitle = params["show-page-title"] == "true"
 	</div>
 </div>
 </wr:PageForm>
-</body>
 <script src="./BootstrapStyle/js/adjustPublicPage.js" type="text/javascript"></script>
 <script src="./BootstrapStyle/js/fieldCheck.js" type="text/javascript"></script>
+</body>
 </html>
