@@ -1,0 +1,32 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="635" gr:y="555" id="sv2#page9" name="Page 9" layout:pageLayout="WRDefault/Empty">
+  <ContentUnits>
+    <DataUnit id="sv2#page9#dau6" name="Description" linkOrder="sv2#page9#dau6#ln1" gr:x="0" gr:y="0" entity="ent1" displayAttributes="ent1#att5 ent1#att3">
+      <Selector id="sv2#page9#dau6#su5" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page9#dau6#su5#kcond6" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page9#dau6#ln1" name="Full Detail" to="sv2#area5#page5#dau2" type="normal" automaticCoupling="true" validate="true" ajaxOpenWaitingDialog="true" gr:bendpoints="-84,-235,326,125"/>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell colspan="10">
+        <layout:Unit unitId="sv2#page9#dau6">
+          <layout:Link link="sv2#page9#dau6#ln1"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att3"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

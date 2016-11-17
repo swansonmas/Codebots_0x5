@@ -27,7 +27,7 @@
         <LinkParameter id="sv2#area3#page3#enu3#ln4#par17" name="time_time" source="sv2#area3#page3#enu3#fld13" target="sv2#cru2.ent1#att6"/>
         <LinkParameter id="sv2#area3#page3#enu3#ln4#par18" name="Title_Title" source="sv2#area3#page3#enu3#fld10" target="sv2#cru2.ent1#att3"/>
       </Link>
-      <SelectionField id="sv2#area3#page3#enu3#sfld2" attribute="ent1#att15" type="string" name="tag">
+      <SelectionField id="sv2#area3#page3#enu3#sfld2" attribute="ent1#att15" type="string" name="tag" preselectValue="Issue">
         <Slot id="sv2#area3#page3#enu3#sfld2#slot1" name="Select tag" label="true" output="true" value="Issue|Event"/>
       </SelectionField>
       <Field id="sv2#area3#page3#enu3#fld20" name="Status" type="string" modifiable="false" preloaded="true" hidden="false" attribute="ent1#att14">
@@ -45,12 +45,15 @@
         <LinkParameter id="sv2#area3#page3#gtu1#ln6#par20" name="UserCtxParam.oid_KeyCondition1 [oid]" source="sv2#area3#page3#gtu1.UserCtxParam" target="sv2#area3#page3#dau1#su1#kcond1.userOID"/>
       </Link>
     </GetUnit>
-    <DataUnit gr:x="25" gr:y="220" id="sv2#area3#page3#dau1" name="user" entity="User">
+    <DataUnit gr:x="25" gr:y="250" id="sv2#area3#page3#dau1" name="user" entity="User">
       <Selector id="sv2#area3#page3#dau1#su1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area3#page3#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
       <Link id="sv2#area3#page3#dau1#ln7" name="Flow7" to="sv2#area3#page3#enu3" type="transport" validate="true">
         <LinkParameter id="sv2#area3#page3#dau1#ln7#par21" name="userName_Author" source="data.userName" target="sv2#area3#page3#enu3#fld9_slot"/>
+      </Link>
+      <Link id="sv2#area3#page3#dau1#ln25" name="Flow25" to="sv2#cru2" type="transport" validate="true">
+        <LinkParameter id="sv2#area3#page3#dau1#ln25#par7" name="oid_User.oid(PostToUser_2)" source="data.userOID" target="sv2#cru2.rel4#role7.userOID"/>
       </Link>
     </DataUnit>
     <NoOpContentUnit gr:x="150" gr:y="345" id="sv2#area3#page3#gctu1" name="Map" gr:showAllParts="true"/>
