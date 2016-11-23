@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Layout> 
+  <Resources> 
+    <Resource name="NotificationMessage-script" path="Scripts/NotificationMessageMultiMessageUnit/NotificationMessage.js" type="javascript" requires="jquery"/>
+    <Resource name="NotificationMessage-style" path="CSS/NotificationMessageMultiMessageUnit/NotificationMessage.css" type="css"/>
+  </Resources> 
+</Layout>

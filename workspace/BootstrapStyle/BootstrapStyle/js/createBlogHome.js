@@ -120,10 +120,23 @@ try{
 
     for(var i = 0; i < partOfTitle.length; i++){
         subTitle = partOfTitle[i].innerText;
-        subTitle = subTitle.replace(/(([^\s]+\s\s*){30})(.*)/,"$1…");
-        partOfTitle[i].innerText = subTitle + '...';
+        subTitle = subTitle.replace(/(([^\s]+\s\s*){7})(.*)/,"$1…");
+        partOfTitle[i].innerText = subTitle;
 
     }
+
+
+    var grids = document.getElementsByClassName('grid_5')
+    var grid_id = ' ';
+
+    for(var i = 0; i < grids.length; i++){
+        grid_id = 'grid_id' + i.toString();
+        grids[i].setAttribute('id', grid_id);
+
+    }
+
+
+
 
 }
 catch (err){

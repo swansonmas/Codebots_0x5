@@ -49,7 +49,7 @@
 
 .cb-slideshow li div h3 {
     font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
-    font-size: 165px;
+    font-size: 145px;
     padding: 0;
     line-height: 200px;
 }
@@ -116,13 +116,6 @@ background-image: url(https://images.unsplash.com/photo-1461187655092-c5597dbaf5
     100% { opacity: 0 }
 }
 
-@media screen and (max-width: 1140px) {
-    .cb-slideshow li div h3 { font-size: 140px }
-}
-@media screen and (max-width: 600px) {
-    .cb-slideshow li div h3 { font-size: 80px }
-}
-
 ul li{
 list-style:none;
 }
@@ -153,9 +146,11 @@ text-align: center;
     margin: 5px auto; /* 15% from the top and centered */
     border: 1px solid #888;
     padding-bottom: 10px;
-    width: 40%;
+    width: 30%;
     
 }
+
+
 
 
 
@@ -184,3 +179,261 @@ text-align: center;
 	margin-top:3%;
 }
 
+.error-msg{
+
+    font-size: 20px;
+    background-color: #de4343;
+    border-color: #c43d3d;
+    color: #fefefe;
+}
+
+/*Custom form*/
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+.customField {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.button-login {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.containerOfForm {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+
+}
+
+::selection {
+        background-color: #b5e2e7;
+    }
+
+::-moz-selection {
+        background-color: #8ac7d8;
+    }
+
+.containerOfForm {
+        display: -webkit-flex;
+        display: flex;
+        height: 100%;
+    }
+
+#logbox {
+        padding: 10px;
+        margin: 50px auto;
+        width: 460px;
+        background-color: #fff;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    }
+
+h1 {
+        text-align: center;
+        font-size: 175%;
+        color: #757575;
+        font-weight: 300;
+    }
+
+h1, input {
+        font-family: "Open Sans", Helvetica, sans-serif;
+    }
+
+.input {
+        width: 75%;
+        height: 50px;
+        display: block;
+        margin: 0 auto 15px;
+        padding: 0 15px;
+        border: none;
+        border-bottom: 2px solid #ebebeb;
+    }
+
+.input:focus {
+        outline: none;
+        border-bottom-color: #3CC !important;
+    }
+
+.input:hover {
+        border-bottom-color: #dcdcdc;
+    }
+
+.input:invalid {
+        box-shadow: none;
+    }
+
+.pass:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px white inset;
+    }
+
+.inputButton {
+        position: relative;
+        width: 85%;
+        height: 50px;
+        display: block;
+        margin: 30px auto 30px;
+        color: white;
+        background-color: #3CC;
+        border: none;
+        -webkit-box-shadow: 0 5px 0 #2CADAD;
+        -moz-box-shadow: 0 5px 0 #2CADAD;
+        box-shadow: 0 5px 0 #2CADAD;
+    }
+
+.inputButton:hover {
+        top: 2px;
+        -webkit-box-shadow: 0 3px 0 #2CADAD;
+        -moz-box-shadow: 0 3px 0 #2CADAD;
+        box-shadow: 0 3px 0 #2CADAD;
+    }
+
+.inputButton:active {
+        top: 5px;
+        box-shadow: none;
+    }
+
+.inputButton:focus {
+        outline: none;
+    }
+
+#loginFormUsr {
+    position: relative;
+    left: 103%;
+    top: 85px;
+    border: 2px #3cc solid;
+    padding: 15px 10px;
+    background: #FEFFED;
+    font-size: 15px;
+    display: none;
+    border-radius: 25px 15px 15px 25px;
+    color: #d2322d;
+}
+
+#loginPwdVal{
+    position: relative;
+    border: 1px #3cc solid;
+    padding: 15px 10px;
+    background: #fefefe;
+    font-size: 15px;
+    top: 124px;
+    left: 103%;
+    text-align: center;
+    height: auto;
+    width: 50%;
+    display: none;
+    border-radius: 25px 15px 15px 25px;
+    color: #d2322d;
+
+}
+
+#regForm_id, #loginForm_id{
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    padding-top: 60px;
+    background: rgba(0,0,0,0.8);
+    
+}
+
+
+
+#closeSpan, #cancelLoginForm {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    top: -25px;
+    left: -12px;
+}
+
+#cancelLoginForm{
+    top: -25px;
+    position: relative;
+}
+
+
+#closeSpan:hover,
+#closeSpan:focus, #cancelLoginForm:hover, #cancelLoginForm:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    color: #d2322d;
+}
+
+
+@media screen and (max-width: 1140px) {
+    .cb-slideshow li div h3 { font-size: 140px }
+}
+
+
+@media screen and (max-width: 768px) {
+    .cb-slideshow li div h3 { font-size: 70px }
+}
+
+
+
+@media screen and (max-width: 525px) {
+    .cb-slideshow li div h3 {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .cb-slideshow li div h3 {
+        font-size: 34px;
+    }
+}

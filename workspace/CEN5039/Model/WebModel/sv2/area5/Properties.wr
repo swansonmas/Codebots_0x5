@@ -1,5 +1,22 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="85" gr:y="80" id="sv2#area5" name="DETAILS" landmark="false" defaultPage="sv2#area5#page5">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="65" gr:y="80" id="sv2#area5" name="DETAILS" landmark="false" defaultPage="sv2#area5#page5">
   <OperationUnits>
-    <CreateUnit gr:x="165" gr:y="595" id="sv2#area5#cru3" name="Comments" entity="ent2"/>
+    <CreateUnit gr:x="185" gr:y="605" id="sv2#area5#cru3" name="Comments" entity="ent2">
+      <OKLink id="sv2#area5#cru3#oln13" name="OKFlow13" to="sv2#area5#pcu1">
+        <LinkParameter id="sv2#area5#cru3#oln13#par19" name="Info_Info" sourceValue="Success2" target="sv2#area5#pcu1#pcp1"/>
+      </OKLink>
+      <KOLink id="sv2#area5#cru3#kln13" name="KOFlow13" to="sv2#area5#pcu1" gr:bendpoints="88,56,-132,31">
+        <LinkParameter id="sv2#area5#cru3#kln13#par61" name="Error_Error" sourceValue="Error" target="sv2#area5#pcu1#pcp2"/>
+      </KOLink>
+    </CreateUnit>
+    <ParameterCollectorUnit gr:x="375" gr:y="625" id="sv2#area5#pcu1" name="Show Messages" gr:showAllParts="true">
+      <CollectorParameter id="sv2#area5#pcu1#pcp1" name="Success2"/>
+      <Link id="sv2#area5#pcu1#ln40" name="Info" to="sv2#area5#page5#mssu1" type="transport" validate="true">
+        <LinkParameter id="sv2#area5#pcu1#ln40#par90" name="Error_Shown Messages" source="sv2#area5#pcu1#pcp2" target="sv2#area5#page5#mssu1.shownMessages"/>
+      </Link>
+      <CollectorParameter id="sv2#area5#pcu1#pcp2" name="Error"/>
+      <Link id="sv2#area5#pcu1#ln45" name="Flow45" to="sv2#area5#page5#mssu5" type="transport" validate="true">
+        <LinkParameter id="sv2#area5#pcu1#ln45#par91" name="Success2_Shown Messages" sourceValue="Success2" target="sv2#area5#page5#mssu5.shownMessages"/>
+      </Link>
+    </ParameterCollectorUnit>
   </OperationUnits>
 </Area>

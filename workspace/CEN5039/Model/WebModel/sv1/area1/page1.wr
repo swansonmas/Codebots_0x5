@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page1" name="SnapCamp" layout:pageLayout="BootstrapStyle/PublicView" ajaxEnabled="false">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv1#area1#page1#enu1" name="Register" gr:showAllParts="true" fieldOrder="sv1#area1#page1#enu1#fld1 sv1#area1#page1#enu1#fld2 sv1#area1#page1#enu1#fld3 sv1#area1#page1#enu1#fld4 sv1#area1#page1#enu1#fld5 sv1#area1#page1#enu1#fld6" entity="User" ajaxEnableExpandedLinks="true" linkOrder="sv1#area1#page1#enu1#ln9">
+    <EntryUnit gr:x="40" gr:y="0" id="sv1#area1#page1#enu1" name="Register" gr:showAllParts="true" fieldOrder="sv1#area1#page1#enu1#fld1 sv1#area1#page1#enu1#fld2 sv1#area1#page1#enu1#fld3 sv1#area1#page1#enu1#fld4 sv1#area1#page1#enu1#fld5 sv1#area1#page1#enu1#fld6" entity="User" ajaxEnableExpandedLinks="true" linkOrder="sv1#area1#page1#enu1#ln9">
       <Field id="sv1#area1#page1#enu1#fld1" name="First Name:" type="string" modifiable="true" attribute="User#att12">
         <VRules>
           <MandatoryValidationRule id="sv1#area1#page1#enu1#fld1#mnd7" name="MandatoryFn" errorMessage="required"/>
@@ -13,7 +13,6 @@
       </Field>
       <Field id="sv1#area1#page1#enu1#fld3" name="email" type="string" modifiable="true" attribute="email">
         <VRules>
-          <EMailValidationRule id="sv1#area1#page1#enu1#fld3#email1" name="EMail1"/>
           <MandatoryValidationRule id="sv1#area1#page1#enu1#fld3#mnd8" name="madatoryEmail" errorMessage="required"/>
         </VRules>
       </Field>
@@ -43,7 +42,7 @@
         <LinkParameter id="sv1#area1#page1#enu1#ln9#par47" name="username_userName" source="sv1#area1#page1#enu1#fld4" target="sv1#miu4.mov1#opm3#icu3#icp5"/>
       </Link>
     </EntryUnit>
-    <EntryUnit gr:x="155" gr:y="15" id="sv1#area1#page1#enu2" name="Login" gr:showAllParts="true" fieldOrder="sv1#area1#page1#enu2#fld7 sv1#area1#page1#enu2#fld8" entity="User" linkOrder="sv1#area1#page1#enu2#ln2">
+    <EntryUnit gr:x="195" gr:y="15" id="sv1#area1#page1#enu2" name="Login" gr:showAllParts="true" fieldOrder="sv1#area1#page1#enu2#fld7 sv1#area1#page1#enu2#fld8" entity="User" linkOrder="sv1#area1#page1#enu2#ln2">
       <Field id="sv1#area1#page1#enu2#fld8" name="password:" type="password" modifiable="true" attribute="password">
         <VRules>
           <MandatoryValidationRule id="sv1#area1#page1#enu2#fld8#mnd11" name="MandatoryPwdLogin"/>
@@ -59,7 +58,8 @@
         <LinkParameter id="sv1#area1#page1#enu2#ln2#par32" name="username:_Username" source="sv1#area1#page1#enu2#fld7" target="sv1#miu1.mov1#opm1#icu1#icp7"/>
       </Link>
     </EntryUnit>
-    <MultiMessageUnit gr:x="160" gr:y="165" id="sv1#area1#page1#mssu2" name="Notification"/>
+    <MultiMessageUnit gr:x="200" gr:y="165" id="sv1#area1#page1#mssu2" name="Error" gr:showAllParts="true"/>
+    <NoOpContentUnit gr:x="0" gr:y="250" id="sv1#area1#page1#gctu2" name="modal-form"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -122,6 +122,24 @@
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="5">
+        <layout:Unit unitId="sv1#area1#page1#gctu2"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
   </layout:Grid>
   <layout:UnitConfiguration unitType="EntryUnit" layout:unitLayout="BootstrapStyle/publicPageForm"/>
+  <layout:UnitConfiguration unitType="MultiMessageUnit" layout:unitLayout="BootstrapStyle/notificationErrorMessage"/>
+  <layout:UnitConfiguration unitType="NoOpContentUnit" layout:unitLayout="BootstrapStyle/customForm"/>
 </Page>

@@ -1,0 +1,87 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area8#page13" name="User Management" layout:layoutManager="grid">
+  <ContentUnits>
+    <SelectorUnit id="sv3#area8#page13#seu9" name="All Groups" gr:showAllParts="false" gr:x="35" gr:y="0" entity="Group">
+      <Link id="sv3#area8#page13#seu9#ln74" name="Flow18" to="sv3#area8#page13#enu10" type="transport" validate="true">
+        <LinkParameter id="sv3#area8#page13#seu9#ln74#par169" name="moduleName_All Modules [label]" source="groupNameArray" target="sv3#area8#page13#enu10#msfld5_label"/>
+        <LinkParameter id="sv3#area8#page13#seu9#ln74#par170" name="oid_All Modules [output]" source="groupOIDArray" target="sv3#area8#page13#enu10#msfld5_output"/>
+        <LinkParameter id="sv3#area8#page13#seu9#ln74#par171" name="oid_default Module [label]" source="groupNameArray" target="sv3#area8#page13#enu10#sfld5_label"/>
+        <LinkParameter id="sv3#area8#page13#seu9#ln74#par172" name="oid_default Module [output]" source="groupOIDArray" target="sv3#area8#page13#enu10#sfld5_output"/>
+      </Link>
+    </SelectorUnit>
+    <IndexUnit id="sv3#area8#page13#inu4" name="List of User" linkOrder="sv3#area8#page13#inu4#ln75 sv3#area8#page13#inu4#ln82" gr:x="0" gr:y="160" entity="User" displayAttributes="userOID userName password email User#att12 User#att13">
+      <Link id="sv3#area8#page13#inu4#ln75" name="modify" to="sv3#area8#page13#enu10" type="normal" validate="true">
+        <LinkParameter id="sv3#area8#page13#inu4#ln75#par173" name="oid_Key Condition [oid]" source="data[].userOID" target="sv3#area8#page13#enu10.userOID"/>
+        <LinkParameter id="sv3#area8#page13#inu4#ln75#par174" name="userName_username" source="data[].userName" target="sv3#area8#page13#enu10#fld26_slot"/>
+      </Link>
+      <Link id="sv3#area8#page13#inu4#ln76" name="Flow67" to="sv3#area8#page13#seu10" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#area8#page13#inu4#ln82" name="delete" to="sv3#area8#miu10" type="normal" validate="true">
+        <LinkParameter id="sv3#area8#page13#inu4#ln82#par178" name="oid_oidUser" source="data[].userOID" target="sv3#area8#miu10.mov1#opm6#icu6#icp15"/>
+      </Link>
+    </IndexUnit>
+    <SelectorUnit id="sv3#area8#page13#seu10" name="Associated Groups" customDescriptor="false" gr:showAllParts="false" gr:x="255" gr:y="295" entity="Group" distinct="false">
+      <Selector id="sv3#area8#page13#seu10#su28" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area8#page13#seu10#su28#rcond8" name="groups" predicate="in" implied="true" role="User2Group"/>
+      </Selector>
+      <Link id="sv3#area8#page13#seu10#ln78" name="Flow69" to="sv3#area8#page13#enu10" type="transport" validate="true">
+        <LinkParameter id="sv3#area8#page13#seu10#ln78#par176" name="groupName_All Groups [label]" source="groupNameArray" target="sv3#area8#page13#enu10#msfld5_label"/>
+        <LinkParameter id="sv3#area8#page13#seu10#ln78#par177" name="oid_All Groups [output]" source="groupOIDArray" target="sv3#area8#page13#enu10#msfld5_output"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit id="sv3#area8#page13#enu10" name="User Form" linkOrder="sv3#area8#page13#enu10#ln81 sv3#area8#page13#enu10#ln83" gr:showAllParts="true" gr:x="270" gr:y="20" entity="User" fieldOrder="sv3#area8#page13#enu10#sfld5 sv3#area8#page13#enu10#msfld5 sv3#area8#page13#enu10#fld26">
+      <MultiSelectionField id="sv3#area8#page13#enu10#msfld5" name="All Groups" type="string" modifiable="true" role="User2Group"/>
+      <SelectionField id="sv3#area8#page13#enu10#sfld5" name="default Group" type="string" modifiable="true" role="User2DefaultGroup"/>
+      <Field id="sv3#area8#page13#enu10#fld26" name="username" type="string" modifiable="false" preloaded="true"/>
+      <Link id="sv3#area8#page13#enu10#ln81" name="manage" to="sv3#area8#miu11" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#area8#page13#enu10#ln83" name="reset" to="sv3#area8#page13" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="40,-162,170,-267;0,-158,130,-263"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area8#page13#inu4">
+          <layout:Attribute attribute="userOID"/>
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att12"/>
+          <layout:Attribute attribute="User#att13"/>
+          <layout:Link link="sv3#area8#page13#inu4#ln75"/>
+          <layout:Link link="sv3#area8#page13#inu4#ln82"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area8#page13#enu10">
+          <layout:Field field="sv3#area8#page13#enu10#sfld5"/>
+          <layout:Field field="sv3#area8#page13#enu10#msfld5"/>
+          <layout:Field field="sv3#area8#page13#enu10#fld26"/>
+          <layout:Link link="sv3#area8#page13#enu10#ln81"/>
+          <layout:Link link="sv3#area8#page13#enu10#ln83"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

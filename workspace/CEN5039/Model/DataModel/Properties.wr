@@ -83,7 +83,7 @@
       <db:JoinColumn attribute="ent2#att7" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="CEN5039" type="MySQL" url="jdbc:mysql://52.212.31.81:3306/freeapp106" username="freeapp106" password="Mzk0NUU2MUU=" cryptedPassword="true"/>
+  <db:Database id="db2" name="CEN5039" type="MySQL" url="jdbc:mysql://52.213.178.53:3306/freeapp3" username="freeapp3" password="MDdFNUQ0NDM=" cryptedPassword="true"/>
   <Relationship id="rel3" name="Comments_Post" sourceEntity="ent2" targetEntity="ent1" gr:bendpoints="-111,43,124,53" db:database="db2" db:table="comments_post">
     <RelationshipRole1 id="rel3#role5" name="CommentsToPost_2" maxCard="N">
       <db:JoinColumn attribute="ent2#att7" name="comments_oid"/>
@@ -98,6 +98,14 @@
     </RelationshipRole1>
     <RelationshipRole2 id="rel4#role8" name="UserToPost_2" maxCard="N">
       <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel5" name="Comments_Comments" sourceEntity="ent2" targetEntity="ent2" gr:bendpoints="116,36,116,36;116,-36,116,-36" db:database="db2" db:table="comments">
+    <RelationshipRole1 id="rel5#role9" name="CommentsToComments1" maxCard="N">
+      <db:JoinColumn attribute="ent2#att7" name="comments_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel5#role10" name="CommentsToComments2" maxCard="1">
+      <db:JoinColumn attribute="ent2#att7" name="oid"/>
     </RelationshipRole2>
   </Relationship>
 </DataModel>
