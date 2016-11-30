@@ -1,0 +1,19 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov1#mpkg1#opm8" name="Action 8">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#mpkg1#opm8#icu8" gr:x="30" gr:y="60">
+      <OKLink id="mov1#mpkg1#opm8#icu8#oln16" name="OKFlow16" to="mov1#mpkg1#opm8#mlu1">
+        <LinkParameter id="mov1#mpkg1#opm8#icu8#oln16#par100" name="Message Content parameter_message_content" source="mov1#mpkg1#opm8#icu8#icp26" target="mov1#mpkg1#opm8#mlu1.message_content"/>
+        <LinkParameter id="mov1#mpkg1#opm8#icu8#oln16#par103" name="Sender name parameter_sender_name" source="mov1#mpkg1#opm8#icu8#icp25" target="mov1#mpkg1#opm8#mlu1.sender_name"/>
+        <LinkParameter id="mov1#mpkg1#opm8#icu8#oln16#par105" name="User name parameter_user_name" source="mov1#mpkg1#opm8#icu8#icp24" target="mov1#mpkg1#opm8#mlu1.user_name"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#mpkg1#opm8#icu8#icp24" name="User name parameter"/>
+      <InputCollectorParameter id="mov1#mpkg1#opm8#icu8#icp25" name="Sender name parameter"/>
+      <InputCollectorParameter id="mov1#mpkg1#opm8#icu8#icp26" name="Message Content parameter"/>
+    </InputCollectorUnit>
+    <MailUnit gr:x="395" gr:y="100" id="mov1#mpkg1#opm8#mlu1" name="Mail" format="html" template="EmailTemplates/new_message_template.html">
+      <OKLink id="mov1#mpkg1#opm8#mlu1#oln18" name="OKFlow18" to="mov1#mpkg1#opm8#okcu6" automaticCoupling="true"/>
+    </MailUnit>
+    <OKCollectorUnit gr:x="545" gr:y="65" id="mov1#mpkg1#opm8#okcu6" name="Success"/>
+    <KOCollectorUnit gr:x="545" gr:y="155" id="mov1#mpkg1#opm8#kocu8" name="KO Port8"/>
+  </OperationUnits>
+</OperationModule>
