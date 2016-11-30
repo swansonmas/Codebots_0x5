@@ -4,22 +4,22 @@
       <Field id="sv2#area3#page3#enu3#fld13" name="time" type="timestamp" preloaded="true" attribute="ent1#att6" hidden="true"/>
       <Field id="sv2#area3#page3#enu3#fld12" name="Description" type="text" modifiable="true" attribute="ent1#att5" contentType="text/html">
         <VRules>
-          <MandatoryValidationRule id="sv2#area3#page3#enu3#fld12#mnd3" name="MandatoryDesc"/>
+          <MandatoryValidationRule id="sv2#area3#page3#enu3#fld12#mnd3" name="MandatoryDesc" errorMessage="provide a description"/>
         </VRules>
       </Field>
       <Field id="sv2#area3#page3#enu3#fld11" name="img" type="blob" contentType="image" modifiable="true" attribute="ent1#att4" ajaxUploadEnabled="false">
         <VRules>
-          <MandatoryValidationRule id="sv2#area3#page3#enu3#fld11#mnd2" name="MandatoryImg"/>
+          <MandatoryValidationRule id="sv2#area3#page3#enu3#fld11#mnd2" name="MandatoryImage" errorMessage="please provide an image"/>
         </VRules>
       </Field>
       <Field id="sv2#area3#page3#enu3#fld10" name="Title" type="string" modifiable="true" attribute="ent1#att3">
         <VRules>
-          <MandatoryValidationRule id="sv2#area3#page3#enu3#fld10#mnd1" name="MandatoryTitle"/>
+          <MandatoryValidationRule id="sv2#area3#page3#enu3#fld10#mnd1" name="MandatoryTitle" errorMessage="A title is required"/>
           <ValueLengthValidationRule id="sv2#area3#page3#enu3#fld10#vl1" name="Value Length1" predicate="max" value="55" errorMessage="Title is too long, must be less than 55 characters"/>
         </VRules>
       </Field>
       <Field id="sv2#area3#page3#enu3#fld9" name="Author" type="string" modifiable="false" attribute="ent1#att2" preloaded="true" hidden="true"/>
-      <Link id="sv2#area3#page3#enu3#ln4" name="Create" to="sv2#cru2" type="normal" validate="true" ajaxOpenWaitingDialog="true">
+      <Link id="sv2#area3#page3#enu3#ln4" name="Create" to="sv2#cru2" type="normal" validate="true" ajaxOpenWaitingDialog="false">
         <LinkParameter id="sv2#area3#page3#enu3#ln4#par12" name="Author_Author" source="sv2#area3#page3#enu3#fld9" target="sv2#cru2.ent1#att2"/>
         <LinkParameter id="sv2#area3#page3#enu3#ln4#par13" name="Description_Description" source="sv2#area3#page3#enu3#fld12" target="sv2#cru2.ent1#att5"/>
         <LinkParameter id="sv2#area3#page3#enu3#ln4#par14" name="img_img" source="sv2#area3#page3#enu3#fld11" target="sv2#cru2.ent1#att4"/>
