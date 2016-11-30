@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area6#page7" name="Group Management">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area6#page7" name="Group Management" layout:pageLayout="BootstrapStyle/adminSite">
   <ContentUnits>
     <SelectorUnit gr:x="10" gr:y="5" id="sv3#area6#page7#seu1" name="All Modules" entity="Module" gr:showAllParts="false" distinctAttributes="moduleName">
       <Link id="sv3#area6#page7#seu1#ln18" name="Flow18" to="sv3#area6#page7#enu6" type="transport" validate="true">

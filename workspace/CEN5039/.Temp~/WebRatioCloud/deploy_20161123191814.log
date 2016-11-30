@@ -1,0 +1,13 @@
+[2016-11-23 19:18:14] Uploading application on server [52.210.113.19]
+[2016-11-23 19:18:14] Computing changes...
+[2016-11-23 19:18:19] Found 5 file(s) changed
+[2016-11-23 19:18:19] --------------------------------------------
+[2016-11-23 19:18:19] UPDATE                  /page5.jsp
+[2016-11-23 19:18:19] UPDATE                  /page3.jsp
+[2016-11-23 19:18:19] UPDATE          RESTART /WEB-INF/lib/com.webratio.struts.jar
+[2016-11-23 19:18:19] UPDATE                  /page1.jsp
+[2016-11-23 19:18:19] UPDATE                  /BootstrapStyle/css/CEN5039.css
+[2016-11-23 19:18:19] --------------------------------------------
+[2016-11-23 19:18:19] Stopping application server
+[2016-11-23 19:18:30] Uploading changes (433.0 KB)
+[2016-11-23 19:18:32] Starting application server

@@ -31,6 +31,7 @@
 			var lngString = pos.lng;
 			var valueStr  = latString.toString() + ',' + lngString.toString();
 			var input = document.getElementById('latlng').value = valueStr;
+			document.getElementById('fld21').value = valueStr;
             infoWindow.setPosition(pos);
             infoWindow.setContent('You are here!');
             map.setCenter(pos);
@@ -66,7 +67,7 @@
               });
               infoWindow.setContent(results[1].formatted_address);
               infoWindow.open(map, marker);
-              document.getElementById('fld21').value = results[1].formatted_address;
+             // document.getElementById('fld21').value = results[1].formatted_address;
             } else {
               window.alert('No results found');
             }
@@ -83,5 +84,3 @@
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzbuYlcUG7G0vVSOLVSfBGHFGg-IBzCpM&callback=initMap">
 </script>
-
-

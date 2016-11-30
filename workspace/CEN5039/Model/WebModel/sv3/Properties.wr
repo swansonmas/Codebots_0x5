@@ -1,3 +1,9 @@
-<SiteView id="sv3" name="Admin" landmarks="sv3#area6 sv3#area8 sv3#area7" homePage="sv3#area6#page7" protected="true">
-  <OperationUnits/>
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3" name="Admin" landmarks="sv3#area6 sv3#area8 sv3#area7 sv3#area9 sv3#area10" homePage="sv3#area6#page7" protected="true" layout:pageLayout="BootstrapStyle/adminSite" layout:style="BootstrapStyle">
+  <OperationUnits>
+    <ModifyUnit gr:x="470" gr:y="1280" id="sv3#mfu3" name="UpdatePost" entity="ent1">
+      <Selector id="sv3#mfu3#su15" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#mfu3#su15#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
+  </OperationUnits>
 </SiteView>

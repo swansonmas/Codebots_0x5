@@ -67,7 +67,7 @@ def showPageTitle = params["show-page-title"] == "true"
 		<wr:Resources types="css"/>
 		<wr:Resources types="javascript"/>
 		
-		<link rel="stylesheet" type="text/css" href="./BootstrapStyle/css/CEN5039.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="./BootstrapStyle/css/CEN5039.css">
 		<link href="./BootstrapStyle/font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css">
 		
 	</head>

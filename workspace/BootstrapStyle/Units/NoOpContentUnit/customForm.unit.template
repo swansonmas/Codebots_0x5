@@ -2,11 +2,12 @@
 [%setHTMLOutput()%]
   <div class="modalw3c"  id="regForm_id">
   <div class="containerOfForm">
-    <div style="margin:0 auto;">
+    <div id="outerModalForm">
     <div id="logbox">
       <div name="notValidForm">
-      <span id="closeSpan">X</span>
+      <span id="closeSpan"><i aria-hidden="true" class="fa fa-times-circle"></i></span>
         <h1>create an account</h1>
+        <span id="pwdChk">password do not match</span>
         <input id="pretendfl1" type="text" placeholder="What is your firt name?"  class="input pass"/>
 		<input id="pretendfl2" type="text" placeholder="What is your last name?"  class="input pass"/>
 		<input id="pretendfl3" type="email" placeholder="Email address" class="input pass" />
@@ -14,7 +15,7 @@
         <input id="pretendfl5" type="password" placeholder="Choose a password"  class="input pass"/>
         <input id="pretendfl6" type="password" placeholder="Confirm password"  class="input pass"/>
 
-        <button value="Sign me up!" class="inputButton" id="pretendReg" style="text-align:center;">Sign me up!</button>
+        <span value="Sign me up!" class="inputButton" id="pretendReg" style="text-align:center;">Sign me up!</span>
         <div class="text-center">
             already have an account? <a href="#" id="login_id">login</a>
         </div>
@@ -27,16 +28,16 @@
 
  <div class="modalw3c"  id="loginForm_id">
   <div class="containerOfForm">
- <div style="margin:0 auto;">
-    <div id="logbox">
+ <div id="outLoginContainer">
+    <div id="logbox2">
       <div  name="notValidForm">
-      <span id="cancelLoginForm">X</span>
+      <span id="cancelLoginForm"><i aria-hidden="true" class="fa fa-times-circle"></i></span>
         <h1>account login</h1>
-        <span id="loginFormUsr">please enter a username</span>
-        <div id="loginPwdVal">Please enter your password</div>
+        <span id="checkUserName">this field is required</span>
         <input id="userNameValue" type="text" placeholder="provide your username please" autofocus="autofocus" class="input pass"/>
+         <span id="checkPwd">provide a password</span>
         <input id="passwordContent" type="password" placeholder="enter your password" class="input pass"/>
-        <button id="pretenderLogin" class="inputButton" style="text-align:center">Sign me in!</button>
+        <span id="pretenderLogin" class="inputButton" style="text-align:center">Sign me in !</span>
         <div class="text-center"">
         <a href="#" id="createAccount">create an account</a> - <a href="#" id="">forgot password?</a>
                 </div>

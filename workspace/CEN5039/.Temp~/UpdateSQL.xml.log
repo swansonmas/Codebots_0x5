@@ -1,27 +1,52 @@
-[21 Nov 2016 17:02:16] DEBUG Executing SQL script
-[21 Nov 2016 17:02:16] INFO ================================================================================
-[21 Nov 2016 17:02:16] INFO onError= 'stop'
-[21 Nov 2016 17:02:16] INFO autoCommit= 'false'
-[21 Nov 2016 17:02:16] INFO username= 'freeapp3'
-[21 Nov 2016 17:02:16] INFO outputPath= 'C:\WebRatio\WebRatio Platform 7.2.14.x64bit\codebots0x5\workspace\CEN5039\.Temp~\UpdateSQL.xml'
-[21 Nov 2016 17:02:16] INFO outputLogPath= 'C:\WebRatio\WebRatio Platform 7.2.14.x64bit\codebots0x5\workspace\CEN5039\.Temp~\UpdateSQL.xml.log'
-[21 Nov 2016 17:02:16] INFO encoding= ''
-[21 Nov 2016 17:02:16] INFO driverClass= 'com.mysql.jdbc.Driver'
-[21 Nov 2016 17:02:16] INFO sqlScript= 'C:\WebRatio\WebRatio Platform 7.2.14.x64bit\codebots0x5\workspace\CEN5039\.Temp~\UpdateSQL.sql'
-[21 Nov 2016 17:02:16] INFO eventSocketPort= '54185'
-[21 Nov 2016 17:02:16] INFO statementSeparator= ';'
-[21 Nov 2016 17:02:16] INFO derby.system.home= 'C:\WebRatio\WebRatio Platform 7.2.14.x64bit\codebots0x5\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
-[21 Nov 2016 17:02:16] INFO password= '07E5D443'
-[21 Nov 2016 17:02:16] INFO url= 'jdbc:mysql://52.213.178.53:3306/freeapp3'
-[21 Nov 2016 17:02:16] INFO ================================================================================
-[21 Nov 2016 17:02:16] INFO Connecting to the Database...
-[21 Nov 2016 17:02:17] INFO Database connection estabilished
-[21 Nov 2016 17:02:17] INFO transaction isolation: 4
-[21 Nov 2016 17:02:17] DEBUG ================================================================================
-[21 Nov 2016 17:02:17] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Platform 7.2.14.x64bit\codebots0x5\workspace\CEN5039\.Temp~\UpdateSQL.sql
-[21 Nov 2016 17:02:17] DEBUG Executing statement:  alter table `comments`  add column  `comments_oid`  integer
-[21 Nov 2016 17:02:18] DEBUG Executing statement:  alter table `comments`   add index fk_comments_comments (`comments_oid`), add constraint fk_comments_comments foreign key (`comments_oid`) references `comments` (`oid`)
-[21 Nov 2016 17:02:18] DEBUG ================================================================================
-[21 Nov 2016 17:02:19] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[21 Nov 2016 17:02:19] INFO Database connection closed
-[21 Nov 2016 17:02:19] DEBUG Total time: 2711 milliseconds
+[23 Nov 2016 15:37:31] DEBUG Executing SQL script
+[23 Nov 2016 15:37:31] INFO ================================================================================
+[23 Nov 2016 15:37:31] INFO onError= 'stop'
+[23 Nov 2016 15:37:31] INFO autoCommit= 'false'
+[23 Nov 2016 15:37:31] INFO username= 'freeapp3'
+[23 Nov 2016 15:37:31] INFO outputPath= 'C:\WebRatio\WebRatio Platform 7.2.14.x64bit\codebots0x5\workspace\CEN5039\.Temp~\UpdateSQL.xml'
+[23 Nov 2016 15:37:31] INFO outputLogPath= 'C:\WebRatio\WebRatio Platform 7.2.14.x64bit\codebots0x5\workspace\CEN5039\.Temp~\UpdateSQL.xml.log'
+[23 Nov 2016 15:37:31] INFO encoding= ''
+[23 Nov 2016 15:37:31] INFO driverClass= 'com.mysql.jdbc.Driver'
+[23 Nov 2016 15:37:31] INFO sqlScript= 'C:\WebRatio\WebRatio Platform 7.2.14.x64bit\codebots0x5\workspace\CEN5039\.Temp~\UpdateSQL.sql'
+[23 Nov 2016 15:37:31] INFO eventSocketPort= '55651'
+[23 Nov 2016 15:37:31] INFO statementSeparator= ';'
+[23 Nov 2016 15:37:31] INFO derby.system.home= 'C:\WebRatio\WebRatio Platform 7.2.14.x64bit\codebots0x5\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[23 Nov 2016 15:37:31] INFO password= '07E5D443'
+[23 Nov 2016 15:37:31] INFO url= 'jdbc:mysql://52.213.178.53:3306/freeapp3'
+[23 Nov 2016 15:37:31] INFO ================================================================================
+[23 Nov 2016 15:37:31] INFO Connecting to the Database...
+[23 Nov 2016 15:37:32] INFO Database connection estabilished
+[23 Nov 2016 15:37:32] INFO transaction isolation: 4
+[23 Nov 2016 15:37:32] DEBUG ================================================================================
+[23 Nov 2016 15:37:32] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Platform 7.2.14.x64bit\codebots0x5\workspace\CEN5039\.Temp~\UpdateSQL.sql
+[23 Nov 2016 15:37:32] DEBUG Executing statement:  create table `group` ( `oid`  integer  not null, `groupname`  varchar(255), primary key (`oid`) )
+[23 Nov 2016 15:37:32] DEBUG Executing statement:    create table `module` ( `oid`  integer  not null, `moduleid`  varchar(255), `modulename`  varchar(255), primary key (`oid`) )
+[23 Nov 2016 15:37:33] DEBUG Executing statement:    create table `user` ( `oid`  integer  not null, `username`  varchar(255), `password`  varchar(255), `email`  varchar(255), `last_name`  varchar(255), `first_name`  varchar(255), primary key (`oid`) )
+[23 Nov 2016 15:37:33] DEBUG Executing statement:    create table `post` ( `oid`  integer  not null, `time`  datetime, `description`  longtext, `img`  varchar(255), `imgblob`  longblob, `title`  varchar(255), `author`  varchar(255), `status`  varchar(255), `tag`  varchar(255), `location`  varchar(255), primary key (`oid`) )
+[23 Nov 2016 15:37:33] DEBUG Executing statement:    create table `comments` ( `oid`  integer  not null, `time`  datetime, `comment`  longtext, `author`  varchar(255), `postoid`  varchar(255), primary key (`oid`) )
+[23 Nov 2016 15:37:33] DEBUG Executing statement:    alter table `group`  add column  `module_oid`  integer
+[23 Nov 2016 15:37:34] DEBUG Executing statement:  alter table `group`   add index fk_group_module (`module_oid`), add constraint fk_group_module foreign key (`module_oid`) references `module` (`oid`)
+[23 Nov 2016 15:37:34] DEBUG Executing statement:    create table `group_module` ( `group_oid`  integer not null, `module_oid`  integer not null, primary key (`group_oid`, `module_oid`) )
+[23 Nov 2016 15:37:34] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_group (`group_oid`), add constraint fk_group_module_group foreign key (`group_oid`) references `group` (`oid`)
+[23 Nov 2016 15:37:35] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_module (`module_oid`), add constraint fk_group_module_module foreign key (`module_oid`) references `module` (`oid`)
+[23 Nov 2016 15:37:35] DEBUG Executing statement:    alter table `user`  add column  `group_oid`  integer
+[23 Nov 2016 15:37:35] DEBUG Executing statement:  alter table `user`   add index fk_user_group (`group_oid`), add constraint fk_user_group foreign key (`group_oid`) references `group` (`oid`)
+[23 Nov 2016 15:37:36] DEBUG Executing statement:    create table `user_group` ( `user_oid`  integer not null, `group_oid`  integer not null, primary key (`user_oid`, `group_oid`) )
+[23 Nov 2016 15:37:36] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_user (`user_oid`), add constraint fk_user_group_user foreign key (`user_oid`) references `user` (`oid`)
+[23 Nov 2016 15:37:37] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_group (`group_oid`), add constraint fk_user_group_group foreign key (`group_oid`) references `group` (`oid`)
+[23 Nov 2016 15:37:37] DEBUG Executing statement:    alter table `user`  add column  `post_oid`  integer
+[23 Nov 2016 15:37:37] DEBUG Executing statement:  alter table `user`   add index fk_user_post (`post_oid`), add constraint fk_user_post foreign key (`post_oid`) references `post` (`oid`)
+[23 Nov 2016 15:37:38] DEBUG Executing statement:    alter table `comments`  add column  `post_oid`  integer
+[23 Nov 2016 15:37:38] DEBUG Executing statement:  alter table `comments`   add index fk_comments_post (`post_oid`), add constraint fk_comments_post foreign key (`post_oid`) references `post` (`oid`)
+[23 Nov 2016 15:37:38] DEBUG Executing statement:    create table `comments_post` ( `comments_oid`  integer not null, `post_oid`  integer not null, primary key (`comments_oid`, `post_oid`) )
+[23 Nov 2016 15:37:39] DEBUG Executing statement:  alter table `comments_post`   add index fk_comments_post_comments (`comments_oid`), add constraint fk_comments_post_comments foreign key (`comments_oid`) references `comments` (`oid`)
+[23 Nov 2016 15:37:39] DEBUG Executing statement:  alter table `comments_post`   add index fk_comments_post_post (`post_oid`), add constraint fk_comments_post_post foreign key (`post_oid`) references `post` (`oid`)
+[23 Nov 2016 15:37:39] DEBUG Executing statement:    create table `post_user_2` ( `post_oid`  integer not null, `user_oid`  integer not null, primary key (`post_oid`, `user_oid`) )
+[23 Nov 2016 15:37:40] DEBUG Executing statement:  alter table `post_user_2`   add index fk_post_user_2_post (`post_oid`), add constraint fk_post_user_2_post foreign key (`post_oid`) references `post` (`oid`)
+[23 Nov 2016 15:37:40] DEBUG Executing statement:  alter table `post_user_2`   add index fk_post_user_2_user (`user_oid`), add constraint fk_post_user_2_user foreign key (`user_oid`) references `user` (`oid`)
+[23 Nov 2016 15:37:40] DEBUG Executing statement:    alter table `comments`  add column  `comments_oid`  integer
+[23 Nov 2016 15:37:41] DEBUG Executing statement:  alter table `comments`   add index fk_comments_comments (`comments_oid`), add constraint fk_comments_comments foreign key (`comments_oid`) references `comments` (`oid`)
+[23 Nov 2016 15:37:41] DEBUG ================================================================================
+[23 Nov 2016 15:37:41] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[23 Nov 2016 15:37:41] INFO Database connection closed
+[23 Nov 2016 15:37:41] DEBUG Total time: 10888 milliseconds

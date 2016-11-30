@@ -21,7 +21,7 @@
         <LinkParameter id="mov1#opm5#icu5#ln35#par85" name="modules_Module.oid(modules)" source="mov1#opm5#icu5#icp13" target="mov1#opm5#mfu1.Group2Module.moduleOID"/>
       </Link>
     </InputCollectorUnit>
-    <IsNotNullUnit gr:x="320" gr:y="85" id="mov1#opm5#inn1" name="New group?">
+    <IsNotNullUnit gr:x="320" gr:y="85" id="mov1#opm5#inn1" name="New group?" gr:showAllParts="true">
       <OKLink id="mov1#opm5#inn1#oln14" name="OKFlow14" to="mov1#opm5#mfu1" automaticCoupling="true"/>
       <KOLink id="mov1#opm5#inn1#kln10" name="KOFlow10" to="mov1#opm5#cru1" automaticCoupling="true"/>
     </IsNotNullUnit>

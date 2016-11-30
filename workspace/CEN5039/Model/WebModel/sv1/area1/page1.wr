@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page1" name="SnapCamp" layout:pageLayout="BootstrapStyle/PublicView" ajaxEnabled="false">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page1" name="SnapCamp" layout:pageLayout="BootstrapStyle/PublicView" ajaxEnabled="false" layout:frameLayout="BootstrapStyle/PublicPageFrame">
   <ContentUnits>
     <EntryUnit gr:x="40" gr:y="0" id="sv1#area1#page1#enu1" name="Register" gr:showAllParts="true" fieldOrder="sv1#area1#page1#enu1#fld1 sv1#area1#page1#enu1#fld2 sv1#area1#page1#enu1#fld3 sv1#area1#page1#enu1#fld4 sv1#area1#page1#enu1#fld5 sv1#area1#page1#enu1#fld6" entity="User" ajaxEnableExpandedLinks="true" linkOrder="sv1#area1#page1#enu1#ln9">
       <Field id="sv1#area1#page1#enu1#fld1" name="First Name:" type="string" modifiable="true" attribute="User#att12">

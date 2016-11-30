@@ -1,0 +1,27 @@
+#?delimiters [%, %], [%=, %]
+<wr:Page type="HTML4_Transitional"/>
+[%setHTMLOutput()%]
+<wr:Resources types="jspdeclaration"/>
+<%@ page contentType="text/html; charset=UTF-8"%> 
+<webratio:Page page="<wr:Id context="page"/>"/>
+<html>
+<head>
+  [%if(enableURLFragments()){%]<wr:BaseURI/>[%}%]
+  <title><wr:Label context="page"/></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <style>
+  	td img{
+  		width: 100%;
+  		height:auto;
+  	}
+  </style>
+  <wr:Resources/>
+</head>
+<body style="background-color:white">
+<wr:PageForm>
+
+<wr:Grid/>
+
+</wr:PageForm>
+</body>
+</html>

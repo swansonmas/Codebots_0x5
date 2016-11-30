@@ -92,7 +92,7 @@ def emptyUnitMessage = params["empty-unit-message"]
 							<wr:Iterate var="attr" context="unit" select="layout:Attribute">
 							<wr:Visible>
 								<div style="margin-left: ${current.level}em;" class="<wr:StyleClass/> [%=attr["type"]%]">
-								[% if (index == 0) { %]<div style="margin-left: ${current.level}em;">[% } %]
+								[% if (index == 0) { %]<div>[% } %]
 									[% if ((linkPosition == "on_row") && (!links.empty)) {%]
 										<wr:Visible position="'index'">
 											<wr:Visible context="unitLink" position="'index'">
@@ -143,8 +143,9 @@ def emptyUnitMessage = params["empty-unit-message"]
 <script type="text/javascript">
 var commentString = document.getElementsByClassName('string');
 for(var i = 0; i < commentString.length ; i++ ){ 
+	commentString[i].style.marginTop = "2%";
 	if(commentString[i].getAttribute('style').includes('0em')){
-		commentString[i].style.borderTop = "1px red solid"
+		commentString[i].style.borderTop = "1px #ddd solid";
 	} 
 		}
 </script>

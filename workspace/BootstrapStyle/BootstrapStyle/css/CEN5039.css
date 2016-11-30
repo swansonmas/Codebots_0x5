@@ -188,9 +188,34 @@ text-align: center;
 }
 
 /*Custom form*/
+#checkUserName{
+    float: right;
+    position: relative;
+    top: 71px;
+    right: 60px;
+    color: #fa5742;
+    display: none;
+    z-index: 4;
+}
 
-form {
-    border: 3px solid #f1f1f1;
+#checkPwd{
+    float: right;
+    position: relative;
+    top: 75px;
+    right: 75px;
+    color: #fa5742;
+    display: none;
+    z-index: 4;
+}
+
+#pwdChk{
+    float: right;
+    position: relative;
+    top: 400px;
+    right: 45px;
+    color: #fa5742;
+    display: none;
+    z-index: 4;
 }
 
 .customField {
@@ -266,7 +291,7 @@ span.psw {
         height: 100%;
     }
 
-#logbox {
+#logbox, #logbox2 {
         padding: 10px;
         margin: 50px auto;
         width: 460px;
@@ -275,6 +300,12 @@ span.psw {
         -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     }
+
+#outerModalForm, #outLoginContainer{
+    margin: 0 auto;
+
+}
+
 
 h1 {
         text-align: center;
@@ -320,6 +351,7 @@ h1, input {
         height: 50px;
         display: block;
         margin: 30px auto 30px;
+        padding-top: 15px;
         color: white;
         background-color: #3CC;
         border: none;
@@ -330,6 +362,7 @@ h1, input {
 
 .inputButton:hover {
         top: 2px;
+        cursor: pointer;
         -webkit-box-shadow: 0 3px 0 #2CADAD;
         -moz-box-shadow: 0 3px 0 #2CADAD;
         box-shadow: 0 3px 0 #2CADAD;
@@ -344,35 +377,7 @@ h1, input {
         outline: none;
     }
 
-#loginFormUsr {
-    position: relative;
-    left: 103%;
-    top: 85px;
-    border: 2px #3cc solid;
-    padding: 15px 10px;
-    background: #FEFFED;
-    font-size: 15px;
-    display: none;
-    border-radius: 25px 15px 15px 25px;
-    color: #d2322d;
-}
 
-#loginPwdVal{
-    position: relative;
-    border: 1px #3cc solid;
-    padding: 15px 10px;
-    background: #fefefe;
-    font-size: 15px;
-    top: 124px;
-    left: 103%;
-    text-align: center;
-    height: auto;
-    width: 50%;
-    display: none;
-    border-radius: 25px 15px 15px 25px;
-    color: #d2322d;
-
-}
 
 #regForm_id, #loginForm_id{
     position: fixed; /* Stay in place */
@@ -414,6 +419,48 @@ h1, input {
     color: #d2322d;
 }
 
+#pretendfl1:focus{
+    background: url("./imgs/invalid.PNG") no-repeat 98% center;
+}
+
+#pretendfl1:valid{
+    background: url("./imgs/valid.png") no-repeat 98% center;
+}
+
+#pretendfl2:focus{
+    background: url("./imgs/invalid.PNG") no-repeat 98% center;
+}
+
+#pretendfl2:valid{
+    background: url("./imgs/valid.png") no-repeat 98% center;
+}
+
+#pretendfl3:focus{
+    background: url("./imgs/invalid.PNG") no-repeat 98% center;
+}
+
+#pretendfl3:valid{
+    background: url("./imgs/valid.png") no-repeat 98% center;
+}
+
+#pretendfl4:focus{
+    background: url("./imgs/invalid.PNG") no-repeat 98% center;
+}
+
+#pretendfl4:valid{
+    background: url("./imgs/valid.png") no-repeat 98% center;
+}
+
+#pretendfl5:focus{
+    background: url("./imgs/invalid.PNG") no-repeat 98% center;
+}
+
+#pretendfl5:valid{
+    background: url("./imgs/valid.png") no-repeat 98% center;
+}
+
+
+/*Media queries*/
 
 @media screen and (max-width: 1140px) {
     .cb-slideshow li div h3 { font-size: 140px }
@@ -430,9 +477,24 @@ h1, input {
     .cb-slideshow li div h3 {
         font-size: 50px;
     }
+    #logbox{
+        width:100%;
+    }
+
+    #logbox2{
+        width:100%;
+    }
+    #outerModalForm{
+        width:100%;
+
+    }
+
+    #outLoginContainer{
+        width:100%;
+    }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 378px) {
     .cb-slideshow li div h3 {
         font-size: 34px;
     }

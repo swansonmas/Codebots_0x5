@@ -52,20 +52,19 @@
     <Attribute id="ent1#att1" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent1#att6" name="time" type="timestamp" key="false" db:column="time"/>
     <Attribute id="ent1#att5" name="Description" type="text" contentType="text/html" key="false" db:column="description"/>
-    <Attribute id="ent1#att4" name="img" type="blob" contentType="image" key="false" db:column="img"/>
+    <Attribute id="ent1#att4" name="img" type="blob" contentType="image" key="false" storageType="database" db:column="img" db:blobColumn="imgblob"/>
     <Attribute id="ent1#att3" name="Title" type="string" key="false" db:column="title"/>
     <Attribute id="ent1#att2" name="Author" type="string" key="false" db:column="author"/>
     <Attribute id="ent1#att14" name="Status" type="string" key="false" db:column="status"/>
     <Attribute id="ent1#att15" name="tag" type="string" key="false" db:column="tag"/>
     <Attribute id="ent1#att17" name="Location" type="string" db:column="location"/>
   </Entity>
-  <Entity gr:x="425" gr:y="25" id="ent2" name="Comments" duration="persistent" attributeOrder="ent2#att7 ent2#att8 ent2#att9 ent2#att10 ent2#att11 ent2#att16" db:database="db2" db:table="comments">
+  <Entity gr:x="425" gr:y="25" id="ent2" name="Comments" duration="persistent" attributeOrder="ent2#att7 ent2#att8 ent2#att9 ent2#att10 ent2#att11" db:database="db2" db:table="comments">
     <Attribute id="ent2#att7" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att10" name="time" type="timestamp" key="false" db:column="time"/>
     <Attribute id="ent2#att9" name="comment" type="text" key="false" contentType="text/plain" db:column="comment"/>
     <Attribute id="ent2#att8" name="Author" type="string" key="false" db:column="author"/>
     <Attribute id="ent2#att11" name="postOID" type="string" key="false" db:column="postoid"/>
-    <Attribute id="ent2#att16" name="fk_comment" type="integer" db:column="fk_comment"/>
   </Entity>
   <Relationship id="rel1" name="Post_User" sourceEntity="ent1" targetEntity="User" gr:bendpoints="-122,83,-17,-117" db:database="db2" db:table="user">
     <RelationshipRole1 id="rel1#role1" name="PostToUser" maxCard="N">

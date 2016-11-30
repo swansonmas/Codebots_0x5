@@ -1,3 +1,7 @@
+#titleContainer{
+    width: 50%;
+    margin: 20px auto;
+}
 .myHeader{
     color: #7C7957;
     font-family: 'Trocchi', serif;
@@ -12,7 +16,7 @@
 .buttonw3c {
     display: inline-block;
     padding: 15px 25px;
-    font-size: 24px;
+    font-size: 16px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -22,8 +26,8 @@
     box-shadow: 0 4px #999;
     margin-top:4%;
     margin-bottom: 3%;
-    width:45%;
-    margin-left:55%;
+    width:35%;
+    margin-left:65%;
     border-radius: 12px;
 }
 
@@ -58,7 +62,7 @@
 
 
 .blogTitle{
-    font-size: 50px;
+    font-size: 32px;
     color: #fa5742;
     text-align: center;
 }
@@ -144,19 +148,18 @@ background: linear-gradient(to left, #8e9eab , #eef2f3); /* W3C, IE 10+/ Edge, F
     /* background: #1CD8D2; */ /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #1CD8D2 , #93EDC7); /* Chrome 10-25, Safari 5.1-6 */
     /* background: linear-gradient(to left, #1CD8D2 , #93EDC7); */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 23em;
+    height: 18em;
     background: #3a7bd5; /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #3a7bd5 , #3a6073); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #3a7bd5 , #3A60BE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    margin-top: 1%;
+    margin-top: 50px;
     width: 100%;
     border-bottom: 1px red solid;
 }
 
 #brandIcons{
-    text-align: center;
-    font-size: 70px;
-    padding: 61px 12px;
+
+    font-size: 50px;
     font-weight: bold;
     font-family: 'Raleway', sans-serif;
 }
@@ -227,10 +230,11 @@ background: linear-gradient(to left, #8e9eab , #eef2f3); /* W3C, IE 10+/ Edge, F
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 680px) {
     #grid_id0{
-        width: 99%;
-        padding:0;
+        width: 94%;
+        position: absolute;
+        top: 100%;
     }
 
     #grid_id1, #grid_id2{
@@ -251,10 +255,6 @@ background: linear-gradient(to left, #8e9eab , #eef2f3); /* W3C, IE 10+/ Edge, F
     #brandSection{
         height:20em;
     }
-}
-
-
-@media screen and (max-width: 368px) {
 
     #brandIcons{
 
@@ -263,5 +263,57 @@ background: linear-gradient(to left, #8e9eab , #eef2f3); /* W3C, IE 10+/ Edge, F
     }
     #brandSection{
         height:16em;
+    }
+
+    #postGridId0{
+        position: absolute;
+        width: 90%;
+        top: 100%;
+        right: 15%;
+    }
+
+    #postGridId1{
+        width: 97%;
+    }
+    #postGridId1 input, #cke_fld12{
+        width: 100%;
+    }
+
+    #grid6_id0{
+
+        width: 95%;
+        padding-left: 1%;
+    }
+
+    #grid4_id0{
+        width: 95%;
+        padding-left: 1%;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    #grid_id0{
+        width: 90%;
+        padding-left: 5px;
+    }
+
+    #brandIcons{
+
+        font-size: 32px;
+
+    }
+    .blogTitle {
+        font-size: 30px;
+
+    }
+
+    .myHeader{
+        font-size:22px;
+    }
+    .blogParagraphs {
+        font-size: 15px;
+
     }
 }
