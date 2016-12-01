@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov1#mpkg1#opm8" name="Action 8">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov1#mpkg1#opm8" name="New Message Email">
   <OperationUnits>
     <InputCollectorUnit id="mov1#mpkg1#opm8#icu8" gr:x="30" gr:y="60">
       <OKLink id="mov1#mpkg1#opm8#icu8#oln16" name="OKFlow16" to="mov1#mpkg1#opm8#mlu1">
@@ -12,6 +12,7 @@
     </InputCollectorUnit>
     <MailUnit gr:x="395" gr:y="100" id="mov1#mpkg1#opm8#mlu1" name="Mail" format="html" template="EmailTemplates/new_message_template.html">
       <OKLink id="mov1#mpkg1#opm8#mlu1#oln18" name="OKFlow18" to="mov1#mpkg1#opm8#okcu6" automaticCoupling="true"/>
+      <KOLink id="mov1#mpkg1#opm8#mlu1#kln14" name="KOFlow14" to="mov1#mpkg1#opm8#kocu8" automaticCoupling="true"/>
     </MailUnit>
     <OKCollectorUnit gr:x="545" gr:y="65" id="mov1#mpkg1#opm8#okcu6" name="Success"/>
     <KOCollectorUnit gr:x="545" gr:y="155" id="mov1#mpkg1#opm8#kocu8" name="KO Port8"/>

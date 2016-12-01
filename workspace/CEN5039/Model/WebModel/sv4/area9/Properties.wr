@@ -1,21 +1,12 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="280" gr:y="170" id="sv4#area9" name="Reports" landmark="true" protected="true" defaultPage="sv4#area9#page6">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="280" gr:y="115" id="sv4#area9" name="Staff Posts" landmark="true" protected="true" defaultPage="sv4#area9#page6">
   <OperationUnits>
-    <CreateUnit gr:x="380" gr:y="35" id="sv4#area9#cru6" name="Create Comment" entity="ent2"/>
-    <TimeUnit gr:x="410" gr:y="350" id="sv4#area9#tmu3" name="Today" linkOrder="sv4#area9#tmu3#ln56">
-      <Link id="sv4#area9#tmu3#ln56" name="Flow56" to="sv4#area9#page11#enu9" type="transport" validate="true">
-        <LinkParameter id="sv4#area9#tmu3#ln56#par108" name="Current/Input Time_time" source="currentTimestamp" target="sv4#area9#page11#enu9#fld25_slot"/>
-      </Link>
-    </TimeUnit>
-    <GetUnit gr:x="385" gr:y="145" id="sv4#area9#gtu6" name="Get Current User" contextParameters="UserCtxParam" linkOrder="sv4#area9#gtu6#ln53">
-      <Link id="sv4#area9#gtu6#ln53" name="Flow53" to="sv4#area9#seu4" automaticCoupling="true" type="transport" validate="true"/>
-    </GetUnit>
-    <SelectorUnit gr:x="395" gr:y="245" id="sv4#area9#seu4" name="Current User Info" entity="User" linkOrder="sv4#area9#seu4#ln55">
-      <Selector id="sv4#area9#seu4#su16" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv4#area9#seu4#su16#kcond14" name="CurrentUserKeyCondition" predicate="in" implied="false"/>
+    <CreateUnit gr:x="430" gr:y="110" id="sv4#area9#cru6" name="Create Comment" entity="ent2"/>
+    <ModifyUnit gr:x="395" gr:y="0" id="sv4#area9#mfu4" name="Update Post" entity="ent1">
+      <Selector id="sv4#area9#mfu4#su17" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area9#mfu4#su17#kcond19" name="KeyCondition19" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv4#area9#seu4#ln55" name="Flow55" to="sv4#area9#page11#enu9" type="transport" validate="true">
-        <LinkParameter id="sv4#area9#seu4#ln55#par104" name="userName_Author" source="userNameArray" target="sv4#area9#page11#enu9#fld22_slot"/>
-      </Link>
-    </SelectorUnit>
+      <OKLink id="sv4#area9#mfu4#oln19" name="OKFlow19" to="sv4#area9#miu6" automaticCoupling="true"/>
+    </ModifyUnit>
+    <ModuleInstanceUnit gr:x="540" gr:y="10" id="sv4#area9#miu6" action="true" moduleId="mov1#mpkg1#opm8"/>
   </OperationUnits>
 </Area>

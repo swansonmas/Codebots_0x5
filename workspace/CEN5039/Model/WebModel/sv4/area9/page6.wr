@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv4#area9#page6" name="Issues">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="55" id="sv4#area9#page6" name="Issues">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv4#area9#page6#enu8" name="Search" linkOrder="sv4#area9#page6#enu8#ln44">
       <SelectionField id="sv4#area9#page6#enu8#sfld3" name="Status" type="string">
