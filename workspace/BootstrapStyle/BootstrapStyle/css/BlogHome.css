@@ -126,12 +126,27 @@ hr{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    margin-left: 38%;
+    margin-left: 45%;
     margin-right: 1%;
+}
+
+.btn-outline-primary:hover{
+    text-decoration: none;
+    border-color: #fa5742;
 }
 
 .glyphicon{
 	display:block;
+}
+
+#resultTable{
+    margin-top: -22px;
+}
+
+#resultTable .panel-heading{
+    text-align: center;
+    text-transform: uppercase;
+    color: #fa5742;
 }
 
 body{

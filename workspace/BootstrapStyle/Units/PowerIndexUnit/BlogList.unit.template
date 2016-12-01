@@ -330,7 +330,23 @@ def printPagination() {
 	try{
 	$('.panel-default ')[2].setAttribute('class', 'panel panel-default collapse in');
 	$('.panel-default ')[2].setAttribute('id', 'resultTable');
+	
+	
+	$('#resultTable').find('.string').each(function(){$(this).addClass('col-xs-5')});
+    var subTitle = " ";
+    var partOfTitle = $('#resultTable').find('.string');
+
+    for(var i = 0; i < partOfTitle.length; i++){
+        subTitle = partOfTitle[i].innerText;
+        subTitle = subTitle.replace(/(([^\s]+\s\s*){7})(.*)/,"$1…");
+        partOfTitle[i].innerText = subTitle;
+
+    }
+	
+	
 	}
+	
+	
 	catch(err){
 	console.log(err);
 	}

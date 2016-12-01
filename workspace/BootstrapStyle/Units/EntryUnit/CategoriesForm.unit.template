@@ -92,11 +92,23 @@ def hasFields = !unit.selectNodes("layout:Field").isEmpty()
 </div>	
 
 <script type="text/javascript">
-document.getElementById('button:ln10').parentElement.innerHTML += "<span id='controlResults' class='btn btn-primary collapsed in' data-toggle='collapse' data-target='#resultTable'>Hide Results</span>";
+document.getElementById('button:ln10').parentElement.innerHTML += "<span id='controlResults' class='btn btn-danger collapsed in' data-toggle='collapse' data-target='#resultTable'>Hide Results</span>";
 $("#controlResults").click(function () {
             $(this).text(function(i, v){
                return v === 'Hide Results' ? 'Show Results' : 'Hide Results'
             })
         });
+        
+ $('#page2_cell_7 .panel-body')[0].className = "panel-body well";
+ $('#page2_cell_7 .panel-body')[0].style.marginBottom = "0";      
+ $('#page2_cell_7 .panel-heading')[0].style.background = "rgba(0,0,0,0.7)";
+  $('#page2_cell_7 .panel-heading')[0].style.color = "#ccc";       
+ document.getElementById('button:ln10').className ="btn btn-primary";
+ document.getElementById('button:ln10').style.marginLeft ="18%";
+ try{
+ $('#page2_cell_7 .panel-heading')[1].style.background = "#fff"; }
+ catch(err){
+ }
+
 </script>
 </wr:Frame>

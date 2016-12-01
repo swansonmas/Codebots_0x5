@@ -104,8 +104,8 @@ var grids = document.getElementsByClassName('grid_5')
 	
     }
     
-    
-  }
+    document.getElementById('fld10').setAttribute('required', '');
+}
   catch(err){
   	
   }
