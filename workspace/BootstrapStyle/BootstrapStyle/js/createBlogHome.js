@@ -73,7 +73,7 @@ var descriptionAnchors = $('.col-md-12').find('a#ln20');
 
 for(var i = 0; i < descriptionAnchors.length; i++){
 
-descriptionAnchors[i].setAttribute('class','col-xs-4 btn btn-primary');
+descriptionAnchors[i].setAttribute('class','col-xs-3 btn btn-primary');
 }
 
 
