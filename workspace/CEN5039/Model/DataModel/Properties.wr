@@ -1,5 +1,5 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="30" gr:y="225" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att12 User#att13" db:database="db2" db:table="user">
+  <Entity id="User" name="User" duration="persistent" gr:x="15" gr:y="290" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att12 User#att13" db:database="db2" db:table="user">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="userName" id="userName" type="string" key="false" db:column="username"/>
     <Attribute name="password" id="password" type="password" key="false" db:column="password"/>
@@ -7,11 +7,11 @@
     <Attribute id="User#att13" name="Last Name" type="string" db:column="last_name"/>
     <Attribute id="User#att12" name="First Name" type="string" db:column="first_name"/>
   </Entity>
-  <Entity id="Group" name="Group" duration="persistent" gr:x="260" gr:y="245" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db2" db:table="group">
+  <Entity id="Group" name="Group" duration="persistent" gr:x="285" gr:y="320" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db2" db:table="group">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
   </Entity>
-  <Entity id="Module" name="Module" duration="persistent" gr:x="480" gr:y="230" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db2" db:table="module">
+  <Entity id="Module" name="Module" duration="persistent" gr:x="540" gr:y="310" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db2" db:table="module">
     <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
     <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
@@ -66,14 +66,6 @@
     <Attribute id="ent2#att8" name="Author" type="string" key="false" db:column="author"/>
     <Attribute id="ent2#att11" name="postOID" type="string" key="false" db:column="postoid"/>
   </Entity>
-  <Relationship id="rel1" name="Post_User" sourceEntity="ent1" targetEntity="User" gr:bendpoints="-122,83,-17,-117" db:database="db2" db:table="user">
-    <RelationshipRole1 id="rel1#role1" name="PostToUser" maxCard="N">
-      <db:JoinColumn attribute="ent1#att1" name="post_oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel1#role2" name="UserToPost" maxCard="1">
-      <db:JoinColumn attribute="userOID" name="oid"/>
-    </RelationshipRole2>
-  </Relationship>
   <Relationship id="rel2" name="Post_Comments" sourceEntity="ent1" targetEntity="ent2" gr:bendpoints="121,-17,-114,-27" db:database="db2" db:table="comments">
     <RelationshipRole1 id="rel2#role3" name="PostToComments" maxCard="N">
       <db:JoinColumn attribute="ent1#att1" name="post_oid"/>
@@ -106,6 +98,14 @@
     </RelationshipRole1>
     <RelationshipRole2 id="rel5#role10" name="CommentsToComments2" maxCard="1">
       <db:JoinColumn attribute="ent2#att7" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel6" name="Assigned_To" sourceEntity="User" targetEntity="ent1" gr:bendpoints="126,-115,1,165" db:database="db2" db:table="post">
+    <RelationshipRole1 id="rel6#role11" name="AssignedUserToPost" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel6#role12" name="PostToAssignedToUser" maxCard="1">
+      <db:JoinColumn attribute="ent1#att1" name="oid"/>
     </RelationshipRole2>
   </Relationship>
 </DataModel>

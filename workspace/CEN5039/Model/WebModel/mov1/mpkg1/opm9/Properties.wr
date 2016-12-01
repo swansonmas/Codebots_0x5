@@ -1,6 +1,0 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="5" gr:y="65" id="mov1#mpkg1#opm9" name="Closed Post Email">
-  <OperationUnits>
-    <InputCollectorUnit id="mov1#mpkg1#opm9#icu9" name="Input Collector" gr:x="30" gr:y="60"/>
-    <MailUnit gr:x="310" gr:y="95" id="mov1#mpkg1#opm9#mlu2" name="Mail" format="html"/>
-  </OperationUnits>
-</OperationModule>
