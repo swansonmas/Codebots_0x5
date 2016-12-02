@@ -1,0 +1,13 @@
+[2016-11-30 14:24:12] Uploading application on server [52.210.230.236]
+[2016-11-30 14:24:12] Computing changes...
+[2016-11-30 14:24:22] Found 5 file(s) changed
+[2016-11-30 14:24:22] --------------------------------------------
+[2016-11-30 14:24:22] UPDATE                  /page5.jsp
+[2016-11-30 14:24:22] ADD                     /BootstrapStyle/css/imgs/valid.png
+[2016-11-30 14:24:22] UPDATE                  /page3.jsp
+[2016-11-30 14:24:22] UPDATE          RESTART /WEB-INF/lib/com.webratio.struts.jar
+[2016-11-30 14:24:22] DELETE                  /BootstrapStyle/css/imgs/valid.PNG
+[2016-11-30 14:24:22] --------------------------------------------
+[2016-11-30 14:24:22] Stopping application server
+[2016-11-30 14:24:34] Uploading changes (406.4 KB)
+[2016-11-30 14:24:36] Starting application server

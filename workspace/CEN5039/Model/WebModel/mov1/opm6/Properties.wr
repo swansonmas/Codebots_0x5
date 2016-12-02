@@ -1,0 +1,19 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="490" gr:y="75" id="mov1#opm6" name="Delete User">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm6#icu6" gr:x="10" gr:y="115">
+      <InputCollectorParameter id="mov1#opm6#icu6#icp15" name="oidUser"/>
+      <OKLink id="mov1#opm6#icu6#oln20" name="OKFlow20" to="mov1#opm6#dlu2">
+        <LinkParameter id="mov1#opm6#icu6#oln20#par157" name="oidUser_KeyCondition16 [oid]" source="mov1#opm6#icu6#icp15" target="mov1#opm6#dlu2#su26#kcond16.userOID"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <DeleteUnit gr:x="335" gr:y="95" id="mov1#opm6#dlu2" name="Delete User" entity="User">
+      <Selector id="mov1#opm6#dlu2#su26" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm6#dlu2#su26#kcond16" name="KeyCondition16" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm6#dlu2#oln21" name="OKFlow21" to="mov1#opm6#okcu4" automaticCoupling="true"/>
+      <KOLink id="mov1#opm6#dlu2#kln17" name="KOFlow17" to="mov1#opm6#kocu6" automaticCoupling="true"/>
+    </DeleteUnit>
+    <OKCollectorUnit gr:x="515" gr:y="45" id="mov1#opm6#okcu4" name="Success"/>
+    <KOCollectorUnit gr:x="515" gr:y="170" id="mov1#opm6#kocu6" name="Failure"/>
+  </OperationUnits>
+</OperationModule>

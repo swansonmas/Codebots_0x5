@@ -1,0 +1,54 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="495" gr:y="140" id="mov1#opm7" name="Manage User">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm7#icu7" gr:x="35" gr:y="70" linkOrder="mov1#opm7#icu7#ln72 mov1#opm7#icu7#ln73">
+      <InputCollectorParameter id="mov1#opm7#icu7#icp16" name="defaultGroup"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp17" name="email"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp18" name="groups"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp19" name="oidUser"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp20" name="first_name"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp21" name="last_name"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp22" name="username"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp23" name="password"/>
+      <Link id="mov1#opm7#icu7#ln72" name="Flow72" to="mov1#opm7#mfu2" type="transport" validate="true" gr:bendpoints="166,122,-219,-8">
+        <LinkParameter id="mov1#opm7#icu7#ln72#par158" name="oidUser_KeyCondition17 [oid]" source="mov1#opm7#icu7#icp19" target="mov1#opm7#mfu2#su27#kcond17.userOID"/>
+        <LinkParameter id="mov1#opm7#icu7#ln72#par121" name="email_email" source="mov1#opm7#icu7#icp17" target="mov1#opm7#mfu2.email"/>
+        <LinkParameter id="mov1#opm7#icu7#ln72#par122" name="first_name_First Name" source="mov1#opm7#icu7#icp20" target="mov1#opm7#mfu2.User#att12"/>
+        <LinkParameter id="mov1#opm7#icu7#ln72#par123" name="last_name_Last Name" source="mov1#opm7#icu7#icp21" target="mov1#opm7#mfu2.User#att13"/>
+        <LinkParameter id="mov1#opm7#icu7#ln72#par124" name="password_password" source="mov1#opm7#icu7#icp23" target="mov1#opm7#mfu2.password"/>
+        <LinkParameter id="mov1#opm7#icu7#ln72#par125" name="username_userName" source="mov1#opm7#icu7#icp22" target="mov1#opm7#mfu2.userName"/>
+        <LinkParameter id="mov1#opm7#icu7#ln72#par120" name="defaultGroup_Group.oid(defaultGroup)" source="mov1#opm7#icu7#icp16" target="mov1#opm7#mfu2.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov1#opm7#icu7#ln72#par126" name="groups_Group.oid(groups)" source="mov1#opm7#icu7#icp18" target="mov1#opm7#mfu2.User2Group.groupOID"/>
+      </Link>
+      <Link id="mov1#opm7#icu7#ln73" name="Flow73" to="mov1#opm7#cru5" type="transport" validate="true" gr:bendpoints="191,-96,-179,-1;332,-72,-43,-12">
+        <LinkParameter id="mov1#opm7#icu7#ln73#par159" name="email_email" source="mov1#opm7#icu7#icp17" target="mov1#opm7#cru5.email"/>
+        <LinkParameter id="mov1#opm7#icu7#ln73#par160" name="first_name_First Name" source="mov1#opm7#icu7#icp20" target="mov1#opm7#cru5.User#att12"/>
+        <LinkParameter id="mov1#opm7#icu7#ln73#par161" name="defaultGroup_Group.oid(defaultGroup)" source="mov1#opm7#icu7#icp16" target="mov1#opm7#cru5.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov1#opm7#icu7#ln73#par162" name="groups_Group.oid(groups)" source="mov1#opm7#icu7#icp18" target="mov1#opm7#cru5.User2Group.groupOID"/>
+        <LinkParameter id="mov1#opm7#icu7#ln73#par163" name="last_name_Last Name" source="mov1#opm7#icu7#icp21" target="mov1#opm7#cru5.User#att13"/>
+        <LinkParameter id="mov1#opm7#icu7#ln73#par164" name="oidUser_oid" source="mov1#opm7#icu7#icp19" target="mov1#opm7#cru5.userOID"/>
+        <LinkParameter id="mov1#opm7#icu7#ln73#par165" name="password_password" source="mov1#opm7#icu7#icp23" target="mov1#opm7#cru5.password"/>
+        <LinkParameter id="mov1#opm7#icu7#ln73#par166" name="username_userName" source="mov1#opm7#icu7#icp22" target="mov1#opm7#cru5.userName"/>
+      </Link>
+      <OKLink id="mov1#opm7#icu7#oln25" name="OKFlow25" to="mov1#opm7#inn2">
+        <LinkParameter id="mov1#opm7#icu7#oln25#par167" name="oidUser_Input" source="mov1#opm7#icu7#icp19" target="mov1#opm7#inn2.isnotnull"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <IsNotNullUnit gr:x="335" gr:y="125" id="mov1#opm7#inn2" name="New User">
+      <KOLink id="mov1#opm7#inn2#kln18" name="KOFlow18" to="mov1#opm7#cru5" automaticCoupling="true"/>
+      <OKLink id="mov1#opm7#inn2#oln22" name="OKFlow22" to="mov1#opm7#mfu2" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <CreateUnit gr:x="475" gr:y="20" id="mov1#opm7#cru5" name="Create User" entity="User">
+      <KOLink id="mov1#opm7#cru5#kln19" name="KOFlow19" to="mov1#opm7#kocu7" automaticCoupling="true"/>
+      <OKLink id="mov1#opm7#cru5#oln23" name="OKFlow23" to="mov1#opm7#okcu5" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="480" gr:y="225" id="mov1#opm7#mfu2" name="Update User" entity="User">
+      <Selector id="mov1#opm7#mfu2#su27" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm7#mfu2#su27#kcond17" name="KeyCondition17" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov1#opm7#mfu2#kln20" name="KOFlow20" to="mov1#opm7#kocu7" automaticCoupling="true"/>
+      <OKLink id="mov1#opm7#mfu2#oln24" name="OKFlow24" to="mov1#opm7#okcu5" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="695" gr:y="20" id="mov1#opm7#okcu5" name="Success"/>
+    <KOCollectorUnit gr:x="695" gr:y="235" id="mov1#opm7#kocu7" name="Failure"/>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,84 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="295" gr:y="1135" id="sv3#page14" name="Modal Post" layout:pageLayout="BootstrapStyle/adminDescriptionPage">
+  <ContentUnits>
+    <DataUnit id="sv3#page14#dau10" name="Image" gr:x="15" gr:y="0" entity="ent1" displayAttributes="ent1#att3 ent1#att4 ent1#att5">
+      <Selector id="sv3#page14#dau10#su22" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page14#dau10#su22#kcond22" name="KeyConditionUser" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page14#dau10#ln49" name="data" to="sv3#page14#enu8" type="transport" validate="true">
+        <LinkParameter id="sv3#page14#dau10#ln49#par119" name="oid_Key Condition [oid]" source="data.ent1#att1" target="sv3#page14#enu8.ent1#att1"/>
+      </Link>
+    </DataUnit>
+    <EntryUnit gr:x="15" gr:y="160" id="sv3#page14#enu8" name="Edit Status" entity="ent1" fieldOrder="sv3#page14#enu8#sfld4 sv3#page14#enu8#sfld8" linkOrder="sv3#page14#enu8#ln52">
+      <SelectionField id="sv3#page14#enu8#sfld4" type="string" preselectValue="Open" name="status" attribute="ent1#att14">
+        <Slot id="sv3#page14#enu8#sfld4#slot3" name="Status" label="true" output="true" value="Open|In Progress|Closed"/>
+      </SelectionField>
+      <Link id="sv3#page14#enu8#ln52" name="update" to="sv3#mfu3" automaticCoupling="true" type="normal" validate="true" ajaxOpenWaitingDialog="true"/>
+      <SelectionField id="sv3#page14#enu8#sfld8" name="Assigned To" type="string" role="rel6#role12"/>
+    </EntryUnit>
+    <SelectorUnit gr:x="0" gr:y="270" id="sv3#page14#seu4" name="Staff Members" entity="User">
+      <Link id="sv3#page14#seu4#ln66" name="Flow66" to="sv3#page14#enu8" type="transport" validate="true">
+        <LinkParameter id="sv3#page14#seu4#ln66#par70" name="userName_PostToAssignedToUser [label]" source="userNameArray" target="sv3#page14#enu8#sfld8_label"/>
+        <LinkParameter id="sv3#page14#seu4#ln66#par71" name="oid_PostToAssignedToUser [output]" source="userOIDArray" target="sv3#page14#enu8#sfld8_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell colspan="10">
+        <layout:Unit unitId="sv3#page14#dau10">
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4">
+            <layout:LayoutParameter name="image-width" value="250" type="attribute"/>
+            <layout:LayoutParameter name="image-height" value="250" type="attribute"/>
+          </layout:Attribute>
+          <layout:Attribute attribute="ent1#att5"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell colspan="10">
+        <layout:Unit unitId="sv3#page14#enu8">
+          <layout:Link link="sv3#page14#enu8#ln52"/>
+          <layout:Field field="sv3#page14#enu8#sfld4"/>
+          <layout:Field field="sv3#page14#enu8#sfld8"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

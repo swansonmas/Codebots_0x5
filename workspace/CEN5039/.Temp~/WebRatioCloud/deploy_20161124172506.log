@@ -1,0 +1,14 @@
+[2016-11-24 17:25:06] Uploading application on server [52.213.216.16]
+[2016-11-24 17:25:06] Computing changes...
+[2016-11-24 17:25:16] Found 6 file(s) changed
+[2016-11-24 17:25:16] --------------------------------------------
+[2016-11-24 17:25:16] UPDATE                  /WEB-INF/descr/page1.descr
+[2016-11-24 17:25:16] UPDATE                  /page5.jsp
+[2016-11-24 17:25:16] UPDATE                  /WEB-INF/descr/enu1.descr
+[2016-11-24 17:25:16] UPDATE                  /page3.jsp
+[2016-11-24 17:25:16] UPDATE          RESTART /WEB-INF/lib/com.webratio.struts.jar
+[2016-11-24 17:25:16] UPDATE          RESTART /WEB-INF/classes/ApplicationResources_en_US.properties
+[2016-11-24 17:25:16] --------------------------------------------
+[2016-11-24 17:25:16] Stopping application server
+[2016-11-24 17:25:26] Uploading changes (418.3 KB)
+[2016-11-24 17:25:28] Starting application server

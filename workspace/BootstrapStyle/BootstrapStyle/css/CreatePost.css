@@ -1,0 +1,19 @@
+@media screen and (max-width: 680px) {
+
+    .grid_4{
+        position: absolute;
+        width: 90%;
+        top: 100%;
+        right: 15%;
+    }
+
+    .grid_5{
+        width: 97%;
+    }
+    #postGridId1 input, #cke_fld12{
+        width: 100%;
+    }
+
+
+}
+

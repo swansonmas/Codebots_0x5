@@ -1,0 +1,12 @@
+[2016-11-24 17:46:10] Uploading application on server [52.213.216.16]
+[2016-11-24 17:46:10] Computing changes...
+[2016-11-24 17:46:18] Found 4 file(s) changed
+[2016-11-24 17:46:18] --------------------------------------------
+[2016-11-24 17:46:18] UPDATE                  /BootstrapStyle/js/adjustPublicPage.js
+[2016-11-24 17:46:18] UPDATE                  /page5.jsp
+[2016-11-24 17:46:18] UPDATE                  /page3.jsp
+[2016-11-24 17:46:18] UPDATE          RESTART /WEB-INF/lib/com.webratio.struts.jar
+[2016-11-24 17:46:18] --------------------------------------------
+[2016-11-24 17:46:18] Stopping application server
+[2016-11-24 17:46:29] Uploading changes (409.4 KB)
+[2016-11-24 17:46:30] Starting application server

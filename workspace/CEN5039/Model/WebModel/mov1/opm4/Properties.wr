@@ -1,0 +1,21 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="285" gr:y="75" id="mov1#opm4" name="Delete group">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm4#icu4" gr:x="30" gr:y="80">
+      <InputCollectorParameter id="mov1#opm4#icu4#icp10" name="oidGroup"/>
+      <OKLink id="mov1#opm4#icu4#oln7" name="OKFlow7" to="mov1#opm4#dlu1">
+        <LinkParameter id="mov1#opm4#icu4#oln7#par86" name="oidGroup_KeyCondition5 [oid]" source="mov1#opm4#icu4#icp10" target="mov1#opm4#dlu1#su10#kcond5.groupOID"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <DeleteUnit gr:x="325" gr:y="65" id="mov1#opm4#dlu1" name="Delete group" entity="Group">
+      <Selector id="mov1#opm4#dlu1#su10" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm4#dlu1#su10#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm4#dlu1#oln6" name="OKFlow6" to="mov1#opm4#okcu2" automaticCoupling="true"/>
+      <KOLink id="mov1#opm4#dlu1#kln7" name="KOFlow7" to="mov1#opm4#kocu4" automaticCoupling="true"/>
+    </DeleteUnit>
+    <OKCollectorUnit gr:x="540" gr:y="35" id="mov1#opm4#okcu2" name="Success"/>
+    <KOCollectorUnit gr:x="540" gr:y="150" id="mov1#opm4#kocu4" name="Failure">
+      <OutputCollectorParameter id="mov1#opm4#kocu4#ocp3" name="errorMessage" value="There was an error deleting "/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>

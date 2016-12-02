@@ -1,19 +1,18 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page8" name="Comment2Comment" gr:x="55" gr:y="840" landmark="false" layout:pageLayout="WRDefault/Empty">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page8" name="Comment2Comment" gr:x="-10" gr:y="880" landmark="false" layout:pageLayout="WRDefault/Empty">
   <ContentUnits>
     <EntryUnit id="sv2#page8#enu7" name="Write a Reply" linkOrder="sv2#page8#enu7#ln26" gr:showAllParts="true" gr:x="0" gr:y="0" entity="ent2" fieldOrder="sv2#page8#enu7#fld27">
       <Field id="sv2#page8#enu7#fld27" name="Reply" type="text" modifiable="true" attribute="ent2#att9"/>
-      <Field id="sv2#page8#enu7#fld28" name="fk_comment" type="integer" modifiable="false" preloaded="true" attribute="ent2#att16" hidden="true"/>
+      <Field id="sv2#page8#enu7#fld28" name="fk_comment" type="integer" modifiable="false" preloaded="true" hidden="true"/>
       <Field id="sv2#page8#enu7#fld29" name="Author" type="string" modifiable="false" attribute="ent2#att8" preloaded="true" hidden="true"/>
       <Field id="sv2#page8#enu7#fld30" name="time" type="timestamp" preloaded="true" attribute="ent2#att10" hidden="true"/>
       <Field id="sv2#page8#enu7#fld31" name="postOID" type="string" preloaded="true" attribute="ent2#att11" hidden="true"/>
-      <Link id="sv2#page8#enu7#ln26" name="Send" to="sv2#area5#cru3" type="normal" validate="true" ajaxOpenWaitingDialog="true">
-        <LinkParameter id="sv2#page8#enu7#ln26#par68" name="Author_Author" source="sv2#page8#enu7#fld29" target="sv2#area5#cru3.ent2#att8"/>
-        <LinkParameter id="sv2#page8#enu7#ln26#par69" name="Comments Object_Comments Object" source="entityBean" target="sv2#area5#cru3.entityBeans"/>
-        <LinkParameter id="sv2#page8#enu7#ln26#par70" name="fk_comment_fk_comment" source="sv2#page8#enu7#fld28" target="sv2#area5#cru3.ent2#att16"/>
-        <LinkParameter id="sv2#page8#enu7#ln26#par71" name="Key [oid]_oid" source="key.ent2#att7" target="sv2#area5#cru3.ent2#att7"/>
-        <LinkParameter id="sv2#page8#enu7#ln26#par72" name="postOID_Post.oid(CommentsToPost)" source="sv2#page8#enu7#fld31" target="sv2#area5#cru3.rel2#role4.ent1#att1"/>
-        <LinkParameter id="sv2#page8#enu7#ln26#par74" name="time_time" source="sv2#page8#enu7#fld30" target="sv2#area5#cru3.ent2#att10"/>
-        <LinkParameter id="sv2#page8#enu7#ln26#par75" name="Comment_comment" source="sv2#page8#enu7#fld27" target="sv2#area5#cru3.ent2#att9"/>
+      <Link id="sv2#page8#enu7#ln26" name="Send" to="sv2#cru6" type="normal" validate="true" ajaxOpenWaitingDialog="true" ajaxEnabled="false" gr:bendpoints="-155,-132,-25,133">
+        <LinkParameter id="sv2#page8#enu7#ln26#par53" name="Author_Author" source="sv2#page8#enu7#fld29" target="sv2#cru6.ent2#att8"/>
+        <LinkParameter id="sv2#page8#enu7#ln26#par54" name="Reply_comment" source="sv2#page8#enu7#fld27" target="sv2#cru6.ent2#att9"/>
+        <LinkParameter id="sv2#page8#enu7#ln26#par55" name="Comments Object_Comments Object" source="entityBean" target="sv2#cru6.entityBeans"/>
+        <LinkParameter id="sv2#page8#enu7#ln26#par56" name="Key [oid]_oid" source="key.ent2#att7" target="sv2#cru6.ent2#att7"/>
+        <LinkParameter id="sv2#page8#enu7#ln26#par58" name="time_time" source="sv2#page8#enu7#fld30" target="sv2#cru6.ent2#att10"/>
+        <LinkParameter id="sv2#page8#enu7#ln26#par60" name="postOID_Comments.oid(CommentsToComments2)" source="key.ent2#att7" target="sv2#cru6.rel5#role10.ent2#att7"/>
       </Link>
     </EntryUnit>
     <GetUnit id="sv2#page8#gtu5" name="LoggedUser" gr:x="325" gr:y="35" contextParameters="UserCtxParam">

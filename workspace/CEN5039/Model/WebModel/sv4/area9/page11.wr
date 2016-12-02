@@ -1,0 +1,171 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="185" gr:y="0" id="sv4#area9#page11" name="Issue Details">
+  <ContentUnits>
+    <DataUnit gr:x="25" gr:y="80" id="sv4#area9#page11#dau5" name="Details" entity="ent1" displayAttributes="ent1#att3 ent1#att4 ent1#att2 ent1#att6 ent1#att5 ent1#att14 ent1#att15 ent1#att17">
+      <Selector id="sv4#area9#page11#dau5#su15" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area9#page11#dau5#su15#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#area9#page11#dau5#ln51" name="Flow51" to="sv4#area9#cru6" type="transport" validate="true" gr:bendpoints="-64,84,-84,-111">
+        <LinkParameter id="sv4#area9#page11#dau5#ln51#par101" name="oid_Post.oid(CommentsToPost)" source="data.ent1#att1" target="sv4#area9#cru6.rel2#role4.ent1#att1"/>
+      </Link>
+      <Link id="sv4#area9#page11#dau5#ln58" name="Flow58" to="sv4#area9#page11#seu5" type="transport" validate="true" gr:bendpoints="-76,73,-96,-192;-64,168,-84,-97">
+        <LinkParameter id="sv4#area9#page11#dau5#ln58#par109" name="oid_PostComments [oid]" source="data.ent1#att1" target="sv4#area9#page11#seu5#su18#rcond1.ent2#att7"/>
+      </Link>
+      <Link id="sv4#area9#page11#dau5#ln54" name="Flow54" to="sv4#area9#mfu4" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv4#area9#page11#dau5#ln57" name="Flow57" to="sv4#area9#page11#enu11" type="transport" validate="true">
+        <LinkParameter id="sv4#area9#page11#dau5#ln57#par6" name="Status_Status - Preselection" source="data.ent1#att14" target="sv4#area9#page11#enu11#sfld6_presel"/>
+      </Link>
+      <Link id="sv4#area9#page11#dau5#ln60" name="Flow60" to="sv4#area9#page11#enu9" type="transport" validate="true">
+        <LinkParameter id="sv4#area9#page11#dau5#ln60#par68" name="oid_postOID" source="data.ent1#att1" target="sv4#area9#page11#enu9#fld32_slot"/>
+      </Link>
+    </DataUnit>
+    <EntryUnit gr:x="15" gr:y="190" id="sv4#area9#page11#enu9" name="Comment Form" linkOrder="sv4#area9#page11#enu9#ln48" entity="ent2">
+      <Field id="sv4#area9#page11#enu9#fld19" name="Comment" type="text" modifiable="true" contentType="text/html"/>
+      <Link id="sv4#area9#page11#enu9#ln48" name="Send" to="sv4#area9#cru6" type="normal" validate="true">
+        <LinkParameter id="sv4#area9#page11#enu9#ln48#par102" name="Comment_comment" source="sv4#area9#page11#enu9#fld19" target="sv4#area9#cru6.ent2#att9"/>
+        <LinkParameter id="sv4#area9#page11#enu9#ln48#par106" name="Author_Author" source="sv4#area9#page11#enu9#fld22" target="sv4#area9#cru6.ent2#att8"/>
+        <LinkParameter id="sv4#area9#page11#enu9#ln48#par107" name="Date_time" source="sv4#area9#page11#enu9#fld25" target="sv4#area9#cru6.ent2#att10"/>
+        <LinkParameter id="sv4#area9#page11#enu9#ln48#par56" name="Key [oid]_postOID" source="sv4#area9#page11#enu9#fld32" target="sv4#area9#cru6.ent2#att11"/>
+      </Link>
+      <Field id="sv4#area9#page11#enu9#fld22" name="Author" type="string" modifiable="false" hidden="true" preloaded="true"/>
+      <Field id="sv4#area9#page11#enu9#fld25" name="time" type="timestamp" modifiable="false" attribute="ent2#att10" preloaded="true" hidden="true"/>
+      <Field id="sv4#area9#page11#enu9#fld32" name="postOID" type="string" modifiable="false" attribute="ent2#att11" preloaded="true" hidden="true"/>
+    </EntryUnit>
+    <RecursiveHierarchicalIndexUnit gr:x="0" gr:y="455" id="sv4#area9#page11#rtu2" name="Comments And Replies" showAllAsRoot="false" entity="ent2" relationship="rel5#role10" displayAttributes="ent2#att8 ent2#att10 ent2#att9">
+      <SortAttribute attribute="ent2#att10" order="descending"/>
+      <RootSelector id="sv4#area9#page11#rtu2#su19" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area9#page11#rtu2#su19#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
+      </RootSelector>
+    </RecursiveHierarchicalIndexUnit>
+    <SelectorUnit gr:x="0" gr:y="315" id="sv4#area9#page11#seu5" name="Post Comment Selector" entity="ent2">
+      <Selector id="sv4#area9#page11#seu5#su18" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#area9#page11#seu5#su18#rcond1" name="PostComments" predicate="in" implied="false" role="rel5#role9"/>
+      </Selector>
+      <Link id="sv4#area9#page11#seu5#ln59" name="Flow59" to="sv4#area9#page11#rtu2" type="transport" validate="true">
+        <LinkParameter id="sv4#area9#page11#seu5#ln59#par69" name="oid_KeyCondition18 [oid]" source="ent2#att7Array" target="sv4#area9#page11#rtu2#su19#kcond18.ent2#att7"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit gr:x="15" gr:y="0" id="sv4#area9#page11#enu11" name="Status Update" linkOrder="sv4#area9#page11#enu11#ln50">
+      <SelectionField id="sv4#area9#page11#enu11#sfld6" name="Status" type="string">
+        <Slot id="sv4#area9#page11#enu11#sfld6#slot4" name="StatusOptions" label="true" output="true" value="Open|Assigned|Progress|Closed"/>
+      </SelectionField>
+      <Link id="sv4#area9#page11#enu11#ln50" name="Save" to="sv4#area9#mfu4" type="normal" validate="true">
+        <LinkParameter id="sv4#area9#page11#enu11#ln50#par53" name="Status_Status" source="sv4#area9#page11#enu11#sfld6" target="sv4#area9#mfu4.ent1#att14"/>
+      </Link>
+    </EntryUnit>
+    <TimeUnit gr:x="270" gr:y="300" id="sv4#area9#page11#tmu5" name="Comment Time">
+      <Link id="sv4#area9#page11#tmu5#ln61" name="Flow61" to="sv4#area9#page11#enu9" type="transport" validate="true">
+        <LinkParameter id="sv4#area9#page11#tmu5#ln61#par57" name="Current/Input Time_time" source="currentTimestamp" target="sv4#area9#page11#enu9#fld25_slot"/>
+      </Link>
+    </TimeUnit>
+    <SelectorUnit id="sv4#area9#page11#seu3" name="Current User Info" gr:x="270" gr:y="185" entity="User">
+      <Selector id="sv4#area9#page11#seu3#su23" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area9#page11#seu3#su23#kcond20" name="CurrentUserKeyCondition" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#area9#page11#seu3#ln62" name="Flow55" to="sv4#area9#page11#enu9" type="transport" validate="true">
+        <LinkParameter id="sv4#area9#page11#seu3#ln62#par58" name="userName_Author" source="userNameArray" target="sv4#area9#page11#enu9#fld22_slot"/>
+      </Link>
+    </SelectorUnit>
+    <GetUnit id="sv4#area9#page11#gtu4" name="Get Current User" gr:x="440" gr:y="195" contextParameters="UserCtxParam">
+      <Link id="sv4#area9#page11#gtu4#ln64" name="Flow53" to="sv4#area9#page11#seu3" type="transport" automaticCoupling="true" validate="true"/>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area9#page11#enu11">
+          <layout:Field field="sv4#area9#page11#enu11#sfld6"/>
+          <layout:Link link="sv4#area9#page11#enu11#ln50"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area9#page11#dau5">
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att6"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att14"/>
+          <layout:Attribute attribute="ent1#att15"/>
+          <layout:Attribute attribute="ent1#att17"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area9#page11#enu9">
+          <layout:Link link="sv4#area9#page11#enu9#ln48"/>
+          <layout:Field field="sv4#area9#page11#enu9#fld19"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area9#page11#rtu2">
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att10"/>
+          <layout:Attribute attribute="ent2#att9"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

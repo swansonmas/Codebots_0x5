@@ -28,6 +28,7 @@ def labelWidth = NumberUtils.toInt(params["label-width"])
 def hasFields = !unit.selectNodes("layout:Field").isEmpty()
 %]
 <wr:Frame>
+<div style='display:none;'>
 <div class="EntryUnit <wr:StyleClass/>">
 	[%if(unit["entity"] != ""){%]<html:hidden property="<wr:Id context="unit"/>Key" styleId="<wr:Id context="unit"/>Key"></html:hidden>[%}%]
 	[% // prints hidden fields, which do not have associated layout:Field elements
@@ -90,4 +91,5 @@ def hasFields = !unit.selectNodes("layout:Field").isEmpty()
 	[% if (hasFields && labelPosition == "left") { %]</div></div>[% } %]
 	[% } %]
 </div>	
+</div>
 </wr:Frame>

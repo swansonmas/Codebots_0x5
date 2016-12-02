@@ -1,9 +1,17 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="CampSnap" protected="true" layout:style="BootstrapStyle" layout:pageLayout="BootstrapStyle/BlogHome" landmarks="sv2#area3 sv2#area4" homePage="sv2#area2#page2">
   <OperationUnits>
-    <CreateUnit gr:x="1095" gr:y="90" id="sv2#cru2" name="POSTS" entity="ent1" gr:showAllParts="true" linkOrder="sv2#cru2#ln5">
-      <Link id="sv2#cru2#ln5" name="Flow5" to="sv2#area2#page2#pwu1" type="transport" validate="true">
-        <LinkParameter id="sv2#cru2#ln5#par19" name="oid_current oid" source="ent1#att1Array" target="sv2#area2#page2#pwu1.current.ent1#att1"/>
-      </Link>
+    <CreateUnit gr:x="1110" gr:y="285" id="sv2#cru2" name="POSTS" entity="ent1" gr:showAllParts="true" linkOrder="sv2#cru2#ln5 sv2#cru2#ln22">
+      <Link id="sv2#cru2#ln5" name="Flow5" to="sv2#area2#page2#qu1" type="transport" validate="true" automaticCoupling="true"/>
+      <Link id="sv2#cru2#ln22" name="Flow22" to="sv2#area2#page2#qu3" automaticCoupling="true" type="transport" validate="true"/>
+      <OKLink id="sv2#cru2#oln9" name="OKFlow9" to="sv2#area3#pcu5">
+        <LinkParameter id="sv2#cru2#oln9#par97" name="Success_Success" sourceValue="Success" target="sv2#area3#pcu5#pcp15"/>
+      </OKLink>
+      <KOLink id="sv2#cru2#kln6" name="KOFlow6" to="sv2#area3#pcu5" gr:bendpoints="-9,134,-219,-16">
+        <LinkParameter id="sv2#cru2#kln6#par156" name="Error_Error" sourceValue="Error" target="sv2#area3#pcu5#pcp13"/>
+      </KOLink>
+    </CreateUnit>
+    <CreateUnit gr:x="-125" gr:y="660" id="sv2#cru6" name="Reply" entity="ent2">
+      <OKLink id="sv2#cru6#oln5" name="OKFlow5" to="sv2#area5#page5" automaticCoupling="true"/>
     </CreateUnit>
   </OperationUnits>
 </SiteView>

@@ -1,0 +1,12 @@
+[2016-11-25 00:30:37] Uploading application on server [52.213.93.84]
+[2016-11-25 00:30:37] Computing changes...
+[2016-11-25 00:30:46] Found 4 file(s) changed
+[2016-11-25 00:30:46] --------------------------------------------
+[2016-11-25 00:30:46] UPDATE                  /page5.jsp
+[2016-11-25 00:30:46] UPDATE                  /page3.jsp
+[2016-11-25 00:30:46] UPDATE          RESTART /WEB-INF/lib/com.webratio.struts.jar
+[2016-11-25 00:30:46] UPDATE                  /page1.jsp
+[2016-11-25 00:30:46] --------------------------------------------
+[2016-11-25 00:30:46] Stopping application server
+[2016-11-25 00:30:57] Uploading changes (423.8 KB)
+[2016-11-25 00:30:59] Starting application server

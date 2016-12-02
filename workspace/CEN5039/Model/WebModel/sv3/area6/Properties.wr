@@ -1,0 +1,16 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="15" gr:y="30" id="sv3#area6" name="Groups" landmark="true" defaultPage="sv3#area6#page7">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="105" gr:y="415" id="sv3#area6#miu3" action="true" moduleId="mov1#opm4">
+      <OKLink id="sv3#area6#miu3#oln15" name="OKFlow15" to="sv3#area6#page7" automaticCoupling="true"/>
+      <KOLink id="sv3#area6#miu3#kln11" name="KOFlow11" to="sv3#area6#page10#mssu3">
+        <LinkParameter id="sv3#area6#miu3#kln11#par67" name="errorMessage_Shown Messages" source="mov1#opm4#kocu4#ocp3" target="sv3#area6#page10#mssu3.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="475" gr:y="155" id="sv3#area6#miu5" action="true" moduleId="mov1#opm5">
+      <KOLink id="sv3#area6#miu5#kln12" name="KOFlow12" to="sv3#area6#page10#mssu3" gr:bendpoints="62,71,47,-124">
+        <LinkParameter id="sv3#area6#miu5#kln12#par73" name="message_Shown Messages" source="mov1#opm5#kocu5#ocp2" target="sv3#area6#page10#mssu3.shownMessages"/>
+      </KOLink>
+      <OKLink id="sv3#area6#miu5#oln17" name="OKFlow17" to="sv3#area6#page7" automaticCoupling="true" gr:bendpoints="-12,-128,323,-123;-72,-138,263,-133"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</Area>

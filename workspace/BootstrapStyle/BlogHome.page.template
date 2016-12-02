@@ -68,7 +68,10 @@ def showPageTitle = params["show-page-title"] == "true"
 		<wr:Resources types="javascript"/>
 		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 		<link href="./BootstrapStyle/font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="./BootstrapStyle/css/BlogHome.css">	
+		<link rel="stylesheet" type="text/css" href="./BootstrapStyle/css/BlogHome.css">
+		<link rel="stylesheet" type="text/css" href="./BootstrapStyle/css/animate.css">
+		<link rel="stylesheet" type="text/css" href="./BootstrapStyle/css/NotificationMessage.css">
+		
 	</head>
 <body class="bootstrap-[%= params["theme"] %]">
 <a href="#main-content" class="sr-only">Skip to main content</a>
@@ -182,31 +185,13 @@ def showPageTitle = params["show-page-title"] == "true"
 		</div>
 	</nav>
 	
-	<div class="container-fluid" style="
-    /* background: #1CD8D2; */ /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #1CD8D2 , #93EDC7); /* Chrome 10-25, Safari 5.1-6 */
-    /* background: linear-gradient(to left, #1CD8D2 , #93EDC7); */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 23em;
-    background: #3a7bd5; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #3a7bd5 , #3a6073); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #3a7bd5 , #3A60BE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    margin-top: 1%;
-    width: 100%;
-    border-bottom: 1px red solid;
-    
-">
-  <div>
-    <p style="
-    text-align: center;
-    font-size: 70px;
-    padding: 61px 12px;
-    font-weight: bold;
-    font-family: 'Raleway', sans-serif;
-">SNAP CAMP<br><i class="fa fa-camera fa-2x" aria-hidden="true"></i></p>
-    </div>
-  
-      
+	<div class="container-fluid" id="brandSection">
+	  	<div id="titleContainer">
+	  		<div id="subtitle"><span>Start posting, and never miss another school event.</span></div>
+	  		<div id="Title"><span id="brandIcons">SNAP CAMP &nbsp;<i class="fa fa-camera" aria-hidden="true"></i></span></div>
+	    </div>
 	</div>
+	
 <div class="container[%= (pageFluid) ? "-fluid" : "" %][%= (params["navbar-type"] == "fixed-top") ? " container-fixed-top-padding" : " container-top-padding"%]">
 	[% if (showBreadcrumb) { %]
 	
@@ -308,6 +293,13 @@ def showPageTitle = params["show-page-title"] == "true"
 <script type="text/javascript">
 $('.navbar-nav').find('li')[1].childNodes[1].innerHTML = "<i class='fa fa-user' aria-hidden='true'></i>" + $('.navbar-nav').find('li')[1].childNodes[1].innerHTML;
 $('.navbar-nav').find('li')[0].childNodes[0].innerHTML = "<i class='fa fa-plus' aria-hidden='true'></i>" + $('.navbar-nav').find('li')[0].childNodes[0].innerHTML;
+ try{
+ 	$('#cke_fld12').css({'width':''});
+ }
+ catch(err){
+ 
+ } 
 </script>
+<script type="text/javascript" src="./BootstrapStyle/js/NotificationMessage.js"></script>
 </body>
 </html>

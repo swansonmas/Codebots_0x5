@@ -1,3 +1,22 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1325" gr:y="40" id="sv2#area3" name="NEW POST" landmark="true" defaultPage="sv2#area3#page3">
-  <OperationUnits/>
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1295" gr:y="60" id="sv2#area3" name="NEW POST" landmark="true" defaultPage="sv2#area3#page3">
+  <OperationUnits>
+    <ParameterCollectorUnit id="sv2#area3#pcu5" name="Show Messages" gr:x="0" gr:y="330" gr:showAllParts="false">
+      <CollectorParameter id="sv2#area3#pcu5#pcp13" name="Error"/>
+      <CollectorParameter id="sv2#area3#pcu5#pcp14" name="Warning"/>
+      <CollectorParameter id="sv2#area3#pcu5#pcp15" name="Success"/>
+      <CollectorParameter id="sv2#area3#pcu5#pcp16" name="Info"/>
+      <Link id="sv2#area3#pcu5#ln39" name="Flow2" to="sv2#area3#page3#mssu16" type="transport" validate="true">
+        <LinkParameter id="sv2#area3#pcu5#ln39#par93" name="Success_Shown Messages" source="sv2#area3#pcu5#pcp15" target="sv2#area3#page3#mssu16.shownMessages"/>
+      </Link>
+      <OKLink id="sv2#area3#pcu5#oln8" name="OKFlow1" to="sv2#area3#page3#mssu14">
+        <LinkParameter id="sv2#area3#pcu5#oln8#par94" name="Info_Shown Messages" source="sv2#area3#pcu5#pcp16" target="sv2#area3#page3#mssu14.shownMessages"/>
+      </OKLink>
+      <Link id="sv2#area3#pcu5#ln42" name="Flow3" to="sv2#area3#page3#mssu13" type="transport" validate="true">
+        <LinkParameter id="sv2#area3#pcu5#ln42#par95" name="Warning_Shown Messages" source="sv2#area3#pcu5#pcp14" target="sv2#area3#page3#mssu13.shownMessages"/>
+      </Link>
+      <Link id="sv2#area3#pcu5#ln43" name="Flow4" to="sv2#area3#page3#mssu15" type="transport" validate="true">
+        <LinkParameter id="sv2#area3#pcu5#ln43#par96" name="Error_Shown Messages" source="sv2#area3#pcu5#pcp13" target="sv2#area3#page3#mssu15.shownMessages"/>
+      </Link>
+    </ParameterCollectorUnit>
+  </OperationUnits>
 </Area>
