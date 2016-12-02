@@ -72,6 +72,7 @@ def showPageTitle = params["show-page-title"] == "true"
 		<link rel="stylesheet" type="text/css" href="./BootstrapStyle/css/animate.css">
 		<link rel="stylesheet" type="text/css" href="./BootstrapStyle/css/NotificationMessage.css">
 		
+		
 	</head>
 <body class="bootstrap-[%= params["theme"] %]">
 <a href="#main-content" class="sr-only">Skip to main content</a>
@@ -187,9 +188,15 @@ def showPageTitle = params["show-page-title"] == "true"
 	
 	<div class="container-fluid" id="brandSection">
 	  	<div id="titleContainer">
-	  		<div id="subtitle"><span>Start posting, and never miss another school event.</span></div>
-	  		<div id="Title"><span id="brandIcons">SNAP CAMP &nbsp;<i class="fa fa-camera" aria-hidden="true"></i></span></div>
+	  		<div id="subtitle"><span>Start posting, see the change, be the change.</span></div>
+	  		<div id="Title" class="slideInUp animated"><span id="brandIcons"><span style="color:white;">S</span><span>N</span><span>A</span><span>P</span> 
+	  		<span style="color:white;">C</span><span>A</span><span>M</span><span>P</span> &nbsp;<i class="fa fa-camera" aria-hidden="true"></i></span></div>
 	    </div>
+	</div>
+	<div id="brandBorder">
+		<div id="brandBorderContainer">
+		<span class="span-decoration-line"></span><span id="brandMessage">Stay informed, don't miss another event!</span> <span class="span-decoration-line"></span>
+		</div>
 	</div>
 	
 <div class="container[%= (pageFluid) ? "-fluid" : "" %][%= (params["navbar-type"] == "fixed-top") ? " container-fixed-top-padding" : " container-top-padding"%]">
@@ -294,6 +301,7 @@ def showPageTitle = params["show-page-title"] == "true"
 $('.navbar-nav').find('li')[1].childNodes[1].innerHTML = "<i class='fa fa-user' aria-hidden='true'></i>" + $('.navbar-nav').find('li')[1].childNodes[1].innerHTML;
 $('.navbar-nav').find('li')[0].childNodes[0].innerHTML = "<i class='fa fa-plus' aria-hidden='true'></i>" + $('.navbar-nav').find('li')[0].childNodes[0].innerHTML;
  try{
+ 
  	$('#cke_fld12').css({'width':''});
  }
  catch(err){
