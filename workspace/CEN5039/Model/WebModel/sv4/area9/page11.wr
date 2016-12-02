@@ -7,15 +7,15 @@
       <Link id="sv4#area9#page11#dau5#ln51" name="Flow51" to="sv4#area9#cru6" type="transport" validate="true" gr:bendpoints="-64,84,-84,-111">
         <LinkParameter id="sv4#area9#page11#dau5#ln51#par101" name="oid_Post.oid(CommentsToPost)" source="data.ent1#att1" target="sv4#area9#cru6.rel2#role4.ent1#att1"/>
       </Link>
-      <Link id="sv4#area9#page11#dau5#ln58" name="Flow58" to="sv4#area9#page11#seu5" type="transport" validate="true" gr:bendpoints="-76,73,-96,-192;-64,168,-84,-97">
-        <LinkParameter id="sv4#area9#page11#dau5#ln58#par109" name="oid_PostComments [oid]" source="data.ent1#att1" target="sv4#area9#page11#seu5#su18#rcond1.ent2#att7"/>
-      </Link>
       <Link id="sv4#area9#page11#dau5#ln54" name="Flow54" to="sv4#area9#mfu4" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv4#area9#page11#dau5#ln57" name="Flow57" to="sv4#area9#page11#enu11" type="transport" validate="true">
         <LinkParameter id="sv4#area9#page11#dau5#ln57#par6" name="Status_Status - Preselection" source="data.ent1#att14" target="sv4#area9#page11#enu11#sfld6_presel"/>
       </Link>
       <Link id="sv4#area9#page11#dau5#ln60" name="Flow60" to="sv4#area9#page11#enu9" type="transport" validate="true">
         <LinkParameter id="sv4#area9#page11#dau5#ln60#par68" name="oid_postOID" source="data.ent1#att1" target="sv4#area9#page11#enu9#fld32_slot"/>
+      </Link>
+      <Link id="sv4#area9#page11#dau5#ln63" name="Flow63" to="sv4#area9#page11#rtu2" type="transport" validate="true" gr:bendpoints="-62,50,-87,-215;-55,188,-80,-77">
+        <LinkParameter id="sv4#area9#page11#dau5#ln63#par69" name="oid_RoleCondition4 [oid]" source="data.ent1#att1" target="sv4#area9#page11#rtu2#su19#rcond4.ent2#att7"/>
       </Link>
     </DataUnit>
     <EntryUnit gr:x="15" gr:y="190" id="sv4#area9#page11#enu9" name="Comment Form" linkOrder="sv4#area9#page11#enu9#ln48" entity="ent2">
@@ -30,20 +30,12 @@
       <Field id="sv4#area9#page11#enu9#fld25" name="time" type="timestamp" modifiable="false" attribute="ent2#att10" preloaded="true" hidden="true"/>
       <Field id="sv4#area9#page11#enu9#fld32" name="postOID" type="string" modifiable="false" attribute="ent2#att11" preloaded="true" hidden="true"/>
     </EntryUnit>
-    <RecursiveHierarchicalIndexUnit gr:x="0" gr:y="455" id="sv4#area9#page11#rtu2" name="Comments And Replies" showAllAsRoot="false" entity="ent2" relationship="rel5#role10" displayAttributes="ent2#att8 ent2#att10 ent2#att9">
+    <RecursiveHierarchicalIndexUnit gr:x="0" gr:y="340" id="sv4#area9#page11#rtu2" name="Comments And Replies" showAllAsRoot="false" entity="ent2" relationship="rel5#role10" displayAttributes="ent2#att8 ent2#att9 ent2#att10">
       <SortAttribute attribute="ent2#att10" order="descending"/>
       <RootSelector id="sv4#area9#page11#rtu2#su19" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv4#area9#page11#rtu2#su19#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
+        <RelationshipRoleCondition id="sv4#area9#page11#rtu2#su19#rcond4" name="RoleCondition4" predicate="in" implied="false" role="rel5#role10"/>
       </RootSelector>
     </RecursiveHierarchicalIndexUnit>
-    <SelectorUnit gr:x="0" gr:y="315" id="sv4#area9#page11#seu5" name="Post Comment Selector" entity="ent2">
-      <Selector id="sv4#area9#page11#seu5#su18" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv4#area9#page11#seu5#su18#rcond1" name="PostComments" predicate="in" implied="false" role="rel5#role9"/>
-      </Selector>
-      <Link id="sv4#area9#page11#seu5#ln59" name="Flow59" to="sv4#area9#page11#rtu2" type="transport" validate="true">
-        <LinkParameter id="sv4#area9#page11#seu5#ln59#par69" name="oid_KeyCondition18 [oid]" source="ent2#att7Array" target="sv4#area9#page11#rtu2#su19#kcond18.ent2#att7"/>
-      </Link>
-    </SelectorUnit>
     <EntryUnit gr:x="15" gr:y="0" id="sv4#area9#page11#enu11" name="Status Update" linkOrder="sv4#area9#page11#enu11#ln50">
       <SelectionField id="sv4#area9#page11#enu11#sfld6" name="Status" type="string">
         <Slot id="sv4#area9#page11#enu11#sfld6#slot4" name="StatusOptions" label="true" output="true" value="Open|Assigned|Progress|Closed"/>
@@ -137,8 +129,8 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv4#area9#page11#rtu2">
           <layout:Attribute attribute="ent2#att8"/>
-          <layout:Attribute attribute="ent2#att10"/>
           <layout:Attribute attribute="ent2#att9"/>
+          <layout:Attribute attribute="ent2#att10"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
