@@ -14,8 +14,8 @@
       <Link id="sv4#area9#page11#dau5#ln60" name="Flow60" to="sv4#area9#page11#enu9" type="transport" validate="true">
         <LinkParameter id="sv4#area9#page11#dau5#ln60#par68" name="oid_postOID" source="data.ent1#att1" target="sv4#area9#page11#enu9#fld32_slot"/>
       </Link>
-      <Link id="sv4#area9#page11#dau5#ln63" name="Flow63" to="sv4#area9#page11#rtu2" type="transport" validate="true" gr:bendpoints="-62,50,-87,-215;-55,188,-80,-77">
-        <LinkParameter id="sv4#area9#page11#dau5#ln63#par69" name="oid_RoleCondition4 [oid]" source="data.ent1#att1" target="sv4#area9#page11#rtu2#su19#rcond4.ent2#att7"/>
+      <Link id="sv4#area9#page11#dau5#ln71" name="Flow67" to="sv4#area9#miu7" type="transport" validate="true" gr:bendpoints="287,-41,-128,54">
+        <LinkParameter id="sv4#area9#page11#dau5#ln71#par153" name="Author_User First Name" source="data.ent1#att2" target="sv4#area9#miu7.mov1#mpkg1#opm8#icu8#icp25"/>
       </Link>
     </DataUnit>
     <EntryUnit gr:x="50" gr:y="270" id="sv4#area9#page11#enu9" name="Comment Form" linkOrder="sv4#area9#page11#enu9#ln48" entity="ent2">
@@ -51,6 +51,9 @@
       <Link id="sv4#area9#page11#enu11#ln50" name="Save" to="sv4#area9#mfu4" type="normal" validate="true" gr:bendpoints="152,-4,-143,-19">
         <LinkParameter id="sv4#area9#page11#enu11#ln50#par53" name="Status_Status" source="sv4#area9#page11#enu11#sfld6" target="sv4#area9#mfu4.ent1#att14"/>
       </Link>
+      <Link id="sv4#area9#page11#enu11#ln70" name="Flow63" to="sv4#area9#miu7" type="transport" validate="true" gr:bendpoints="137,-54,-268,-54;232,-55,-173,-55">
+        <LinkParameter id="sv4#area9#page11#enu11#ln70#par152" name="Status_Post Status" source="sv4#area9#page11#enu11#sfld6" target="sv4#area9#miu7.mov1#mpkg1#opm8#icu8#icp24"/>
+      </Link>
     </EntryUnit>
     <TimeUnit gr:x="300" gr:y="405" id="sv4#area9#page11#tmu5" name="Comment Time">
       <Link id="sv4#area9#page11#tmu5#ln61" name="Flow61" to="sv4#area9#page11#enu9" type="transport" validate="true">
@@ -68,6 +71,8 @@
     <GetUnit id="sv4#area9#page11#gtu4" name="Get Current User" gr:x="460" gr:y="250" contextParameters="UserCtxParam">
       <Link id="sv4#area9#page11#gtu4#ln64" name="Flow53" to="sv4#area9#page11#seu3" type="transport" automaticCoupling="true" validate="true"/>
     </GetUnit>
+    <MultiMessageUnit id="sv4#area9#page11#mssu4" name="Success" gr:x="450" gr:y="105"/>
+    <MultiMessageUnit id="sv4#area9#page11#mssu6" name="Error" gr:x="545" gr:y="105"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -140,6 +145,33 @@
           <layout:Attribute attribute="ent2#att9"/>
           <layout:Attribute attribute="ent2#att10"/>
         </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Grid containerType="cell">
+          <layout:Row>
+            <layout:Cell>
+              <layout:Unit unitId="sv4#area9#page11#mssu4" layout:unitLayout="StoreTemplates/NotificationMessage">
+                <layout:LayoutParameter name="message-type" value="Success" type="unit"/>
+              </layout:Unit>
+              <layout:Unit unitId="sv4#area9#page11#mssu6" layout:unitLayout="StoreTemplates/NotificationMessage">
+                <layout:LayoutParameter name="message-type" value="Error" type="unit"/>
+              </layout:Unit>
+            </layout:Cell>
+          </layout:Row>
+        </layout:Grid>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
