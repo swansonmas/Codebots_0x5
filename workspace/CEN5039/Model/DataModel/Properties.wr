@@ -74,8 +74,7 @@
       <db:JoinColumn attribute="ent2#att7" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="CEN5039" type="MySQL" url="jdbc:mysql://localhost:3306/SnapCampDB" username="SnapCampDBAdmin" password="U25hcENhbXBEQkFkbWlu" cryptedPassword="true">
-  </db:Database>
+  <db:Database id="db2" name="CEN5039" type="MySQL" url="jdbc:mysql://localhost:3306/SnapCampDB" username="SnapCampDBAdmin" password="U25hcENhbXBEQkFkbWlu" cryptedPassword="true"/>
   <Relationship id="rel3" name="Comments_Post" sourceEntity="ent2" targetEntity="ent1" gr:bendpoints="-111,43,124,53" db:database="db2" db:table="comments_post">
     <RelationshipRole1 id="rel3#role5" name="CommentsToPost_2" maxCard="N">
       <db:JoinColumn attribute="ent2#att7" name="comments_oid"/>

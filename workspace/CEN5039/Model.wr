@@ -2,5 +2,7 @@
 <?webml version="7.2.0.4"?>
 
 <WebProject xmlns:gr="http://www.webratio.com/2006/WebML/Graph" outputPath="${webapps_loc}/${project_name}" gr:showUnitContent="true" gr:showTooltip="true" httpPort="8080" httpsPort="8443" enableProjectDependencies="false" jobGroupName="WEBRATIO" wrTempNewProject="true" adminArea="true" adminPath="Admin.do" adminUser="admin" adminPassword="YWRtaW4=" adminCryptedPassword="true">
-  <ServiceDataProviders/>
+  <ServiceDataProviders>
+    <SMTPServer id="smtp1" name="SendGrid Server" url="smtp.sendgrid.net" port="587" useSsl="false" username="apikey" password="U0cuQ0F1cFphcS1UOHFNNzQ5aFN3T3pCdy5xSzVteFJNaGNTaFpmblNwWml2bFIzQXl2aXZMcFFqZThtSUNxYThPNnMw" cryptedPassword="true"/>
+  </ServiceDataProviders>
 </WebProject>
