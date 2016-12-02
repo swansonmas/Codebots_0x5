@@ -101,14 +101,13 @@ $("#controlResults").click(function () {
         
  $('#page2_cell_7 .panel-body')[0].className = "panel-body well";
  $('#page2_cell_7 .panel-body')[0].style.marginBottom = "0";      
- $('#page2_cell_7 .panel-heading')[0].style.background = "rgba(0,0,0,0.7)";
-  $('#page2_cell_7 .panel-heading')[0].style.color = "#ccc";       
+ $('#page2_cell_7 .panel-heading')[0].style.background = "#428bca";
+  $('#page2_cell_7 .panel-heading')[0].style.color = "#fff";       
  document.getElementById('button:ln10').className ="btn btn-primary";
  document.getElementById('button:ln10').style.marginLeft ="18%";
- try{
- $('#page2_cell_7 .panel-heading')[1].style.background = "#fff"; }
- catch(err){
- }
+ 
+ 
+
 
 </script>
 </wr:Frame>

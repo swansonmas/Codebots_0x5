@@ -1,6 +1,134 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area7#page6" name="Staff">
-  <ContentUnits/>
+  <ContentUnits>
+    <SelectorUnit gr:x="5" gr:y="10" id="sv3#area7#page6#seu6" name="AllGroup" entity="Group">
+      <Link id="sv3#area7#page6#seu6#ln71" name="Flow71" to="sv3#area7#page6#enu12" type="transport" validate="true">
+        <LinkParameter id="sv3#area7#page6#seu6#ln71#par153" name="groupName_All Groups [label]" source="groupNameArray" target="sv3#area7#page6#enu12#msfld2_label"/>
+        <LinkParameter id="sv3#area7#page6#seu6#ln71#par154" name="oid_All Groups [output]" source="groupOIDArray" target="sv3#area7#page6#enu12#msfld2_output"/>
+        <LinkParameter id="sv3#area7#page6#seu6#ln71#par155" name="groupName_default Group [label]" source="groupNameArray" target="sv3#area7#page6#enu12#sfld7_label"/>
+        <LinkParameter id="sv3#area7#page6#seu6#ln71#par168" name="oid_default Group [output]" source="groupOIDArray" target="sv3#area7#page6#enu12#sfld7_output"/>
+      </Link>
+    </SelectorUnit>
+    <QueryUnit gr:x="0" gr:y="155" id="sv3#area7#page6#qu7" name="Staff" mode="select" language="SQL" db="db2">
+      <Link id="sv3#area7#page6#qu7#ln79" name="Flow79" to="sv3#area7#page6#pwu6" type="transport" validate="true">
+        <LinkParameter id="sv3#area7#page6#qu7#ln79#par187" name="staffId (Array)_containsStaf [oid]" source="sv3#area7#page6#qu7#qo7" target="sv3#area7#page6#pwu6#su25#kcond23.userOID"/>
+      </Link>
+      <QueryOutput id="sv3#area7#page6#qu7#qo7" name="staffId" type="integer"/>
+      <QueryText xml:space="preserve">select s.oid
+from user as s
+where s.group_oid = 3</QueryText>
+    </QueryUnit>
+    <PowerIndexUnit gr:x="25" gr:y="260" id="sv3#area7#page6#pwu6" name="Staff Members" sortable="true" checkable="false" useCountQuery="false" entity="User" linkOrder="sv3#area7#page6#pwu6#ln80 sv3#area7#page6#pwu6#ln85" displayAttributes="userName password email User#att12 User#att13">
+      <Link id="sv3#area7#page6#pwu6#ln80" name="modify" to="sv3#area7#page6#enu12" type="normal" validate="true">
+        <LinkParameter id="sv3#area7#page6#pwu6#ln80#par175" name="email_email" source="data[].email" target="sv3#area7#page6#enu12#fld34_slot"/>
+        <LinkParameter id="sv3#area7#page6#pwu6#ln80#par179" name="First Name_first name" source="data[].User#att12" target="sv3#area7#page6#enu12#fld36_slot"/>
+        <LinkParameter id="sv3#area7#page6#pwu6#ln80#par180" name="oid_Key Condition [oid]" source="data[].userOID" target="sv3#area7#page6#enu12.userOID"/>
+        <LinkParameter id="sv3#area7#page6#pwu6#ln80#par181" name="Last Name_last name" source="data[].User#att13" target="sv3#area7#page6#enu12#fld35_slot"/>
+        <LinkParameter id="sv3#area7#page6#pwu6#ln80#par182" name="password_password" source="data[].password" target="sv3#area7#page6#enu12#fld37_slot"/>
+        <LinkParameter id="sv3#area7#page6#pwu6#ln80#par183" name="userName_username" source="data[].userName" target="sv3#area7#page6#enu12#fld33_slot"/>
+      </Link>
+      <Link id="sv3#area7#page6#pwu6#ln84" name="Flow84" to="sv3#area7#page6#seu7" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#area7#page6#pwu6#ln85" name="delete" to="sv3#area7#miu6" type="normal" validate="true">
+        <LinkParameter id="sv3#area7#page6#pwu6#ln85#par188" name="oid_oidUser" source="data[].userOID" target="sv3#area7#miu6.mov1#opm6#icu6#icp15"/>
+      </Link>
+      <Selector id="sv3#area7#page6#pwu6#su25" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area7#page6#pwu6#su25#kcond23" name="containsStaf" predicate="in" implied="false"/>
+      </Selector>
+    </PowerIndexUnit>
+    <EntryUnit id="sv3#area7#page6#enu12" name="User Form" gr:showAllParts="true" gr:x="205" gr:y="0" entity="User" fieldOrder="sv3#area7#page6#enu12#sfld7 sv3#area7#page6#enu12#msfld2 sv3#area7#page6#enu12#fld33 sv3#area7#page6#enu12#fld37 sv3#area7#page6#enu12#fld36 sv3#area7#page6#enu12#fld35 sv3#area7#page6#enu12#fld34" linkOrder="sv3#area7#page6#enu12#ln77 sv3#area7#page6#enu12#ln86">
+      <MultiSelectionField id="sv3#area7#page6#enu12#msfld2" name="All Groups" type="string" modifiable="true" role="User2Group"/>
+      <SelectionField id="sv3#area7#page6#enu12#sfld7" name="default Group" type="string" modifiable="true" role="User2DefaultGroup"/>
+      <Field id="sv3#area7#page6#enu12#fld33" name="username" type="string" modifiable="true" preloaded="true" attribute="userName"/>
+      <Field id="sv3#area7#page6#enu12#fld34" name="email" type="string" preloaded="true" modifiable="true"/>
+      <Field id="sv3#area7#page6#enu12#fld35" name="last name" type="string" preloaded="true" modifiable="true"/>
+      <Field id="sv3#area7#page6#enu12#fld36" name="first name" type="string" preloaded="true" modifiable="true"/>
+      <Field id="sv3#area7#page6#enu12#fld37" name="password" type="string" preloaded="true" modifiable="true" attribute="password"/>
+      <Link id="sv3#area7#page6#enu12#ln77" name="reset" to="sv3#area7#page6" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="85,-180,170,-260;42,-183,127,-263"/>
+      <Link id="sv3#area7#page6#enu12#ln86" name="manage" to="sv3#area7#miu7" type="normal" validate="true">
+        <LinkParameter id="sv3#area7#page6#enu12#ln86#par189" name="default Group_defaultGroup" source="sv3#area7#page6#enu12#sfld7" target="sv3#area7#miu7.mov1#opm7#icu7#icp16"/>
+        <LinkParameter id="sv3#area7#page6#enu12#ln86#par190" name="email_email" source="sv3#area7#page6#enu12#fld34" target="sv3#area7#miu7.mov1#opm7#icu7#icp17"/>
+        <LinkParameter id="sv3#area7#page6#enu12#ln86#par191" name="first name_first_name" source="sv3#area7#page6#enu12#fld36" target="sv3#area7#miu7.mov1#opm7#icu7#icp20"/>
+        <LinkParameter id="sv3#area7#page6#enu12#ln86#par192" name="All Groups_groups" source="sv3#area7#page6#enu12#msfld2" target="sv3#area7#miu7.mov1#opm7#icu7#icp18"/>
+        <LinkParameter id="sv3#area7#page6#enu12#ln86#par193" name="last name_last_name" source="sv3#area7#page6#enu12#fld35" target="sv3#area7#miu7.mov1#opm7#icu7#icp21"/>
+        <LinkParameter id="sv3#area7#page6#enu12#ln86#par194" name="Key [oid]_oidUser" source="key.userOID" target="sv3#area7#miu7.mov1#opm7#icu7#icp19"/>
+        <LinkParameter id="sv3#area7#page6#enu12#ln86#par195" name="password_password" source="sv3#area7#page6#enu12#fld37" target="sv3#area7#miu7.mov1#opm7#icu7#icp23"/>
+        <LinkParameter id="sv3#area7#page6#enu12#ln86#par196" name="username_username" source="sv3#area7#page6#enu12#fld33" target="sv3#area7#miu7.mov1#opm7#icu7#icp22"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="210" gr:y="290" id="sv3#area7#page6#seu7" name="Associated Groups" entity="Group">
+      <Link id="sv3#area7#page6#seu7#ln87" name="Flow87" to="sv3#area7#page6#enu12" type="transport" validate="true">
+        <LinkParameter id="sv3#area7#page6#seu7#ln87#par184" name="groupName_All Groups [label]" source="groupNameArray" target="sv3#area7#page6#enu12#msfld2_label"/>
+        <LinkParameter id="sv3#area7#page6#seu7#ln87#par185" name="oid_All Groups [output]" source="groupOIDArray" target="sv3#area7#page6#enu12#msfld2_output"/>
+      </Link>
+      <Selector id="sv3#area7#page6#seu7#su24" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area7#page6#seu7#su24#rcond4" name="RoleCondition4" predicate="in" implied="false" role="Module2Group"/>
+      </Selector>
+    </SelectorUnit>
+  </ContentUnits>
   <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area7#page6#pwu6">
+          <layout:Link link="sv3#area7#page6#pwu6#ln80"/>
+          <layout:Link link="sv3#area7#page6#pwu6#ln85"/>
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att12"/>
+          <layout:Attribute attribute="User#att13"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area7#page6#enu12">
+          <layout:Field field="sv3#area7#page6#enu12#sfld7"/>
+          <layout:Field field="sv3#area7#page6#enu12#msfld2"/>
+          <layout:Field field="sv3#area7#page6#enu12#fld33"/>
+          <layout:Field field="sv3#area7#page6#enu12#fld37"/>
+          <layout:Field field="sv3#area7#page6#enu12#fld36"/>
+          <layout:Field field="sv3#area7#page6#enu12#fld35"/>
+          <layout:Field field="sv3#area7#page6#enu12#fld34"/>
+          <layout:Link link="sv3#area7#page6#enu12#ln77"/>
+          <layout:Link link="sv3#area7#page6#enu12#ln86"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12"/>
       <layout:Cell/>

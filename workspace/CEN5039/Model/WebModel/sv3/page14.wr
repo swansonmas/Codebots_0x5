@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="295" gr:y="1135" id="sv3#page14" name="Modal Post" layout:pageLayout="BootstrapStyle/adminDescriptionPage">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="915" gr:y="1035" id="sv3#page14" name="Modal Post" layout:pageLayout="BootstrapStyle/adminDescriptionPage">
   <ContentUnits>
-    <DataUnit id="sv3#page14#dau10" name="Image" gr:x="15" gr:y="0" entity="ent1" displayAttributes="ent1#att3 ent1#att4 ent1#att5">
+    <DataUnit id="sv3#page14#dau10" name="Image" gr:x="140" gr:y="0" entity="ent1" displayAttributes="ent1#att3 ent1#att4 ent1#att5">
       <Selector id="sv3#page14#dau10#su22" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page14#dau10#su22#kcond22" name="KeyConditionUser" predicate="in" implied="false"/>
       </Selector>
@@ -8,19 +8,31 @@
         <LinkParameter id="sv3#page14#dau10#ln49#par119" name="oid_Key Condition [oid]" source="data.ent1#att1" target="sv3#page14#enu8.ent1#att1"/>
       </Link>
     </DataUnit>
-    <EntryUnit gr:x="15" gr:y="160" id="sv3#page14#enu8" name="Edit Status" entity="ent1" fieldOrder="sv3#page14#enu8#sfld4 sv3#page14#enu8#sfld8" linkOrder="sv3#page14#enu8#ln52">
+    <EntryUnit gr:x="145" gr:y="150" id="sv3#page14#enu8" name="Edit Status" entity="ent1" fieldOrder="sv3#page14#enu8#sfld4 sv3#page14#enu8#sfld8" linkOrder="sv3#page14#enu8#ln52">
       <SelectionField id="sv3#page14#enu8#sfld4" type="string" preselectValue="Open" name="status" attribute="ent1#att14">
         <Slot id="sv3#page14#enu8#sfld4#slot3" name="Status" label="true" output="true" value="Open|In Progress|Closed"/>
       </SelectionField>
-      <Link id="sv3#page14#enu8#ln52" name="update" to="sv3#mfu3" automaticCoupling="true" type="normal" validate="true" ajaxOpenWaitingDialog="true"/>
+      <Link id="sv3#page14#enu8#ln52" name="update" to="sv3#mfu3" automaticCoupling="true" type="normal" validate="true" ajaxOpenWaitingDialog="true" gr:bendpoints="-153,141,192,151"/>
       <SelectionField id="sv3#page14#enu8#sfld8" name="Assigned To" type="string" role="rel6#role12"/>
     </EntryUnit>
-    <SelectorUnit gr:x="0" gr:y="270" id="sv3#page14#seu4" name="Staff Members" entity="User">
+    <SelectorUnit gr:x="0" gr:y="155" id="sv3#page14#seu4" name="Staff Members" entity="User">
       <Link id="sv3#page14#seu4#ln66" name="Flow66" to="sv3#page14#enu8" type="transport" validate="true">
         <LinkParameter id="sv3#page14#seu4#ln66#par70" name="userName_PostToAssignedToUser [label]" source="userNameArray" target="sv3#page14#enu8#sfld8_label"/>
         <LinkParameter id="sv3#page14#seu4#ln66#par71" name="oid_PostToAssignedToUser [output]" source="userOIDArray" target="sv3#page14#enu8#sfld8_output"/>
       </Link>
+      <Selector id="sv3#page14#seu4#su29" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page14#seu4#su29#kcond24" name="Staff" predicate="in" implied="false"/>
+      </Selector>
     </SelectorUnit>
+    <QueryUnit gr:x="5" gr:y="30" id="sv3#page14#qu9" name="Find Staff" mode="select" language="SQL" db="db2">
+      <QueryText xml:space="preserve">select s.oid
+from user as s
+where s.group_oid = 3</QueryText>
+      <Link id="sv3#page14#qu9#ln93" name="Flow93" to="sv3#page14#seu4" type="transport" validate="true">
+        <LinkParameter id="sv3#page14#qu9#ln93#par217" name="IsStaff (Array)_Staff [oid]" source="sv3#page14#qu9#qo9" target="sv3#page14#seu4#su29#kcond24.userOID"/>
+      </Link>
+      <QueryOutput id="sv3#page14#qu9#qo9" name="IsStaff"/>
+    </QueryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>

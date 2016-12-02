@@ -1,3 +1,10 @@
 <Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="25" gr:y="605" id="sv3#area7" name="Staff" landmark="true" defaultPage="sv3#area7#page6">
-  <OperationUnits/>
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="70" gr:y="465" id="sv3#area7#miu6" action="true" moduleId="mov1#opm6">
+      <OKLink id="sv3#area7#miu6#oln16" name="OKFlow16" to="sv3#area7#page6" automaticCoupling="true" gr:bendpoints="148,-8,118,282"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="400" gr:y="165" id="sv3#area7#miu7" action="true" moduleId="mov1#opm7">
+      <OKLink id="sv3#area7#miu7#oln18" name="OKFlow18" to="sv3#area7#page6" automaticCoupling="true" gr:bendpoints="-30,106,275,96"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
 </Area>

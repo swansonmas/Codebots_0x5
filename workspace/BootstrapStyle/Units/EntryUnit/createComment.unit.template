@@ -92,5 +92,6 @@ def hasFields = !unit.selectNodes("layout:Field").isEmpty()
 </div>
 	
 <script src="./BootstrapStyle/js/createDetails.js" type="text/javascript"></script>
+<script src="./BootstrapStyle/js/stickyComment.js" type="text/javascript"></script>
 
 </wr:Frame>

@@ -1,7 +1,7 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="275" gr:y="125" id="sv4#area9" name="Staff Posts" landmark="true" protected="true" defaultPage="sv4#area9#page6">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="30" gr:y="10" id="sv4#area9" name="Staff Posts" landmark="true" protected="false" defaultPage="sv4#area9#page6">
   <OperationUnits>
-    <CreateUnit gr:x="445" gr:y="135" id="sv4#area9#cru6" name="Create Comment" entity="ent2"/>
-    <ModifyUnit gr:x="405" gr:y="25" id="sv4#area9#mfu4" name="Update Post" entity="ent1">
+    <CreateUnit gr:x="575" gr:y="160" id="sv4#area9#cru6" name="Create Comment" entity="ent2"/>
+    <ModifyUnit gr:x="580" gr:y="30" id="sv4#area9#mfu4" name="Update Post" entity="ent1">
       <Selector id="sv4#area9#mfu4#su17" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#area9#mfu4#su17#kcond19" name="KeyCondition19" predicate="in" implied="false"/>
       </Selector>
