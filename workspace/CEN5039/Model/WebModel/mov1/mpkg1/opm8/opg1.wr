@@ -1,18 +1,18 @@
-<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="305" gr:y="60" id="mov1#mpkg1#opm8#opg1" name="Operation Email" transaction="true">
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="305" gr:y="-50" id="mov1#mpkg1#opm8#opg1" name="Operation Email" transaction="true">
   <OperationUnits>
-    <SwitchUnit gr:x="0" gr:y="0" id="mov1#mpkg1#opm8#opg1#switch2" name="Switch2">
+    <SwitchUnit gr:x="0" gr:y="110" id="mov1#mpkg1#opm8#opg1#switch2" name="Switch2">
       <OKLink id="mov1#mpkg1#opm8#opg1#switch2#oln18" name="OKFlow18" to="mov1#mpkg1#opm8#opg1#mlu1" code="Closed">
         <LinkParameter id="mov1#mpkg1#opm8#opg1#switch2#oln18#par75" name="SnapCamp_Mail - Subject" sourceValue="SnapCamp" target="mov1#mpkg1#opm8#opg1#mlu1.subject"/>
-        <LinkParameter id="mov1#mpkg1#opm8#opg1#switch2#oln18#par127" name="delgadog2016@fau.edu_Mail - To" sourceValue="gabsdel@gmail.com" target="mov1#mpkg1#opm8#opg1#mlu1.to"/>
         <LinkParameter id="mov1#mpkg1#opm8#opg1#switch2#oln18#par135" name="info@snapcamp.edu_Mail - From" sourceValue="info@snapcamp.edu" target="mov1#mpkg1#opm8#opg1#mlu1.from"/>
         <LinkParameter id="mov1#mpkg1#opm8#opg1#switch2#oln18#par136" name="/CEN5039/page1.do_issue_link" sourceValue="http://localhost:8080/CEN5039/page1.do" target="mov1#mpkg1#opm8#opg1#mlu1.issue_link"/>
+        <LinkParameter id="mov1#mpkg1#opm8#opg1#switch2#oln18#par69" name="gabsdel@gmail.com_Mail - To" sourceValue="gabsdel@gmail.com" target="mov1#mpkg1#opm8#opg1#mlu1.to"/>
       </OKLink>
       <Case value="Closed"/>
       <OKLink id="mov1#mpkg1#opm8#opg1#switch2#oln30" name="OKFlow30" to="mov1#mpkg1#opm8#okcu7" gr:bendpoints="138,91,-292,11">
         <LinkParameter id="mov1#mpkg1#opm8#opg1#switch2#oln30#par155" name="Issue status changed successfully._Success Message" sourceValue="Issue status changed successfully." target="mov1#mpkg1#opm8#okcu7#ocp5"/>
       </OKLink>
     </SwitchUnit>
-    <MailUnit gr:x="125" gr:y="0" id="mov1#mpkg1#opm8#opg1#mlu1" name="Closed Issue Mail" format="html" template="EmailTemplates/resolved_issue_template.html" smtpServer="smtp1">
+    <MailUnit gr:x="125" gr:y="110" id="mov1#mpkg1#opm8#opg1#mlu1" name="Closed Issue Mail" format="html" template="EmailTemplates/resolved_issue_template.html" smtpServer="smtp1">
       <OKLink id="mov1#mpkg1#opm8#opg1#mlu1#oln40" name="OKFlow40" to="mov1#mpkg1#opm8#okcu7">
         <LinkParameter id="mov1#mpkg1#opm8#opg1#mlu1#oln40#par154" name="The issue has been marked as closed and an email has been sent to the user._Success Message" sourceValue="The issue has been marked as closed and an email has been sent to the user." target="mov1#mpkg1#opm8#okcu7#ocp5"/>
       </OKLink>

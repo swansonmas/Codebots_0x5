@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="265" gr:y="0" id="sv4#area9#page11" name="Issue Details">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="260" gr:y="0" id="sv4#area9#page11" name="Issue Details">
   <ContentUnits>
-    <DataUnit gr:x="30" gr:y="105" id="sv4#area9#page11#dau5" name="Details" entity="ent1" displayAttributes="ent1#att3 ent1#att4 ent1#att2 ent1#att6 ent1#att5 ent1#att14 ent1#att15 ent1#att17">
+    <DataUnit gr:x="35" gr:y="105" id="sv4#area9#page11#dau5" name="Details" entity="ent1" displayAttributes="ent1#att3 ent1#att4 ent1#att2 ent1#att6 ent1#att5 ent1#att14 ent1#att15 ent1#att17 countDistinct(rel4#role7.email)">
       <Selector id="sv4#area9#page11#dau5#su15" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#area9#page11#dau5#su15#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
       </Selector>
@@ -17,8 +17,14 @@
       <Link id="sv4#area9#page11#dau5#ln71" name="Flow67" to="sv4#area9#miu7" type="transport" validate="true" gr:bendpoints="287,-41,-128,54">
         <LinkParameter id="sv4#area9#page11#dau5#ln71#par153" name="Author_User First Name" source="data.ent1#att2" target="sv4#area9#miu7.mov1#mpkg1#opm8#icu8#icp25"/>
       </Link>
+      <Link id="sv4#area9#page11#dau5#ln58" name="Flow58" to="sv4#area9#page11#rtu2" type="transport" validate="true" gr:bendpoints="-66,150,-101,-185">
+        <LinkParameter id="sv4#area9#page11#dau5#ln58#par59" name="oid_Comments post [oid]" source="data.ent1#att1" target="sv4#area9#page11#rtu2#su30#rcond5.ent2#att7"/>
+      </Link>
+      <Link id="sv4#area9#page11#dau5#ln69" name="Flow69" to="sv4#area9#page11#seu11" type="transport" validate="true">
+        <LinkParameter id="sv4#area9#page11#dau5#ln69#par130" name="Author_AttCondition4" source="data.ent1#att2" target="sv4#area9#page11#seu11#su32#acond4"/>
+      </Link>
     </DataUnit>
-    <EntryUnit gr:x="50" gr:y="270" id="sv4#area9#page11#enu9" name="Comment Form" linkOrder="sv4#area9#page11#enu9#ln48" entity="ent2">
+    <EntryUnit gr:x="55" gr:y="270" id="sv4#area9#page11#enu9" name="Comment Form" linkOrder="sv4#area9#page11#enu9#ln48" entity="ent2">
       <Field id="sv4#area9#page11#enu9#fld19" name="Comment" type="text" modifiable="true" contentType="text/html"/>
       <Link id="sv4#area9#page11#enu9#ln48" name="Send" to="sv4#area9#cru6" type="normal" validate="true">
         <LinkParameter id="sv4#area9#page11#enu9#ln48#par102" name="Comment_comment" source="sv4#area9#page11#enu9#fld19" target="sv4#area9#cru6.ent2#att9"/>
@@ -30,21 +36,13 @@
       <Field id="sv4#area9#page11#enu9#fld25" name="time" type="timestamp" modifiable="false" attribute="ent2#att10" preloaded="true" hidden="true"/>
       <Field id="sv4#area9#page11#enu9#fld32" name="postOID" type="string" modifiable="false" attribute="ent2#att11" preloaded="true" hidden="true"/>
     </EntryUnit>
-    <RecursiveHierarchicalIndexUnit gr:x="0" gr:y="340" id="sv4#area9#page11#rtu2" name="Comments And Replies" showAllAsRoot="false" entity="ent2" relationship="rel5#role10" displayAttributes="ent2#att8 ent2#att9 ent2#att10">
+    <RecursiveHierarchicalIndexUnit gr:x="20" gr:y="435" id="sv4#area9#page11#rtu2" name="Comments And Replies" showAllAsRoot="false" entity="ent2" relationship="rel5#role10" displayAttributes="ent2#att8 ent2#att9 ent2#att10">
       <SortAttribute attribute="ent2#att10" order="descending"/>
-      <RootSelector id="sv4#area9#page11#rtu2#su19" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv4#area9#page11#rtu2#su19#rcond4" name="RoleCondition4" predicate="in" implied="false" role="rel5#role10"/>
+      <RootSelector id="sv4#area9#page11#rtu2#su30" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#area9#page11#rtu2#su30#rcond5" name="Comments post" predicate="in" implied="false" role="rel5#role10"/>
       </RootSelector>
     </RecursiveHierarchicalIndexUnit>
-    <SelectorUnit gr:x="15" gr:y="430" id="sv4#area9#page11#seu5" name="Post Comment Selector" entity="ent2">
-      <Selector id="sv4#area9#page11#seu5#su18" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv4#area9#page11#seu5#su18#rcond1" name="PostComments" predicate="in" implied="false" role="rel5#role9"/>
-      </Selector>
-      <Link id="sv4#area9#page11#seu5#ln59" name="Flow59" to="sv4#area9#page11#rtu2" type="transport" validate="true">
-        <LinkParameter id="sv4#area9#page11#seu5#ln59#par69" name="oid_KeyCondition18 [oid]" source="ent2#att7Array" target="sv4#area9#page11#rtu2#su19#kcond18.ent2#att7"/>
-      </Link>
-    </SelectorUnit>
-    <EntryUnit gr:x="0" gr:y="0" id="sv4#area9#page11#enu11" name="Status Update" linkOrder="sv4#area9#page11#enu11#ln50">
+    <EntryUnit gr:x="5" gr:y="0" id="sv4#area9#page11#enu11" name="Status Update" linkOrder="sv4#area9#page11#enu11#ln50">
       <SelectionField id="sv4#area9#page11#enu11#sfld6" name="Status" type="string">
         <Slot id="sv4#area9#page11#enu11#sfld6#slot4" name="StatusOptions" label="true" output="true" value="Open|Assigned|Progress|Closed"/>
       </SelectionField>
@@ -55,12 +53,12 @@
         <LinkParameter id="sv4#area9#page11#enu11#ln70#par152" name="Status_Post Status" source="sv4#area9#page11#enu11#sfld6" target="sv4#area9#miu7.mov1#mpkg1#opm8#icu8#icp24"/>
       </Link>
     </EntryUnit>
-    <TimeUnit gr:x="300" gr:y="405" id="sv4#area9#page11#tmu5" name="Comment Time">
+    <TimeUnit gr:x="305" gr:y="405" id="sv4#area9#page11#tmu5" name="Comment Time">
       <Link id="sv4#area9#page11#tmu5#ln61" name="Flow61" to="sv4#area9#page11#enu9" type="transport" validate="true">
         <LinkParameter id="sv4#area9#page11#tmu5#ln61#par57" name="Current/Input Time_time" source="currentTimestamp" target="sv4#area9#page11#enu9#fld25_slot"/>
       </Link>
     </TimeUnit>
-    <SelectorUnit id="sv4#area9#page11#seu3" name="Current User Info" gr:x="310" gr:y="260" entity="User">
+    <SelectorUnit id="sv4#area9#page11#seu3" name="Current User Info" gr:x="315" gr:y="260" entity="User">
       <Selector id="sv4#area9#page11#seu3#su23" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#area9#page11#seu3#su23#kcond20" name="CurrentUserKeyCondition" predicate="in" implied="false"/>
       </Selector>
@@ -68,11 +66,19 @@
         <LinkParameter id="sv4#area9#page11#seu3#ln62#par58" name="userName_Author" source="userNameArray" target="sv4#area9#page11#enu9#fld22_slot"/>
       </Link>
     </SelectorUnit>
-    <GetUnit id="sv4#area9#page11#gtu4" name="Get Current User" gr:x="460" gr:y="250" contextParameters="UserCtxParam">
+    <GetUnit id="sv4#area9#page11#gtu4" name="Get Current User" gr:x="465" gr:y="250" contextParameters="UserCtxParam">
       <Link id="sv4#area9#page11#gtu4#ln64" name="Flow53" to="sv4#area9#page11#seu3" type="transport" automaticCoupling="true" validate="true"/>
     </GetUnit>
-    <MultiMessageUnit id="sv4#area9#page11#mssu4" name="Success" gr:x="450" gr:y="105"/>
-    <MultiMessageUnit id="sv4#area9#page11#mssu6" name="Error" gr:x="545" gr:y="105"/>
+    <MultiMessageUnit id="sv4#area9#page11#mssu4" name="Success" gr:x="455" gr:y="105"/>
+    <MultiMessageUnit id="sv4#area9#page11#mssu6" name="Error" gr:x="550" gr:y="105"/>
+    <SelectorUnit gr:x="240" gr:y="100" id="sv4#area9#page11#seu11" name="email" entity="User" maxResults="1">
+      <Selector id="sv4#area9#page11#seu11#su32" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv4#area9#page11#seu11#su32#acond4" name="AttCondition4" predicate="eq" booleanOperator="or" implied="false" attributes="email"/>
+      </Selector>
+      <Link id="sv4#area9#page11#seu11#ln88" name="Flow88" to="sv4#area9#miu7" type="transport" validate="true">
+        <LinkParameter id="sv4#area9#page11#seu11#ln88#par129" name="email_User Email" source="emailArray" target="sv4#area9#miu7.mov1#mpkg1#opm8#icu8#icp26"/>
+      </Link>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -105,6 +111,7 @@
           <layout:Attribute attribute="ent1#att14"/>
           <layout:Attribute attribute="ent1#att15"/>
           <layout:Attribute attribute="ent1#att17"/>
+          <layout:Attribute attribute="countDistinct(rel4#role7.email)"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

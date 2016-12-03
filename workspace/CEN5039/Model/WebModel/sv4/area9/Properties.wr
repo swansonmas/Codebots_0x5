@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="30" gr:y="10" id="sv4#area9" name="Staff Posts" landmark="true" protected="false" defaultPage="sv4#area9#page6">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="30" gr:y="10" id="sv4#area9" name="Staff Posts" landmark="true" protected="true" defaultPage="sv4#area9#page6" secure="false">
   <OperationUnits>
     <CreateUnit gr:x="575" gr:y="160" id="sv4#area9#cru6" name="Create Comment" entity="ent2"/>
     <ModifyUnit gr:x="580" gr:y="30" id="sv4#area9#mfu4" name="Update Post" entity="ent1">
@@ -7,7 +7,7 @@
       </Selector>
       <OKLink id="sv4#area9#mfu4#oln38" name="OKFlow31" to="sv4#area9#miu7" automaticCoupling="true"/>
     </ModifyUnit>
-    <ModuleInstanceUnit id="sv4#area9#miu7" gr:x="570" gr:y="30" action="true" moduleId="mov1#mpkg1#opm8">
+    <ModuleInstanceUnit id="sv4#area9#miu7" gr:x="740" gr:y="35" action="true" moduleId="mov1#mpkg1#opm8">
       <OKLink id="sv4#area9#miu7#oln39" name="OKFlow39" to="sv4#area9#page11#mssu4">
         <LinkParameter id="sv4#area9#miu7#oln39#par175" name="Success Message_Shown Messages" source="mov1#mpkg1#opm8#okcu7#ocp5" target="sv4#area9#page11#mssu4.shownMessages"/>
       </OKLink>

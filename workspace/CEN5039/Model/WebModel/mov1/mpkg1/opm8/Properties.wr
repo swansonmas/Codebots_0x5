@@ -1,15 +1,18 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov1#mpkg1#opm8" name="Resolved Issue Email">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#mpkg1#opm8#icu8" gr:x="30" gr:y="80">
+    <InputCollectorUnit id="mov1#mpkg1#opm8#icu8" gr:x="30" gr:y="80" linkOrder="mov1#mpkg1#opm8#icu8#ln67">
       <InputCollectorParameter id="mov1#mpkg1#opm8#icu8#icp24" name="Post Status"/>
       <InputCollectorParameter id="mov1#mpkg1#opm8#icu8#icp25" name="User First Name"/>
-      <InputCollectorParameter id="mov1#mpkg1#opm8#icu8#icp26" name="Input Port Parameter26"/>
+      <InputCollectorParameter id="mov1#mpkg1#opm8#icu8#icp26" name="User Email"/>
       <Link id="mov1#mpkg1#opm8#icu8#ln68" name="Flow68" to="mov1#mpkg1#opm8#opg1#mlu1" type="transport" validate="true" gr:bendpoints="200,69,-145,79">
         <LinkParameter id="mov1#mpkg1#opm8#icu8#ln68#par128" name="User First Name_user_name" source="mov1#mpkg1#opm8#icu8#icp25" target="mov1#mpkg1#opm8#opg1#mlu1.user_name"/>
       </Link>
       <OKLink id="mov1#mpkg1#opm8#icu8#oln33" name="OKFlow33" to="mov1#mpkg1#opm8#opg1#switch2">
         <LinkParameter id="mov1#mpkg1#opm8#icu8#oln33#par134" name="Post Status_Switch" source="mov1#mpkg1#opm8#icu8#icp24" target="mov1#mpkg1#opm8#opg1#switch2.switch"/>
       </OKLink>
+      <Link id="mov1#mpkg1#opm8#icu8#ln67" name="Flow67" to="mov1#mpkg1#opm8#opg1#mlu1" type="transport" validate="true" gr:bendpoints="207,-112,-158,-102">
+        <LinkParameter id="mov1#mpkg1#opm8#icu8#ln67#par127" name="User Email_Mail - To" source="mov1#mpkg1#opm8#icu8#icp26" target="mov1#mpkg1#opm8#opg1#mlu1.to"/>
+      </Link>
     </InputCollectorUnit>
     <OKCollectorUnit gr:x="675" gr:y="155" id="mov1#mpkg1#opm8#okcu7" name="Success">
       <OutputCollectorParameter id="mov1#mpkg1#opm8#okcu7#ocp5" name="Success Message"/>
