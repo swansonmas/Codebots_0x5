@@ -6,7 +6,7 @@
       <Field id="sv2#page8#enu7#fld29" name="Author" type="string" modifiable="false" attribute="ent2#att8" preloaded="true" hidden="true"/>
       <Field id="sv2#page8#enu7#fld30" name="time" type="timestamp" preloaded="true" attribute="ent2#att10" hidden="true"/>
       <Field id="sv2#page8#enu7#fld31" name="postOID" type="string" preloaded="true" attribute="ent2#att11" hidden="true"/>
-      <Link id="sv2#page8#enu7#ln26" name="Send" to="sv2#cru6" type="normal" validate="true" ajaxOpenWaitingDialog="true" ajaxEnabled="false" gr:bendpoints="-155,-132,-25,133">
+      <Link id="sv2#page8#enu7#ln26" name="Send" to="sv2#cru6" type="normal" validate="true" ajaxOpenWaitingDialog="false" ajaxEnabled="false" gr:bendpoints="-155,-132,-25,133">
         <LinkParameter id="sv2#page8#enu7#ln26#par53" name="Author_Author" source="sv2#page8#enu7#fld29" target="sv2#cru6.ent2#att8"/>
         <LinkParameter id="sv2#page8#enu7#ln26#par54" name="Reply_comment" source="sv2#page8#enu7#fld27" target="sv2#cru6.ent2#att9"/>
         <LinkParameter id="sv2#page8#enu7#ln26#par55" name="Comments Object_Comments Object" source="entityBean" target="sv2#cru6.entityBeans"/>

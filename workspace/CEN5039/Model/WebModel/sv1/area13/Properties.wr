@@ -1,0 +1,3 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="625" gr:y="30" id="sv1#area13" name="Forgot Password" landmark="false" defaultPage="sv1#area13#page17" layout:pageLayout="BootstrapStyle/reset_page">
+  <OperationUnits/>
+</Area>

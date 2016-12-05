@@ -39,7 +39,7 @@
         <input id="passwordContent" type="password" placeholder="enter your password" class="input pass"/>
         <span id="pretenderLogin" class="inputButton" style="text-align:center">Sign me in !</span>
         <div class="text-center"">
-        <a href="#" id="createAccount">create an account</a> - <a href="#" id="">forgot password?</a>
+        <a href="#" id="createAccount">create an account</a> - <a href="page17.do" id="">forgot password?</a>
                 </div>
       </div>
     </div>

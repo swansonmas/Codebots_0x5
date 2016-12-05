@@ -1,0 +1,52 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1340" gr:y="1155" id="sv2#page16" name="Edit profile">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv2#page16#enu15" name="Edit Profile Form" gr:showAllParts="true" fieldOrder="sv2#page16#enu15#fld46 sv2#page16#enu15#fld47 sv2#page16#enu15#fld48" entity="User" linkOrder="sv2#page16#enu15#ln88">
+      <Field id="sv2#page16#enu15#fld47" name="new password" type="password" preloaded="false" modifiable="true" attribute="password">
+        <VRules>
+          <ValueLengthValidationRule id="sv2#page16#enu15#fld47#vl2" name="Value Length2" predicate="min" value="4" errorMessage="password must be 4 characters minimum"/>
+          <MandatoryValidationRule id="sv2#page16#enu15#fld47#mnd13" name="MandatoryNewPassword" companionField="sv2#page16#enu15#fld48" predicate="eq" errorMessage="Password is mandatory"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page16#enu15#fld46" name="email" type="string" preloaded="true" modifiable="true" attribute="email">
+        <VRules>
+          <EMailValidationRule id="sv2#page16#enu15#fld46#email1" name="EMail1" errorMessage="Please provide a valid email"/>
+        </VRules>
+      </Field>
+      <Link id="sv2#page16#enu15#ln88" name="update" to="sv2#mfu6" type="normal" validate="true">
+        <LinkParameter id="sv2#page16#enu15#ln88#par129" name="email_email" source="sv2#page16#enu15#fld46" target="sv2#mfu6.email"/>
+        <LinkParameter id="sv2#page16#enu15#ln88#par130" name="Key [oid]_KeyCondition27 [oid]" source="key.userOID" target="sv2#mfu6#su30#kcond27.userOID"/>
+        <LinkParameter id="sv2#page16#enu15#ln88#par131" name="new password_password" source="sv2#page16#enu15#fld48" target="sv2#mfu6.password"/>
+        <LinkParameter id="sv2#page16#enu15#ln88#par132" name="User Object_User Object" source="entityBean" target="sv2#mfu6.entityBeans"/>
+      </Link>
+      <Field id="sv2#page16#enu15#fld48" name="confirm password" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page16#enu15#fld48#mnd14" name="ConfirmNewPassword" predicate="eq" errorMessage="please confirm password"/>
+          <CompareValidationRule id="sv2#page16#enu15#fld48#cmp2" name="Compare2" predicate="eq" valueField="sv2#page16#enu15#fld47" errorMessage="Password do not match"/>
+        </VRules>
+      </Field>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell colspan="8">
+        <layout:Unit unitId="sv2#page16#enu15">
+          <layout:Link link="sv2#page16#enu15#ln88"/>
+          <layout:Field field="sv2#page16#enu15#fld46"/>
+          <layout:Field field="sv2#page16#enu15#fld47"/>
+          <layout:Field field="sv2#page16#enu15#fld48"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

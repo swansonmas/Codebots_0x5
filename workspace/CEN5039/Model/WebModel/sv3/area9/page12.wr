@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="290" gr:y="0" id="sv3#area9#page12" name="Events" layout:layoutManager="grid" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="450" gr:y="10" id="sv3#area9#page12" name="Events" layout:layoutManager="grid" landmark="true">
   <ContentUnits>
     <QueryUnit id="sv3#area9#page12#qu8" name="Events" gr:showAllParts="true" gr:x="0" gr:y="0" mode="select" language="SQL" db="db2">
       <QueryText xml:space="preserve">select p.oid

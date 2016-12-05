@@ -1,0 +1,50 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="325" gr:y="240" id="mov1#opm8" name="Reset Password">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm8#icu8" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm8#icu8#icp24" name="email"/>
+      <OKLink id="mov1#opm8#icu8#oln35" name="OKFlow35" to="mov1#opm8#seu5">
+        <LinkParameter id="mov1#opm8#icu8#oln35#par149" name="email_AttCondition" source="mov1#opm8#icu8#icp24" target="mov1#opm8#seu5#su31#acond4"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <SelectorUnit gr:x="345" gr:y="50" id="mov1#opm8#seu5" name="select user" entity="User" linkOrder="mov1#opm8#seu5#ln94 mov1#opm8#seu5#ln95">
+      <Selector id="mov1#opm8#seu5#su31" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#opm8#seu5#su31#acond4" name="AttCondition" predicate="eq" booleanOperator="or" implied="false" ignoreCase="false" attributes="email"/>
+      </Selector>
+      <OKLink id="mov1#opm8#seu5#oln34" name="OKFlow34" to="mov1#opm8#inn3">
+        <LinkParameter id="mov1#opm8#seu5#oln34#par148" name="email_Input" source="emailArray" target="mov1#opm8#inn3.isnotnull"/>
+      </OKLink>
+      <Link id="mov1#opm8#seu5#ln94" name="Flow94" to="mov1#opm8#mfu7" type="transport" validate="true" gr:bendpoints="72,217,-298,82;291,223,-99,83" automaticCoupling="true"/>
+      <Link id="mov1#opm8#seu5#ln95" name="Flow95" to="mov1#opm8#mlu1" type="transport" validate="true" gr:bendpoints="-41,283,-601,148;399,286,-161,151">
+        <LinkParameter id="mov1#opm8#seu5#ln95#par202" name="First Name_FirstName" source="User#att12Array" target="mov1#opm8#mlu1.FirstName"/>
+        <LinkParameter id="mov1#opm8#seu5#ln95#par203" name="Last Name_LastName" source="User#att13Array" target="mov1#opm8#mlu1.LastName"/>
+        <LinkParameter id="mov1#opm8#seu5#ln95#par212" name="justforwebratio@gmail.com_Mail - From" sourceValue="justforwebratio@gmail.com" target="mov1#opm8#mlu1.from"/>
+        <LinkParameter id="mov1#opm8#seu5#ln95#par213" name="email_Mail - To" source="emailArray" target="mov1#opm8#mlu1.to"/>
+      </Link>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="560" gr:y="70" id="mov1#opm8#inn3" name="check email exist">
+      <OKLink id="mov1#opm8#inn3#oln36" name="OKFlow36" to="mov1#opm8#pwu8" automaticCoupling="true"/>
+      <KOLink id="mov1#opm8#inn3#kln21" name="KOFlow21" to="mov1#opm8#kocu8" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <PasswordUnit gr:x="465" gr:y="200" id="mov1#opm8#pwu8" name="generate code" passwordSize="8">
+      <OKLink id="mov1#opm8#pwu8#oln39" name="OKFlow39" to="mov1#opm8#mfu7">
+        <LinkParameter id="mov1#opm8#pwu8#oln39#par201" name="Generated Password_password" source="password" target="mov1#opm8#mfu7.password"/>
+      </OKLink>
+    </PasswordUnit>
+    <ModifyUnit gr:x="720" gr:y="185" id="mov1#opm8#mfu7" name="save code" entity="User">
+      <Selector id="mov1#opm8#mfu7#su33" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm8#mfu7#su33#kcond28" name="KeyCondition28" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm8#mfu7#oln40" name="OKFlow40" to="mov1#opm8#mlu1" automaticCoupling="true"/>
+    </ModifyUnit>
+    <MailUnit gr:x="890" gr:y="205" id="mov1#opm8#mlu1" name="reset mail to client" format="html" smtpServer="smtp1">
+      <SubjectTemplate xml:space="preserve">Reset Password</SubjectTemplate>
+      <BodyTemplate xml:space="preserve">#?delimiters [%, %], [%=, %]
+&lt;html&gt;
+	&lt;body&gt;
+		&lt;p&gt;Dear $$FirstName$$ $$LastName$$,&lt;/p&gt;
+		&lt;p&gt;thanks for registering on our website.&lt;/p&gt;
+		&lt;p&gt;Best Regards,&lt;/p&gt;
+		&lt;p&gt;Acme inc.&lt;/p&gt;
+	&lt;/body&gt;	
+&lt;/html&gt;
+</BodyTemplate>      <OKLink id="mov1#opm8#mlu1#oln41" name="OKFlow41" to="mov1#opm8#okcu6" automaticCoupling="true"/>      <KOLink id="mov1#opm8#mlu1#kln23" name="KOFlow23" to="mov1#opm8#kocu8">        <LinkParameter id="mov1#opm8#mlu1#kln23#par207" name="Failed to send email_message" sourceValue="Failed to send email" target="mov1#opm8#kocu8#ocp5"/>      </KOLink>    </MailUnit>    <OKCollectorUnit gr:x="1065" gr:y="260" id="mov1#opm8#okcu6" name="success">      <OutputCollectorParameter id="mov1#opm8#okcu6#ocp4" name="message" value="Check your email for instruction"/>    </OKCollectorUnit>    <KOCollectorUnit gr:x="1065" gr:y="55" id="mov1#opm8#kocu8" name="Failure">      <OutputCollectorParameter id="mov1#opm8#kocu8#ocp5" name="message" value="Not a valid email"/>    </KOCollectorUnit>  </OperationUnits></OperationModule>

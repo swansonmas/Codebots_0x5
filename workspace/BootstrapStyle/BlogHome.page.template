@@ -303,11 +303,20 @@ $('.navbar-nav').find('li')[0].childNodes[0].innerHTML = "<i class='fa fa-plus' 
  try{
  
  	$('#cke_fld12').css({'width':''});
+ 	
+
+ 	var reply = $('[id="ln38"]');
+ 	for(var i = 0; i < reply.length; i++ ){
+ 		reply[i].innerHTML = "reply &nbsp;" + "<i class='fa fa-reply' aria-hidden='true'></i>";
+ 	}
+ 	
  }
  catch(err){
- 
+ 	console.log(err);
  } 
 </script>
+
 <script type="text/javascript" src="./BootstrapStyle/js/NotificationMessage.js"></script>
+
 </body>
 </html>

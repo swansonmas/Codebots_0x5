@@ -7,6 +7,193 @@ body{
 
 }
 
+#page2_cell_1 .text, #page2_cell_30 .text{
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#page2_cell_1 .text p,  #page2_cell_30 .text p {
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+
+}
+
+
+#page2_cell_1 .string, #page2_cell_30 .string{
+    color: #7C7957;
+    font-family: 'Trocchi', serif;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 48px;
+    margin: 0;
+    margin-bottom: 3%;
+    border: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#ln8{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    border: 1px violet solid;
+    box-shadow: 0 4px #999;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    width: 35%;
+    margin-left: 60%;
+    border-radius: 12px;
+    white-space: nowrap;
+
+
+}
+
+#ln8:hover{
+    text-decoration: none;
+
+}
+
+#ln8:after{
+    content: '�';
+    cursor: pointer;
+    transition: 1s;
+    opacity: 0;
+    padding-left: 3px;
+}
+
+#ln8:hover:after{
+
+    cursor: pointer;
+    transition: 1s;
+    opacity: 1;
+
+}
+
+
+#ln24{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    border: 1px violet solid;
+    box-shadow: 0 4px #999;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    width: 35%;
+    margin-left: 60%;
+    border-radius: 12px;
+    white-space: nowrap;
+
+
+}
+
+#ln24:hover{
+    text-decoration: none;
+
+}
+
+#ln24:after{
+    content: '�';
+    cursor: pointer;
+    transition: 1s;
+    opacity: 0;
+    padding-left: 3px;
+}
+
+#ln24:hover:after{
+
+    cursor: pointer;
+    transition: 1s;
+    opacity: 1;
+
+}
+
+
+#ln70{
+    padding: 5px 52px;
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    float: right;
+}
+
+
+button[id="button:ln4"], button[id="button:ln67"]{
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+
+}
+
+button[id="button:ln4"]:hover, button[id="button:ln67"]{
+    color: #fff;
+
+    background-color: #398439;
+    border-color: #5cb85c;
+    transition: 1s;
+
+}
+
+
+button[id="button:ln10"]{
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+    margin-left: 18%;
+
+}
+
+button[id="button:ln10"]:hover{
+    color: #fff;
+
+    background-color: #357ebd;
+    border-color: #357ebd;
+    transition: 1s;
+
+}
+
+
+button[id="button:ln16"]{
+    width: 100%;
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+button[id="button:ln16"]:hover{
+    width: 100%;
+    background-color: #46b8da;
+
+}
+
+.panel-default>.panel-heading {
+    color: white;
+    background-color: rgb(66, 139, 202);
+    border-color: #cc0000;
+    border-width: 5px;
+    text-align: center;
+}
+
 #titleContainer{
     width: 50%;
     margin: 60px auto;
@@ -85,53 +272,19 @@ body{
     background-color: #cc0000;
 }
 
-.buttonw3c {
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: black;
-    border: 1px violet solid;
-    box-shadow: 0 4px #999;
-    margin-top:4%;
-    margin-bottom: 3%;
-    width:35%;
-    margin-left:60%;
-    border-radius: 12px;
-}
+
 
 .timestamp{
+    font-size: 17px;
+    margin-left: 18px;
+    font-family: 'Glyphicons Halflings';
+    -webkit-font-smoothing: antialiased;
+}
+
+.timestamp:before{
     font-size: 15px;
+    content: "⌚";
 }
-
-.buttonw3c span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.buttonw3c span:after {
-  content: '�';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.buttonw3c:hover span {
-  padding-right: 25px;
-}
-
-.buttonw3c:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
 
 .blogTitle{
     font-size: 32px;
@@ -180,7 +333,20 @@ hr{
     user-select: none;
 }
 
-.btn-outline-primary{
+#page2_cell_18 .string{
+    width: 41.66666666666667%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+
+
+}
+#ln17 , .btn-outline-primary{
 
     margin-bottom: 0px;
     font-weight: 400;
@@ -200,11 +366,57 @@ hr{
     user-select: none;
     margin-left: 45%;
     margin-right: 1%;
+    width: 25%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+
 }
 
-.btn-outline-primary:hover{
+#ln20{
+
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+    width: 25%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+
+}
+
+#ln20:hover{
+
+    color: #fff;
+    background-color: #357ebd;
+    border-color: #357ebd;
     text-decoration: none;
-    border-color: #fa5742;
+}
+
+
+#ln17:hover, .btn-outline-primary:hover{
+    text-decoration: none;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    color: white;
+    transition: 1s;
 }
 
 .glyphicon{
@@ -281,11 +493,7 @@ hr{
 
 /*MEDIA QUERIES*/
 @media screen and (max-width: 1240px) {
-    .buttonw3c {
-        font-size: 18px;
-        width: 46%;
-        margin-left: 50%;
-    }
+
 }
 
 
@@ -323,11 +531,7 @@ hr{
 }
 
 @media screen and (max-width: 768px) {
-    .buttonw3c {
 
-        width: 55%;
-        margin-left: 45%;
-    }
     .btn{
         font-size: 12px;
     }
@@ -474,10 +678,6 @@ hr{
         width: 243px;
         font-size: 12px;
 
-    }
-
-    #titleContainer {
-        margin-right: 120px;
     }
 
     .span-decoration-line {
