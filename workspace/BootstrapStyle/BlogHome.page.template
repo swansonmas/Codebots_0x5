@@ -317,6 +317,7 @@ $('.navbar-nav').find('li')[0].childNodes[0].innerHTML = "<i class='fa fa-plus' 
 </script>
 
 <script type="text/javascript" src="./BootstrapStyle/js/NotificationMessage.js"></script>
+<script type="text/javascript" src="./BootstrapStyle/js/ImageAnimation.js"></script>
 
 </body>
 </html>

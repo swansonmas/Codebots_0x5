@@ -64,6 +64,23 @@ body{
 
 }
 
+#ln38{
+    border: #444 1px solid;
+    padding: 2px 14px;
+    background-image: -webkit-linear-gradient(top,#f2f2f2,#f1f1f1);
+    border: 1px solid rgba(0,0,0,0.3);
+    font-family: arial,sans-serif;
+    font-size: 15px;
+}
+
+#ln38:hover{
+    text-decoration: none;
+}
+
+.smallcol{
+    margin-top: 1%;
+}
+
 #ln8:hover{
     text-decoration: none;
 
@@ -192,6 +209,7 @@ button[id="button:ln16"]:hover{
     border-color: #cc0000;
     border-width: 5px;
     text-align: center;
+    padding: 1.5em;
 }
 
 #titleContainer{
@@ -482,8 +500,17 @@ hr{
       }
       
 #latlng {
-        width: 225px;
+        width: 100%;
       }
+
+#submitGeocode{
+
+    width:50%;
+}
+
+#deleteMarker{
+    width: 49%;
+}
 
 #ln1{
     float:right;
@@ -492,7 +519,12 @@ hr{
 
 
 /*MEDIA QUERIES*/
-@media screen and (max-width: 1240px) {
+@media screen and (max-width: 1100px) {
+   #ln8,#ln24{
+       width: 42%;
+       margin-left: 56%;
+   }
+
 
 }
 
@@ -543,6 +575,11 @@ hr{
         width: 329px;
         font-size: 16px;
 
+    }
+
+    #ln8,#ln24{
+        width: 46%;
+        margin-left: 48%;
     }
 }
 

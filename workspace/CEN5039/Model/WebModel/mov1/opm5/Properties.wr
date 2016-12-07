@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="280" gr:y="135" id="mov1#opm5" name="Manage Group">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="300" gr:y="170" id="mov1#opm5" name="Manage Group">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm5#icu5" gr:x="30" gr:y="60" linkOrder="mov1#opm5#icu5#ln34 mov1#opm5#icu5#ln35">
       <OKLink id="mov1#opm5#icu5#oln10" name="OKFlow10" to="mov1#opm5#inn1">

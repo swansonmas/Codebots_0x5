@@ -3,22 +3,39 @@
 <div id="floating-panel">
       <input id="latlng" type="text" value="26.6400778,-80.1468974">
       <input id="submitGeocode" type="button" value="Reverse Geocode">
+      <input id="deleteMarker" onclick="deleteMarkers();" type=button value="Delete Markers">
  </div>
  <div id="map" style="height:300px;"></div>
 <script>
-
+	var markers = [];
      function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
+          center: {lat:26.370617, lng:-80.1020161},
           zoom: 16
         });
+        
+        map.addListener('click', function(e) {
+          placeMarkerAndPanTo(e.latLng, map);
+          
+          
+          var latString = e.latLng.lat();
+			var lngString = e.latLng.lng();
+			var valueStr  = latString.toString() + ',' + lngString.toString();
+			var input = document.getElementById('latlng').value = valueStr;
+			document.getElementById('fld21').value = valueStr;
+    
+        });
+        
+        
+       
         var infoWindow = new google.maps.InfoWindow({map: map});
 		var geocoder = new google.maps.Geocoder;
 		
 		 document.getElementById('submitGeocode').addEventListener('click', function() {
           geocodeLatLng(geocoder, map, infoWindow);
         });
-		
+        
+        
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
@@ -65,6 +82,7 @@
                 map: map,
                 animation: google.maps.Animation.BOUNCE
               });
+              markers.push(marker);
               infoWindow.setContent(results[1].formatted_address);
               infoWindow.open(map, marker);
              // document.getElementById('fld21').value = results[1].formatted_address;
@@ -77,8 +95,50 @@
         });
       }
 	  
+	   function placeMarkerAndPanTo(latLng, map) {
+        var marker = new google.maps.Marker({
+          position: latLng,
+          map: map,
+          draggable: true
+        });
+        markers.push(marker);
+        map.panTo(latLng);
+        
+        marker.addListener('click', function(e) {
+          
+          	var latString = e.latLng.lat();
+			var lngString = e.latLng.lng();
+			var valueStr  = latString.toString() + ',' + lngString.toString();
+          	
+          	var pos = {
+              lat: e.latLng.lat(),
+              lng: e.latLng.lng()
+            };
+          	
+          	var infoWindow = new google.maps.InfoWindow({map: map});
+          	infoWindow.open(map, marker);
+          	infoWindow.setContent(valueStr);
+          
+        });
+         
+		
+  
+      }
 	  
-	  
+	  function deleteMarkers() {
+        clearMarkers();
+        markers = [];
+      }
+      
+       function clearMarkers() {
+        setMapOnAll(null);
+      }
+      
+      function setMapOnAll(map) {
+        for (var i = 0; i < markers.length; i++) {
+          markers[i].setMap(map);
+        }
+      }
      
     </script>
 <script async defer

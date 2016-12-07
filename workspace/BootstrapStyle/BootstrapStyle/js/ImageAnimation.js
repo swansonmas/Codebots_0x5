@@ -1,43 +1,25 @@
-function isScrolledIntoView(el) {
-    var elemTop = el.getBoundingClientRect().top;
-    var elemBottom = el.getBoundingClientRect().bottom;
+function imageAnimation() {
 
-    var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
-    return isVisible;
-}
+    var element = document.getElementsByTagName("img");
+    for(var i = 0; i < element.length; i ++){
 
-function 	navbarScroll(){
-    window.addEventListener('scroll', function(e) {
-        last_known_scroll_position = window.scrollY;
-
-
-        var navBar = $('#topNavigationbar');
-        var el = document.getElementById('topNavigationbar');
-        isScrolledIntoView(el);
-
-        if (isScrolledIntoView && last_known_scroll_position > 0) {
-            navBar.addClass('navbar-inverse');
-            navBar.addClass('navbar-fixed-top');
-            navBar.removeClass('navbar-default');
-
-            navBar.addClass('blackBackground');
-            navBar.removeClass('blueBackground');
-
+        if(element[i].getBoundingClientRect().top < 750){
+            element[i].className = "rotateIn animated";
         }
         else{
-            navBar.removeClass('navbar-inverse');
-            navBar.addClass('navbar-default');
-            navBar.addClass('blueBackground');
-            navBar.removeClass('navbar-fixed-top');
-            navBar.removeClass('blackBackground');
-
+            element[i].className = " ";
         }
 
+    }
 
-    });
 }
 
-jQuery('document').ready(function(){
+window.addEventListener("scroll", function(){
 
-    navbarScroll();
+
+    imageAnimation();
+
+
+
 });
+

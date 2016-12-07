@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area2#page2" name="SnapCamp" ajaxEnabled="false">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area2#page2" name="SnapCamp" ajaxEnabled="false" layout:pageLayout="BootstrapStyle/BlogHome">
   <ContentUnits>
     <PowerIndexUnit gr:x="20" gr:y="0" id="sv2#area2#page2#pwu1" name="ISSUES" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att3 ent1#att4 ent1#att5 ent1#att6" blockFactor="5" linkOrder="sv2#area2#page2#pwu1#ln8">
       <Link id="sv2#area2#page2#pwu1#ln8" name="READ MORE" to="sv2#area5#page5#dau2" type="normal" validate="true" gr:bendpoints="-192,-38,273,-48">
