@@ -163,3 +163,19 @@ document.getElementById("cancelLoginForm").addEventListener('click', function(){
 	});
 
 
+document.getElementById("pretendfl6").addEventListener("keyup", function(){
+
+	var pretendPassword = document.getElementById('pretendfl5').value;
+	var confirmPassword = document.getElementById('pretendfl6').value;
+
+	if(pretendPassword === confirmPassword){
+		$("#pretendfl6").css({"background":"url('BootstrapStyle/css/imgs/valid.png') no-repeat 98% center"})
+		$('#pwdChk').hide();
+	}
+	else{
+		$("#pretendfl6").css({"background":"url('BootstrapStyle/css/imgs/invalid.PNG') no-repeat 98% center"})
+		$('#pwdChk').show();
+	}
+
+
+})

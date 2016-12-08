@@ -1,14 +1,14 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="80" id="sv4#area9#page6" name="Issues">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="55" id="sv4#area9#page6" name="Issues">
   <ContentUnits>
-    <EntryUnit gr:x="5" gr:y="0" id="sv4#area9#page6#enu8" name="Search" linkOrder="sv4#area9#page6#enu8#ln44">
+    <EntryUnit gr:x="5" gr:y="0" id="sv4#area9#page6#enu8" name="Search" linkOrder="sv4#area9#page6#enu8#ln44" gr:showAllParts="true">
       <SelectionField id="sv4#area9#page6#enu8#sfld3" name="Status" type="string">
-        <Slot id="sv4#area9#page6#enu8#sfld3#slot3" name="Status" label="true" output="true" value="Open|Progress|Closed"/>
+        <Slot id="sv4#area9#page6#enu8#sfld3#slot3" name="Status" label="true" output="true" value="Open|In Progress|Closed"/>
       </SelectionField>
       <Link id="sv4#area9#page6#enu8#ln44" name="Search" to="sv4#area9#page6#pwu5" type="normal" validate="true">
         <LinkParameter id="sv4#area9#page6#enu8#ln44#par89" name="Status_PostStatus" source="sv4#area9#page6#enu8#sfld3" target="sv4#area9#page6#pwu5#su11#acond1"/>
       </Link>
     </EntryUnit>
-    <PowerIndexUnit gr:x="5" gr:y="95" id="sv4#area9#page6#pwu5" name="Issues List" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att4 ent1#att3 ent1#att5 ent1#att6 ent1#att14" linkOrder="sv4#area9#page6#pwu5#ln47">
+    <PowerIndexUnit gr:x="45" gr:y="205" id="sv4#area9#page6#pwu5" name="Issues List" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att4 ent1#att3 ent1#att5 ent1#att6 ent1#att14 ent1#att17" linkOrder="sv4#area9#page6#pwu5#ln47" gr:showAllParts="true">
       <SortAttribute attribute="ent1#att6" order="descending"/>
       <Selector id="sv4#area9#page6#pwu5#su11" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv4#area9#page6#pwu5#su11#acond1" name="PostStatus" predicate="eq" booleanOperator="or" implied="true" attributes="ent1#att14" ignoreCase="true"/>
@@ -16,7 +16,7 @@
       </Selector>
       <Link id="sv4#area9#page6#pwu5#ln47" name="View Details" to="sv4#area9#page11#dau5" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
-    <GetUnit gr:x="0" gr:y="235" id="sv4#area9#page6#gtu6" name="Get Current Staff" contextParameters="UserCtxParam">
+    <GetUnit gr:x="0" gr:y="420" id="sv4#area9#page6#gtu6" name="Get Current Staff" contextParameters="UserCtxParam">
       <Link id="sv4#area9#page6#gtu6#ln56" name="Flow56" to="sv4#area9#page6#pwu5" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
   </ContentUnits>
@@ -44,6 +44,8 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv4#area9#page6#pwu5">
+          <layout:Link link="sv4#area9#page6#pwu5#ln47"/>
+          <layout:Link link="sv4#area9#page6#pwu5ent1#att6"/>
           <layout:Attribute attribute="ent1#att4">
             <layout:LayoutParameter name="image-width" value="100" type="attribute"/>
           </layout:Attribute>
@@ -51,8 +53,7 @@
           <layout:Attribute attribute="ent1#att5"/>
           <layout:Attribute attribute="ent1#att6"/>
           <layout:Attribute attribute="ent1#att14"/>
-          <layout:Link link="sv4#area9#page6#pwu5#ln47"/>
-          <layout:Link link="sv4#area9#page6#pwu5ent1#att6"/>
+          <layout:Attribute attribute="ent1#att17"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

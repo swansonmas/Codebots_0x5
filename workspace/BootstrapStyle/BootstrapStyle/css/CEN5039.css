@@ -459,6 +459,9 @@ h1, input {
     background: url("./imgs/valid.png") no-repeat 98% center;
 }
 
+#pretendfl6:focus{
+    background: url("./imgs/invalid.PNG") no-repeat 98% center;
+}
 
 /*Media queries*/
 

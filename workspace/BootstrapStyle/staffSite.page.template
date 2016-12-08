@@ -68,12 +68,7 @@ def showPageTitle = params["show-page-title"] == "true"
 		<wr:Resources types="javascript"/>
 		
 		<link rel="stylesheet" type="text/css" href="./BootstrapStyle/css/adminSite.css">
-		<style>
-			.panel-body img{
-				max-width: 400px;
-				max-height:350px; 
-			}
-		</style>
+		
 	</head>
 <body class="bootstrap-[%= params["theme"] %]">
 <a href="#main-content" class="sr-only">Skip to main content</a>

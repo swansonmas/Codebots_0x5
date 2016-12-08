@@ -1,10 +1,10 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="245" gr:y="0" id="sv4#area9#page11" name="Issue Details">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="400" gr:y="0" id="sv4#area9#page11" name="Issue Details">
   <ContentUnits>
-    <DataUnit gr:x="40" gr:y="140" id="sv4#area9#page11#dau5" name="Details" entity="ent1" displayAttributes="ent1#att3 ent1#att4 ent1#att5 ent1#att6 ent1#att17 ent1#att1">
+    <DataUnit gr:x="40" gr:y="140" id="sv4#area9#page11#dau5" name="Details" entity="ent1" displayAttributes="ent1#att3 ent1#att4 ent1#att5 ent1#att6 ent1#att17" linkOrder="sv4#area9#page11#dau5#ln96">
       <Selector id="sv4#area9#page11#dau5#su15" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#area9#page11#dau5#su15#kcond25" name="containsPost" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv4#area9#page11#dau5#ln51" name="Flow51" to="sv4#area9#cru6" type="transport" validate="true" gr:bendpoints="-64,84,-84,-111">
+      <Link id="sv4#area9#page11#dau5#ln51" name="Flow51" to="sv4#area9#cru6" type="transport" validate="true" gr:bendpoints="69,65,-96,50">
         <LinkParameter id="sv4#area9#page11#dau5#ln51#par101" name="oid_Post.oid(CommentsToPost)" source="data.ent1#att1" target="sv4#area9#cru6.rel2#role4.ent1#att1"/>
       </Link>
       <Link id="sv4#area9#page11#dau5#ln54" name="Flow54" to="sv4#area9#mfu4" automaticCoupling="true" type="transport" validate="true"/>
@@ -17,6 +17,10 @@
       <Link id="sv4#area9#page11#dau5#ln58" name="Flow58" to="sv4#area9#page11#qu10" type="transport" validate="true" gr:bendpoints="-85,152,-105,-168">
         <LinkParameter id="sv4#area9#page11#dau5#ln58#par59" name="oid_postOID" source="data.ent1#att1" target="sv4#area9#page11#qu10.sv4#area9#page11#qu10#qi3"/>
       </Link>
+      <Link id="sv4#area9#page11#dau5#ln96" name="Get Direction" to="sv4#area14#page18#enu13" type="normal" validate="true" gr:bendpoints="316,-65,-309,-100">
+        <LinkParameter id="sv4#area9#page11#dau5#ln96#par150" name="oid_Key Condition [oid]" source="data.ent1#att1" target="sv4#area14#page18#enu13.ent1#att1"/>
+        <LinkParameter id="sv4#area9#page11#dau5#ln96#par151" name="Location_Location" source="data.ent1#att17" target="sv4#area14#page18#enu13#fld38_slot"/>
+      </Link>
     </DataUnit>
     <EntryUnit gr:x="60" gr:y="305" id="sv4#area9#page11#enu9" name="Comment Form" linkOrder="sv4#area9#page11#enu9#ln48" entity="ent2">
       <Field id="sv4#area9#page11#enu9#fld19" name="Comment" type="text" modifiable="true" contentType="text/html"/>
@@ -25,6 +29,7 @@
         <LinkParameter id="sv4#area9#page11#enu9#ln48#par106" name="Author_Author" source="sv4#area9#page11#enu9#fld22" target="sv4#area9#cru6.ent2#att8"/>
         <LinkParameter id="sv4#area9#page11#enu9#ln48#par107" name="Date_time" source="sv4#area9#page11#enu9#fld25" target="sv4#area9#cru6.ent2#att10"/>
         <LinkParameter id="sv4#area9#page11#enu9#ln48#par56" name="Key [oid]_postOID" source="sv4#area9#page11#enu9#fld32" target="sv4#area9#cru6.ent2#att11"/>
+        <LinkParameter id="sv4#area9#page11#enu9#ln48#par74" name="Key [oid]_Comments.oid(CommentsToComments2)" source="key.ent2#att7" target="sv4#area9#cru6.rel5#role10.ent2#att7"/>
       </Link>
       <Field id="sv4#area9#page11#enu9#fld22" name="Author" type="string" modifiable="false" hidden="true" preloaded="true"/>
       <Field id="sv4#area9#page11#enu9#fld25" name="time" type="timestamp" modifiable="false" attribute="ent2#att10" preloaded="true" hidden="true"/>
@@ -38,12 +43,12 @@
         <LinkParameter id="sv4#area9#page11#enu11#ln50#par53" name="Status_Status" source="sv4#area9#page11#enu11#sfld6" target="sv4#area9#mfu4.ent1#att14"/>
       </Link>
     </EntryUnit>
-    <TimeUnit gr:x="310" gr:y="440" id="sv4#area9#page11#tmu5" name="Comment Time">
+    <TimeUnit gr:x="310" gr:y="470" id="sv4#area9#page11#tmu5" name="Comment Time">
       <Link id="sv4#area9#page11#tmu5#ln61" name="Flow61" to="sv4#area9#page11#enu9" type="transport" validate="true">
         <LinkParameter id="sv4#area9#page11#tmu5#ln61#par57" name="Current/Input Time_time" source="currentTimestamp" target="sv4#area9#page11#enu9#fld25_slot"/>
       </Link>
     </TimeUnit>
-    <SelectorUnit id="sv4#area9#page11#seu3" name="Current User Info" gr:x="320" gr:y="295" entity="User">
+    <SelectorUnit id="sv4#area9#page11#seu3" name="Current User Info" gr:x="330" gr:y="310" entity="User">
       <Selector id="sv4#area9#page11#seu3#su23" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#area9#page11#seu3#su23#kcond20" name="CurrentUserKeyCondition" predicate="in" implied="false"/>
       </Selector>
@@ -51,14 +56,15 @@
         <LinkParameter id="sv4#area9#page11#seu3#ln62#par58" name="userName_Author" source="userNameArray" target="sv4#area9#page11#enu9#fld22_slot"/>
       </Link>
     </SelectorUnit>
-    <GetUnit id="sv4#area9#page11#gtu4" name="Get Current User" gr:x="470" gr:y="285" contextParameters="UserCtxParam">
+    <GetUnit id="sv4#area9#page11#gtu4" name="Get Current User" gr:x="475" gr:y="300" contextParameters="UserCtxParam">
       <Link id="sv4#area9#page11#gtu4#ln64" name="Flow53" to="sv4#area9#page11#seu3" type="transport" automaticCoupling="true" validate="true"/>
     </GetUnit>
-    <RecursiveHierarchicalIndexUnit gr:x="100" gr:y="535" id="sv4#area9#page11#rtu2" name="Comments" showAllAsRoot="true" entity="ent2" relationship="rel5#role10" displayAttributes="ent2#att8 ent2#att9 ent2#att10 ent2#att7">
+    <RecursiveHierarchicalIndexUnit gr:x="120" gr:y="560" id="sv4#area9#page11#rtu2" name="Comments" showAllAsRoot="true" entity="ent2" relationship="rel5#role10" displayAttributes="ent2#att8 ent2#att9 ent2#att10" linkOrder="sv4#area9#page11#rtu2#ln63">
       <SortAttribute attribute="ent2#att10" order="descending"/>
       <RootSelector id="sv4#area9#page11#rtu2#su18" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#area9#page11#rtu2#su18#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
       </RootSelector>
+      <Link id="sv4#area9#page11#rtu2#ln63" name="reply" to="sv4#area9#page11#enu9" type="normal" validate="true" automaticCoupling="true"/>
     </RecursiveHierarchicalIndexUnit>
     <QueryUnit gr:x="10" gr:y="440" id="sv4#area9#page11#qu10" name="comments" mode="select" language="SQL" db="db2">
       <Link id="sv4#area9#page11#qu10#ln59" name="Flow59" to="sv4#area9#page11#rtu2" type="transport" validate="true">
@@ -69,4 +75,4 @@ from comments as c
 where c.comments_oid is NULL and c.postoid in (:postOID)
 order by c.time desc
 
-</QueryText>      <QueryInput id="sv4#area9#page11#qu10#qi3" name="postOID" required="true" type="integer"/>      <QueryOutput id="sv4#area9#page11#qu10#qo10" name="comments" type="integer"/>    </QueryUnit>  </ContentUnits>  <layout:Grid containerType="grid">    <layout:Row>      <layout:Cell colspan="12">        <layout:Unit unitId="sv4#area9#page11#enu11">          <layout:Field field="sv4#area9#page11#enu11#sfld6"/>          <layout:Link link="sv4#area9#page11#enu11#ln50"/>        </layout:Unit>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12">        <layout:Unit unitId="sv4#area9#page11#dau5">          <layout:Attribute attribute="ent1#att3"/>          <layout:Attribute attribute="ent1#att4"/>          <layout:Attribute attribute="ent1#att5"/>          <layout:Attribute attribute="ent1#att6"/>          <layout:Attribute attribute="ent1#att17"/>          <layout:Attribute attribute="ent1#att1"/>        </layout:Unit>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12">        <layout:Unit unitId="sv4#area9#page11#enu9">          <layout:Link link="sv4#area9#page11#enu9#ln48"/>          <layout:Field field="sv4#area9#page11#enu9#fld19"/>        </layout:Unit>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12">        <layout:Unit unitId="sv4#area9#page11#rtu2">          <layout:Attribute attribute="ent2#att8"/>          <layout:Attribute attribute="ent2#att9"/>          <layout:Attribute attribute="ent2#att10"/>          <layout:Attribute attribute="ent2#att7"/>        </layout:Unit>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12"/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12"/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12"/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12"/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>  </layout:Grid></Page>
+</QueryText>      <QueryInput id="sv4#area9#page11#qu10#qi3" name="postOID" required="true" type="integer"/>      <QueryOutput id="sv4#area9#page11#qu10#qo10" name="comments" type="integer"/>    </QueryUnit>  </ContentUnits>  <layout:Grid containerType="grid">    <layout:Row>      <layout:Cell colspan="12">        <layout:Unit unitId="sv4#area9#page11#enu11">          <layout:Field field="sv4#area9#page11#enu11#sfld6"/>          <layout:Link link="sv4#area9#page11#enu11#ln50"/>        </layout:Unit>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12">        <layout:Unit unitId="sv4#area9#page11#dau5">          <layout:Link link="sv4#area9#page11#dau5#ln96"/>          <layout:Attribute attribute="ent1#att3"/>          <layout:Attribute attribute="ent1#att4"/>          <layout:Attribute attribute="ent1#att5"/>          <layout:Attribute attribute="ent1#att6"/>          <layout:Attribute attribute="ent1#att17"/>        </layout:Unit>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12">        <layout:Unit unitId="sv4#area9#page11#enu9">          <layout:Link link="sv4#area9#page11#enu9#ln48"/>          <layout:Field field="sv4#area9#page11#enu9#fld19"/>        </layout:Unit>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12">        <layout:Unit unitId="sv4#area9#page11#rtu2">          <layout:Attribute attribute="ent2#att8"/>          <layout:Attribute attribute="ent2#att9"/>          <layout:Attribute attribute="ent2#att10"/>          <layout:Link link="sv4#area9#page11#rtu2#ln63"/>        </layout:Unit>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12"/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12"/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12"/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12"/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>  </layout:Grid>  <layout:UnitConfiguration unitType="RecursiveHierarchicalIndexUnit" layout:unitLayout="BootstrapStyle/commentHierachy"/></Page>
