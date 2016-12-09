@@ -179,3 +179,21 @@ document.getElementById("pretendfl6").addEventListener("keyup", function(){
 
 
 })
+
+
+document.getElementById("pretendfl5").addEventListener("change", function(){
+
+	var pretendPassword = document.getElementById('pretendfl5').value;
+	var confirmPassword = document.getElementById('pretendfl6').value;
+
+	if(pretendPassword === confirmPassword){
+		$("#pretendfl6").css({"background":"url('BootstrapStyle/css/imgs/valid.png') no-repeat 98% center"})
+
+	}
+	else{
+		$("#pretendfl6").css({"background":"url('BootstrapStyle/css/imgs/invalid.PNG') no-repeat 98% center"})
+
+	}
+
+
+})
