@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Public" homePage="sv1#area1#page1" layout:style="BootstrapStyle" layout:pageLayout="BootstrapStyle/PublicView">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Public" layout:style="BootstrapStyle" layout:pageLayout="BootstrapStyle/PublicView" homePage="sv1#area1#page1">
   <OperationUnits>
     <ModuleInstanceUnit gr:x="465" gr:y="280" id="sv1#miu1" action="true" moduleId="mov1#opm1">
       <KOLink id="sv1#miu1#kln4" name="KOFlow4" to="sv1#area1#page1#mssu2">
@@ -16,10 +16,29 @@
     </ModuleInstanceUnit>
     <ModuleInstanceUnit gr:x="915" gr:y="195" id="sv1#miu8" action="true" moduleId="mov1#opm8">
       <OKLink id="sv1#miu8#oln42" name="OKFlow42" to="sv1#area13#page17#mssu4">
-        <LinkParameter id="sv1#miu8#oln42#par206" name="message_Shown Messages" source="mov1#opm8#okcu6#ocp4" target="sv1#area13#page17#mssu4.shownMessages"/>
+        <LinkParameter id="sv1#miu8#oln42#par206" name="message_Shown Messages" target="sv1#area13#page17#mssu4.shownMessages" source="mov1#opm8#okcu6#ocp4"/>
       </OKLink>
       <KOLink id="sv1#miu8#kln22" name="KOFlow22" to="sv1#area13#page17#mssu4" gr:bendpoints="-8,-102,302,-2">
         <LinkParameter id="sv1#miu8#kln22#par205" name="message_Shown Messages" source="mov1#opm8#kocu8#ocp5" target="sv1#area13#page17#mssu4.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ParameterCollectorUnit gr:x="465" gr:y="570" id="sv1#pcu2" name="reset url entry point" gr:showAllParts="false" customURLName="reset" urlFragment="sv1#pcu2#pcp3">
+      <CollectorParameter id="sv1#pcu2#pcp3" name="code"/>
+      <OKLink id="sv1#pcu2#oln53" name="OKFlow53" to="sv1#miu9">
+        <LinkParameter id="sv1#pcu2#oln53#par222" name="code_code" source="sv1#pcu2#pcp3" target="sv1#miu9.mov1#opm9#icu9#icp25"/>
+      </OKLink>
+    </ParameterCollectorUnit>
+    <ModuleInstanceUnit gr:x="675" gr:y="645" id="sv1#miu9" action="true" moduleId="mov1#opm9">
+      <OKLink id="sv1#miu9#oln54" name="OKFlow54" to="sv1#area15#page19#enu18">
+        <LinkParameter id="sv1#miu9#oln54#par223" name="primary key_primary" source="mov1#opm9#okcu7#ocp10" target="sv1#area15#page19#enu18#fld40_slot"/>
+      </OKLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="1230" gr:y="140" id="sv1#miu13" action="true" moduleId="mov1#opm10">
+      <OKLink id="sv1#miu13#oln55" name="OKFlow55" to="sv1#area16#page20#mssu7" gr:bendpoints="85,129,40,-271">
+        <LinkParameter id="sv1#miu13#oln55#par231" name="Success Message_Shown Messages" source="mov1#opm10#okcu8#ocp12" target="sv1#area16#page20#mssu7.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv1#miu13#kln29" name="KOFlow29" to="sv1#area16#page20#mssu7" gr:bendpoints="123,44,83,-366;128,114,88,-296;135,333,95,-77">
+        <LinkParameter id="sv1#miu13#kln29#par229" name="Something went wrong!_Shown Messages" target="sv1#area16#page20#mssu7.shownMessages" source="mov1#opm10#kocu10#ocp11"/>
       </KOLink>
     </ModuleInstanceUnit>
   </OperationUnits>

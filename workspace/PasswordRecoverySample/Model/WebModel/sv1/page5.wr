@@ -1,0 +1,177 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="875" gr:y="275" id="sv1#page5" name="Insert New Password">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="90" id="sv1#page5#enu3" name="Reset your password" linkOrder="sv1#page5#enu3#ln13">
+      <Field id="sv1#page5#enu3#fld5" name="New password" type="password" modifiable="true" validationOrder="sv1#page5#enu3#fld5#vl1 sv1#page5#enu3#fld5#mnd5 sv1#page5#enu3#fld5#cmp1">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page5#enu3#fld5#mnd5" name="mandatory"/>
+          <CompareValidationRule id="sv1#page5#enu3#fld5#cmp1" name="compare" predicate="eq" valueField="sv1#page5#enu3#fld6"/>
+          <ValueLengthValidationRule id="sv1#page5#enu3#fld5#vl1" name="Min character" predicate="min" value="8"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#page5#enu3#fld6" name="Reenter password" type="password" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page5#enu3#fld6#mnd6" name="mandatory"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#page5#enu3#fld7" name="primary key" type="integer" modifiable="false" preloaded="true" hidden="true"/>
+      <Link id="sv1#page5#enu3#ln13" name="Confirm" to="sv1#miu3" type="normal" validate="true" gr:bendpoints="236,-1,0,159">
+        <LinkParameter id="sv1#page5#enu3#ln13#par44" name="New password_password" source="sv1#page5#enu3#fld5" target="sv1#miu3.mov1#opm3#icu3#icp6"/>
+        <LinkParameter id="sv1#page5#enu3#ln13#par45" name="user_user" source="sv1#page5#enu3#fld7" target="sv1#miu3.mov1#opm3#icu3#icp5"/>
+      </Link>
+      <Comment xml:space="preserve">Form where the user inserts his new password and confirms the reset</Comment>
+    </EntryUnit>
+    <MultiMessageUnit id="sv1#page5#mssu5" name="Instructions" gr:x="5" gr:y="0">
+      <Message xml:space="preserve">Choose your new password to complete the reset procedure</Message>
+      <Comment xml:space="preserve">Message that describes the instructions that the user needs to do to reset his password</Comment>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6" label="Insert your data" rowspan="3" layout:cellLayout="Print Frame">
+        <layout:Grid containerType="grid">
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Unit unitId="sv1#page5#mssu5" layout:frameLayout="None"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Unit unitId="sv1#page5#enu3" layout:frameLayout="None">
+                <layout:Field field="sv1#page5#enu3#fld5"/>
+                <layout:Field field="sv1#page5#enu3#fld6"/>
+                <layout:Link link="sv1#page5#enu3#ln13"/>
+                <layout:LayoutParameter name="mandatory-fields" value="true" type="unit"/>
+              </layout:Unit>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="8"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="8"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page5#enu3" layout:unitLayout="WRDefault/HiddenFields">
+          <layout:Field field="sv1#page5#enu3#fld5"/>
+          <layout:Field field="sv1#page5#enu3#fld6"/>
+          <layout:Link link="sv1#page5#enu3#ln13"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="show-breadcrumb" value="false" type="page"/>
+  <layout:LayoutParameter name="show-page-title" value="false" type="page"/>
+  <Comment xml:space="preserve">Page where the user can reset his password</Comment>
+</Page>

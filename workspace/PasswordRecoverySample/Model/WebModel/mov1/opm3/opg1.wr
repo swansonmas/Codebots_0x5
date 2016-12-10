@@ -1,0 +1,28 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="330" gr:y="15" id="mov1#opm3#opg1" name="Store New User Password" transaction="true">
+  <OperationUnits>
+    <ModifyUnit id="mov1#opm3#opg1#mfu2" name="store new password" gr:x="160" gr:y="155" entity="User">
+      <Selector id="mov1#opm3#opg1#mfu2#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm3#opg1#mfu2#su2#kcond2" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm3#opg1#mfu2#oln14" name="OKFlow19" to="mov1#opm3#okcu3" automaticCoupling="true"/>
+      <Comment xml:space="preserve">Update Operation that saves the new password entered by the user</Comment>
+    </ModifyUnit>
+    <SelectorUnit id="mov1#opm3#opg1#seu4" name="retrieve current user" gr:x="0" gr:y="0" entity="User">
+      <Selector id="mov1#opm3#opg1#seu4#su5" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm3#opg1#seu4#su5#kcond3" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm3#opg1#seu4#oln26" name="OKFlow1" to="mov1#opm3#opg1#inn4">
+        <LinkParameter id="mov1#opm3#opg1#seu4#oln26#par11" name="oid_Input" source="userOIDArray" target="mov1#opm3#opg1#inn4.isnotnull"/>
+      </OKLink>
+      <Comment xml:space="preserve">Selector Utility Component that search for user who has as "oid" the parameter passed</Comment>
+    </SelectorUnit>
+    <IsNotNullUnit id="mov1#opm3#opg1#inn4" name="user exists?" gr:x="185" gr:y="20" emptyStringAsNull="true">
+      <KOLink id="mov1#opm3#opg1#inn4#kln7" name="KOFlow1" to="mov1#opm3#kocu3" automaticCoupling="true"/>
+      <OKLink id="mov1#opm3#opg1#inn4#oln27" name="OKFlow18" to="mov1#opm3#opg1#mfu2">
+        <LinkParameter id="mov1#opm3#opg1#inn4#oln27#par3" name="Input Value_KeyCondition1 [oid]" source="inputValue" target="mov1#opm3#opg1#mfu2#su2#kcond2.userOID"/>
+      </OKLink>
+      <Comment xml:space="preserve">Is Not Null Control Flow Operation checks whether a user was found with that "oid" associated</Comment>
+    </IsNotNullUnit>
+  </OperationUnits>
+  <KOLink id="mov1#opm3#opg1#kln8" name="KOFlow8" to="mov1#opm3#kocu3" automaticCoupling="true" gr:bendpoints="217,-2,-113,68"/>
+</OperationGroup>

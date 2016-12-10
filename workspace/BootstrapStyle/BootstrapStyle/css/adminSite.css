@@ -79,9 +79,8 @@ button[id="button:ln48"]:hover,button[id="button:ln50"]:hover{
     color: white;
 }
 
-.navbar-brand:hover{
+.navbar-default .navbar-brand:hover{
     color: white;
-
 }
 
 #ln96{

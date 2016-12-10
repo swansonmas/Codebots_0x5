@@ -1,0 +1,45 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page6" name="From String to Date" landmark="true" gr:x="200" gr:y="1770">
+  <ContentUnits>
+    <EntryUnit id="sv1#page6#enu4" name="Form" linkOrder="sv1#page6#enu4#ln8" gr:x="0" gr:y="80">
+      <Field id="sv1#page6#enu4#fld8" name="string" type="string" modifiable="true"/>
+      <Field id="sv1#page6#enu4#fld9" name="pattern (of the input string)" type="string" modifiable="true"/>
+      <Link id="sv1#page6#enu4#ln8" name="convert to date" to="sv1#dfu12" type="normal" validate="true">
+        <LinkParameter id="sv1#page6#enu4#ln8#par11" name="string_String(s)" source="sv1#page6#enu4#fld8" target="sv1#dfu12.stringArray"/>
+        <LinkParameter id="sv1#page6#enu4#ln8#par19" name="pattern (of the input string)_Pattern(s)" source="sv1#page6#enu4#fld9" target="sv1#dfu12.patternArray"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit id="sv1#page6#mssu7" name="Result date" gr:x="0" gr:y="170"/>
+    <MultiMessageUnit id="sv1#page6#mssu8" name="Multi Message Unit" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">The &lt;b&gt;"From String(s) to Date(s)"&lt;/b&gt; unit mode converts a string representing a date, to an SQL date.&lt;br/&gt;
+In this example, you can specify the string (representing a date) and the pattern of the string (e.g. MM/dd/yyyy). The result is the SQL date.</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#page6#mssu8" layout:frameLayout="None">
+          <layout:LayoutParameter name="contentType" value="text/html" type="unit"/>
+        </layout:Unit>
+        <layout:Unit unitId="sv1#page6#enu4" layout:frameLayout="None">
+          <layout:Field field="sv1#page6#enu4#fld8"/>
+          <layout:Field field="sv1#page6#enu4#fld9"/>
+          <layout:Link link="sv1#page6#enu4#ln8"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell height="30"/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#page6#mssu7"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

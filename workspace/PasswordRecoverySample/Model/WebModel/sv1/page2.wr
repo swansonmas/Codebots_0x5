@@ -1,0 +1,50 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="795" gr:y="-40" id="sv1#page2" name="Result">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page2#mssu2" name="Success">
+      <Comment xml:space="preserve">Message that appears when an operation is successful</Comment>
+    </MultiMessageUnit>
+    <MultiMessageUnit id="sv1#page2#mssu3" name="Fail" gr:x="0" gr:y="95" linkOrder="sv1#page2#mssu3#ln6">
+      <Link id="sv1#page2#mssu3#ln6" name="retry" to="sv1#page1" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-605,0,0,150"/>
+      <Comment xml:space="preserve">Message that appears when an operation failed</Comment>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell colspan="8">
+        <layout:Unit unitId="sv1#page2#mssu2"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4"/>
+      <layout:Cell/>
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell colspan="8">
+        <layout:Unit unitId="sv1#page2#mssu3">
+          <layout:Link link="sv1#page2#mssu3#ln6"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4"/>
+      <layout:Cell/>
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="show-breadcrumb" value="false" type="page"/>
+  <layout:LayoutParameter name="show-page-title" value="false" type="page"/>
+  <Comment xml:space="preserve">Page appears when the user enters into a transaction and returns whether an action is successful or failed</Comment>
+</Page>

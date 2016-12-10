@@ -1,9 +1,11 @@
 function imageAnimation() {
 
     var element = document.getElementsByTagName("img");
+    var elementControl = $(".string");
+
     for(var i = 0; i < element.length; i ++){
 
-        if(element[i].getBoundingClientRect().top < 750){
+        if((elementControl[i].getBoundingClientRect().top+10) < window.innerHeight){
             element[i].className = "zoomInLeft animated";
         }
         else{

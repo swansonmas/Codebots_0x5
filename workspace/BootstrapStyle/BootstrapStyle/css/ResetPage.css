@@ -1,0 +1,107 @@
+.navbar-default {
+    background-color: #003366;
+    border-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-text {
+    color: #fefefe;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #f8f8f8;
+    background-color: #cc0000;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+    color: #f8f8f8;
+    background-color: #cc0000;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.breadcrumb {
+    background-color: #FEEFB3;
+    font-size: 17px;
+}
+
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #e3e3e3;
+    border-color: #ddd;
+}
+
+.dropdown-menu>li>a:hover {
+    background: #cc0000;
+}
+
+.panel-body img {
+    max-width: 80%;
+    max-height: 350px;
+}
+
+
+.navbar-default .navbar-brand:hover{
+    color: white;
+}
+
+/*Buttons*/
+
+button[id="button:ln91"]{
+    background-color: #2185D0;
+    padding: 6px 18px;
+    color: #FFF;
+}
+
+button[id="button:ln91"]:hover{
+    background-color: #2185D0;
+    box-shadow: 0 4px #999;
+    color: #FFF;
+    transition: 0.5s;
+}
+
+
+button[id="button:ln90"]{
+
+    padding: 10px 12px;
+    cursor: pointer;
+    border: none;
+    background: #E0E1E2;
+    color: rgba(0,0,0,.6);
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    6px 18px;
+    font-weight: 700;
+    line-height: 1em;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;
+
+}
+
+
+button[id="button:ln90"]:hover{
+    box-shadow: 0 4px #999;
+    transition: 0.5s;
+    background: #E0E1E2;
+    color: rgba(0,0,0,.6);
+}
+
+button[id="button:ln103"]{
+    background-color: #21BA45;
+    color: #FFF;
+    padding: 6px 18px;
+    margin-top: 1%;
+}
+
+
+button[id="button:ln103"]:hover{
+    transition: 0.5s;
+    background-color: #21BA45;
+    box-shadow: 0 4px #999;
+    border-radius: 10px;
+    color: #fff;
+}
+

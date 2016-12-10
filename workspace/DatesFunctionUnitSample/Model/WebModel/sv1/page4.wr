@@ -1,0 +1,54 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="200" gr:y="1120" id="sv1#page4" name="Start / End Timestamp" landmark="true">
+  <ContentUnits>
+    <MultiMessageUnit id="sv1#page4#mssu5" name="Multi Message Unit" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">The &lt;b&gt;"Start Day Timestamp(s)"&lt;/b&gt; unit mode gets the start timestamp of the day(s). &lt;br/&gt;
+The &lt;b&gt;"End Day Timestamp(s)"&lt;/b&gt; unit mode gets the end timestamp of the day(s).  &lt;br/&gt;
+In this example, you can specify a timestamp. The result is the start or end timestamp of the day.</Message>
+    </MultiMessageUnit>
+    <EntryUnit id="sv1#page4#enu3" name="Form" gr:x="0" gr:y="80" linkOrder="sv1#page4#enu3#ln16 sv1#page4#enu3#ln17">
+      <Field id="sv1#page4#enu3#fld10" name="timestamp" type="timestamp" modifiable="true"/>
+      <Link id="sv1#page4#enu3#ln16" name="start day timestamp" to="sv1#dfu9" type="normal" validate="true">
+        <LinkParameter id="sv1#page4#enu3#ln16#par6" name="timestamp_Timestamp(s)" source="sv1#page4#enu3#fld10" target="sv1#dfu9.timestampArray"/>
+      </Link>
+      <Link id="sv1#page4#enu3#ln17" name="end day timestamp" to="sv1#dfu10" type="normal" validate="true">
+        <LinkParameter id="sv1#page4#enu3#ln17#par9" name="timestamp_Timestamp(s)" source="sv1#page4#enu3#fld10" target="sv1#dfu10.timestampArray"/>
+      </Link>
+    </EntryUnit>
+    <DataUnit id="sv1#page4#dau2" name="Result timestamp" gr:x="0" gr:y="160" entity="ent2" displayAttributes="ent2#att4">
+      <Selector id="sv1#page4#dau2#su9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page4#dau2#su9#kcond5" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#page4#mssu5" layout:frameLayout="None">
+          <layout:LayoutParameter name="contentType" value="text/html" type="unit"/>
+        </layout:Unit>
+        <layout:Unit unitId="sv1#page4#enu3" layout:frameLayout="None">
+          <layout:Field field="sv1#page4#enu3#fld10"/>
+          <layout:Link link="sv1#page4#enu3#ln16"/>
+          <layout:Link link="sv1#page4#enu3#ln17"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell height="30"/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#page4#dau2">
+          <layout:LayoutParameter name="show-attribute-name" value="false" type="unit"/>
+          <layout:Attribute attribute="ent2#att4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

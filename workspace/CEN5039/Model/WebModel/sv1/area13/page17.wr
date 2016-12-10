@@ -1,11 +1,11 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area13#page17" name="Reset Password" layout:pageLayout="BootstrapStyle/reset_page">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area13#page17" name="Reset Password" layout:pageLayout="BootstrapStyle/reset_page" layout:style="BootstrapStyle" layout:fieldLayout="WRDefault/EntryUnit">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#area13#page17#mssu4" name="instructions">
       <Message xml:space="preserve">You are here because you forgot your password. Kindly provide your email and we
 will send you instructions. Please remember this is time sensitive, so don't take
 too long to reset your password, or you will have to follow this procedure again. </Message>
     </MultiMessageUnit>
-    <EntryUnit gr:x="15" gr:y="100" id="sv1#area13#page17#enu17" name="Insert email" linkOrder="sv1#area13#page17#enu17#ln90 sv1#area13#page17#enu17#ln91" gr:showAllParts="true" entity="User" fieldOrder="sv1#area13#page17#enu17#fld49">
+    <EntryUnit gr:x="15" gr:y="100" id="sv1#area13#page17#enu17" name="Insert email" linkOrder="sv1#area13#page17#enu17#ln90 sv1#area13#page17#enu17#ln91" gr:showAllParts="true" entity="User" fieldOrder="sv1#area13#page17#enu17#fld49 sv1#area13#page17#enu17#fld39">
       <Link id="sv1#area13#page17#enu17#ln90" name="return Home" to="sv1#area1#page1" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-297,-170,273,-185"/>
       <Link id="sv1#area13#page17#enu17#ln91" name="next " to="sv1#miu8" type="normal" validate="true">
         <LinkParameter id="sv1#area13#page17#enu17#ln91#par136" name="email_email" source="sv1#area13#page17#enu17#fld49" target="sv1#miu8.mov1#opm8#icu8#icp24"/>
@@ -13,6 +13,12 @@ too long to reset your password, or you will have to follow this procedure again
       <Field id="sv1#area13#page17#enu17#fld49" name="email" type="string" modifiable="true" attribute="email">
         <VRules>
           <EMailValidationRule id="sv1#area13#page17#enu17#fld49#email2" name="EMail2"/>
+          <MandatoryValidationRule id="sv1#area13#page17#enu17#fld49#mnd16" name="MandatoryEmailForReset"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area13#page17#enu17#fld39" name="Control Code" type="string" modifiable="true" validationOrder="sv1#area13#page17#enu17#fld39#captcha1" preloaded="false">
+        <VRules>
+          <CaptchaValidationRule id="sv1#area13#page17#enu17#fld39#captcha1" name="Captcha" cfg_ignoreCase="true"/>
         </VRules>
       </Field>
     </EntryUnit>
@@ -42,6 +48,7 @@ too long to reset your password, or you will have to follow this procedure again
           <layout:Link link="sv1#area13#page17#enu17#ln90"/>
           <layout:Link link="sv1#area13#page17#enu17#ln91"/>
           <layout:Field field="sv1#area13#page17#enu17#fld49"/>
+          <layout:Field field="sv1#area13#page17#enu17#fld39"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

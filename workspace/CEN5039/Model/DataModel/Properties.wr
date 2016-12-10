@@ -1,11 +1,13 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="15" gr:y="290" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att12 User#att13" db:database="db2" db:table="user">
+  <Entity id="User" name="User" duration="persistent" gr:x="15" gr:y="290" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att12 User#att13 User#att16 User#att18" db:database="db2" db:table="user">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="userName" id="userName" type="string" key="false" db:column="username"/>
     <Attribute name="password" id="password" type="password" key="false" db:column="password"/>
     <Attribute name="email" id="email" type="string" key="false" db:column="email"/>
-    <Attribute id="User#att13" name="Last Name" type="string" db:column="last_name"/>
-    <Attribute id="User#att12" name="First Name" type="string" db:column="first_name"/>
+    <Attribute id="User#att13" name="Last Name" type="string" db:column="last_name" key="false"/>
+    <Attribute id="User#att12" name="First Name" type="string" db:column="first_name" key="false"/>
+    <Attribute id="User#att16" name="code" type="string" key="false" db:column="code"/>
+    <Attribute id="User#att18" name="expiration_date" type="date" key="false" db:column="expiration_date"/>
   </Entity>
   <Entity id="Group" name="Group" duration="persistent" gr:x="285" gr:y="320" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db2" db:table="group">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>

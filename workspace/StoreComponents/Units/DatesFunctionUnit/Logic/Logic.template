@@ -1,0 +1,7 @@
+#?delimiters  <%,%>,<%=,%>
+<% setXMLOutput() %>
+<Descriptor service="com.webratio.units.store.datesfunctionunit.DatesFunctionUnitService">
+  <Mode><%=unit["mode"]%></Mode>
+  <NumberOfDays><%=unit["numberOfDays"]%></NumberOfDays>
+  <Pattern><%=unit["pattern"]%></Pattern>
+</Descriptor>

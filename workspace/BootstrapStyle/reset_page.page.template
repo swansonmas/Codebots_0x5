@@ -66,7 +66,7 @@ def showPageTitle = params["show-page-title"] == "true"
 		<c:set var="bootstrap-theme" value="[%= params["theme"]%]"/>
 		<wr:Resources types="css"/>
 		<wr:Resources types="javascript"/>
-		<link rel="stylesheet" type="text/css" href="./BootstrapStyle/css/adminSite.css">
+		<link rel="stylesheet" type="text/css" href="./BootstrapStyle/css/ResetPage.css">
 		<link href="./BootstrapStyle/font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css">
 	</head>
 <body class="bootstrap-[%= params["theme"] %]">

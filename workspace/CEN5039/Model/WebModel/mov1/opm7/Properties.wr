@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="495" gr:y="140" id="mov1#opm7" name="Manage User">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="470" gr:y="75" id="mov1#opm7" name="Manage User">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm7#icu7" gr:x="35" gr:y="70" linkOrder="mov1#opm7#icu7#ln72 mov1#opm7#icu7#ln73">
       <InputCollectorParameter id="mov1#opm7#icu7#icp16" name="defaultGroup"/>

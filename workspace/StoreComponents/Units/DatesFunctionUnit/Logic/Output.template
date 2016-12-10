@@ -1,0 +1,14 @@
+#?delimiters <%,%>,<%=,%>
+<% setXMLOutput() %>
+<OutputParameters>
+	<% if (unit["mode"] == "addDaysToDate(s)" || unit["mode"] == "removeDaysFromDate(s)" || unit["mode"] == "addWorkingDaysToDate(s)" || unit["mode"] == "removeWorkingDaysFromDate(s)" || unit["mode"] == "firstDayOfMonth(s)" || unit["mode"] == "firstDayOfYear(s)" || unit["mode"] == "lastDayOfMonth(s)" || unit["mode"] == "lastDayOfYear(s)" || unit["mode"] == "fromString(s)ToDate(s)") { %>
+  		<OutputParameter name="resultDates" type="" label="Result Date(s)" />
+  	<% } else if (unit["mode"] == "startDayTimestamp(s)" || unit["mode"] == "endDayTimestamp(s)") { %>
+  		<OutputParameter name="resultTimestamps" type="" label="Result Timestamp(s)" />
+  	<% } else if (unit["mode"] == "fromDate(s)ToString(s)") { %>
+  		<OutputParameter name="resultStrings" type="" label="Result String(s)" />
+  	<% } %>
+  	
+  	<OutputParameter name="errorMessage" label="Error Message" />
+    <OutputParameter name="exception" label="Exception" />
+</OutputParameters>

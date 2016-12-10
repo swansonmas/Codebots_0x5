@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Unit type="operation" version="1.0.0" idPrefix="dfu" namePrefix="Dates Function Unit" label="Dates Function Unit" formBased="false" linkSource="true" linkTarget="true" okLinkSource="true" okLinkTarget="true" koLinkSource="true" koLinkTarget="true" canPlaceLayoutUnit="false" author="WebRatio s.r.l.">
+	<EnumProperty attributeName="mode" defaultValue="addDaysToDate(s)" figureDisplayOrder="1" changeFigureIcon="false">
+		<EnumItem value="addDaysToDate(s)" />
+		<EnumItem value="removeDaysFromDate(s)" />
+		<EnumItem value="addWorkingDaysToDate(s)" />
+		<EnumItem value="removeWorkingDaysFromDate(s)" />
+		<EnumItem value="firstDayOfMonth(s)" />
+		<EnumItem value="lastDayOfMonth(s)" />
+		<EnumItem value="firstDayOfYear(s)" />
+		<EnumItem value="lastDayOfYear(s)" />
+		<EnumItem value="startDayTimestamp(s)" />
+		<EnumItem value="endDayTimestamp(s)" />		
+		<EnumItem value="fromString(s)ToDate(s)" />
+		<EnumItem value="fromDate(s)ToString(s)" />
+		<Description xml:space="preserve">The unit operation mode indicating the operation to be performed:&lt;ul&gt;
+			&lt;li&gt; Add Days To Date(s): adds the specified number of days to the date(s). &lt;/li&gt;
+			&lt;li&gt; Remove Days From Date(s): removes the specified number of days from the date(s). &lt;/li&gt;
+			&lt;li&gt; Add Working Days To Date(s): adds the specified number of working days to the date(s). &lt;/li&gt;
+			&lt;li&gt; Remove Working Days From Date(s): removes the specified number of working days from the date(s). &lt;/li&gt;
+			&lt;li&gt; First Day Of Month(s): gets the first day of the month(s). &lt;/li&gt;
+			&lt;li&gt; Last Day Of Month(s): gets the last day of the month(s). &lt;/li&gt;
+			&lt;li&gt; First Day Of Year(s): gets the first day of the year(s). &lt;/li&gt;
+			&lt;li&gt; Last Day Of Year(s): gets the last day of the year(s). &lt;/li&gt;
+			&lt;li&gt; Start Day Timestamp(s): gets the start timestamp of the day(s). &lt;/li&gt;
+			&lt;li&gt; End Day Timestamp(s): gets the end timestamp of the day(s). &lt;/li&gt;
+			&lt;li&gt; From String(s) To Date(s): converts a string representing a date to a SQL date. &lt;/li&gt;
+			&lt;li&gt; From Date(s) To String(s): converts a SQL date to a string, formatting it according to the specified pattern. &lt;/li&gt;
+			&lt;/ul&gt;
+			</Description> 
+	</EnumProperty>
+	
+	<IntegerProperty attributeName="numberOfDays" defaultValue=""> 
+		<IsEnabled> return (element["mode"] == "addDaysToDate(s)" || element["mode"] == "removeDaysFromDate(s)" || element["mode"] == "addWorkingDaysToDate(s)" || element["mode"] == "removeWorkingDaysFromDate(s)") </IsEnabled>
+		<Description xml:space="preserve">The number of days to add or remove.</Description>
+	</IntegerProperty>
+	
+	<StringProperty attributeName="pattern" defaultValue=""> 
+    	<IsEnabled>return (element["mode"] == "fromString(s)ToDate(s)" || element["mode"] == "fromDate(s)ToString(s)")</IsEnabled>  
+    	<Description xml:space="preserve">The pattern to use for formatting the date.</Description> 
+  	</StringProperty>  
+	
+	<Description xml:space="preserve">&lt;p&gt;The dates function unit is able to perform several operations regarding the dates.&lt;/p&gt;</Description>
+		
+	<InputDescription xml:space="preserve" name="[Add Days To Date(s)] Date(s)">The date(s) to be incremented.</InputDescription>
+	<InputDescription xml:space="preserve" name="[Add Days To Date(s)] Number(s) of Days">The number(s) of days to add the date(s).</InputDescription>
+	<InputDescription xml:space="preserve" name="[Remove Days From Date(s)] Date(s)">The date(s) to be decremented.</InputDescription>
+	<InputDescription xml:space="preserve" name="[Remove Days From Date(s)] Number(s) of Days">The number(s) of days to remove from the date(s).</InputDescription>
+	<InputDescription xml:space="preserve" name="[Add Working Days To Date(s)] Date(s)">The date(s) to be incremented.</InputDescription>
+	<InputDescription xml:space="preserve" name="[Add Working Days To Date(s)] Number(s) of Days">The number(s) of working days to add the date(s).</InputDescription>
+	<InputDescription xml:space="preserve" name="[Remove Working Days From Date(s)] Date(s)">The date(s) to be decremented.</InputDescription>
+	<InputDescription xml:space="preserve" name="[Remove Working Days From Date(s)] Number(s) of Days">The number(s) of working days to remove from date(s).</InputDescription>
+	<InputDescription xml:space="preserve" name="[First Day Of Month(s)] Date(s)">The date(s) from which extract the first day(s) of the month.</InputDescription>
+	<InputDescription xml:space="preserve" name="[Last Day Of Month(s)] Date(s)">The date(s) from which extract the last day(s) of the month.</InputDescription>
+	<InputDescription xml:space="preserve" name="[First Day Of Year(s)] Date(s)">The date(s) from which extract the first day(s) of the year.</InputDescription>
+	<InputDescription xml:space="preserve" name="[Last Day Of Year(s)] Date(s)">The date(s) from which extract the last day(s) of the year.</InputDescription>
+	<InputDescription xml:space="preserve" name="[Start Day Timestamp(s)] Timestamp(s)">The date(s) from which extract the start-day-timestamp(s).</InputDescription>
+	<InputDescription xml:space="preserve" name="[End Day Timestamp(s)] Timestamp(s)">The date(s) from which extract the end-day-timestamp(s).</InputDescription>
+	<InputDescription xml:space="preserve" name="[From String(s) To Date(s)] String(s)">The string(s) to covert into a SQL date(s).</InputDescription>
+	<InputDescription xml:space="preserve" name="[From String(s) To Date(s)] Pattern(s)">The format(s) of the input date(s) expressed as strings.</InputDescription>
+	<InputDescription xml:space="preserve" name="[From Date(s) To String(s)] Date(s)">The SQL date(s) to covert into string(s).</InputDescription>
+	<InputDescription xml:space="preserve" name="[From Date(s) To String(s)] Pattern(s)">The desired format(s) of the result date(s).</InputDescription>
+
+	<OutputDescription xml:space="preserve" name="[Add Days To Date(s)] Result Date(s)">The incremented date(s).</OutputDescription>
+	<OutputDescription xml:space="preserve" name="[Remove Days From Date(s)] Result Date(s)">The decremented date(s).</OutputDescription>
+	<OutputDescription xml:space="preserve" name="[Add Working Days To Date(s)] Result Date(s)">The incremented date(s).</OutputDescription>
+	<OutputDescription xml:space="preserve" name="[Remove Working Days From Date(s)] Result Date(s)">The decremented date(s).</OutputDescription>
+	<OutputDescription xml:space="preserve" name="[First Day Of Month(s)] Result Date(s)">The first-day-month date(s).</OutputDescription>
+	<OutputDescription xml:space="preserve" name="[Last Day Of Month(s)] Result Date(s)">The last-day-month date(s).</OutputDescription>
+	<OutputDescription xml:space="preserve" name="[First Day Of Year(s)] Result Date(s)">The first-day-year date(s).</OutputDescription>
+	<OutputDescription xml:space="preserve" name="[Last Day Of Year(s)] Result Date(s)">The last-day-year date(s).</OutputDescription>
+	<OutputDescription xml:space="preserve" name="[Start Day Timestamp(s)] Result Timestamp(s)">The start-day-timestamp(s).</OutputDescription>
+	<OutputDescription xml:space="preserve" name="[End Day Timestamp(s)] Result Timestamp(s)">The end-day-timestamp(s).</OutputDescription>
+	<OutputDescription xml:space="preserve" name="[From String(s) To Date(s)] Result Date(s)">The SQL date(s) obtained from the conversion of the specified string(s).</OutputDescription>
+	<OutputDescription xml:space="preserve" name="[From Date(s) To String(s)] Result String(s)">The string(s) obtained from the conversion of the specified SQL date(s).</OutputDescription>
+</Unit>

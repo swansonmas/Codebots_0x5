@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="285" gr:y="75" id="mov1#opm4" name="Delete group">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="250" gr:y="160" id="mov1#opm4" name="Delete group">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm4#icu4" gr:x="30" gr:y="80">
       <InputCollectorParameter id="mov1#opm4#icu4#icp10" name="oidGroup"/>

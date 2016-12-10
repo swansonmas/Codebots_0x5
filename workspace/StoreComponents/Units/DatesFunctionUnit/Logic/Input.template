@@ -1,0 +1,21 @@
+#?delimiters <%,%>,<%=,%>
+<%
+setXMLOutput()
+def unitId = unit["id"]
+%>
+<InputParameters>
+	<% if (unit["mode"] == "addDaysToDate(s)" || unit["mode"] == "removeDaysFromDate(s)" || unit["mode"] == "addWorkingDaysToDate(s)" || unit["mode"] == "removeWorkingDaysFromDate(s)") { %>
+  		<InputParameter name="<%=unitId%>.dateArray" type="" label="Date(s)" />
+		<InputParameter name="<%=unitId%>.numberOfDaysArray" type="" label="Number(s) Of Days" />		  	
+  	<% } else if (unit["mode"] == "firstDayOfMonth(s)" || unit["mode"] == "firstDayOfYear(s)" || unit["mode"] == "lastDayOfMonth(s)" || unit["mode"] == "lastDayOfYear(s)") { %>
+  		<InputParameter name="<%=unitId%>.dateArray" type="" label="Date(s)" />
+	<% } else if (unit["mode"] == "startDayTimestamp(s)" || unit["mode"] == "endDayTimestamp(s)") { %>
+		<InputParameter name="<%=unitId%>.timestampArray" type="" label="Timestamp(s)" />	
+  	<% } else if (unit["mode"] == "fromString(s)ToDate(s)") { %>
+  		<InputParameter name="<%=unitId%>.stringArray" type="" label="String(s)" />
+		<InputParameter name="<%=unitId%>.patternArray" type="" label="Pattern(s)" />  		
+  	<% } else if (unit["mode"] == "fromDate(s)ToString(s)") { %>
+  		<InputParameter name="<%=unitId%>.dateArray" type="" label="Date(s)" />
+		<InputParameter name="<%=unitId%>.patternArray" type="" label="Pattern(s)" />
+  	<% } %>
+</InputParameters>

@@ -1,0 +1,63 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area15#page19" name="Insert New Password" layout:pageLayout="BootstrapStyle/reset_page">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#area15#page19#mssu6" name="Instruction">
+      <Message xml:space="preserve">Enter new password and reenter password to confirm.</Message>
+    </MultiMessageUnit>
+    <EntryUnit gr:x="130" gr:y="25" id="sv1#area15#page19#enu18" name="Reset Password " fieldOrder="sv1#area15#page19#enu18#fld41 sv1#area15#page19#enu18#fld50" gr:showAllParts="true" entity="User" linkOrder="sv1#area15#page19#enu18#ln103">
+      <Field id="sv1#area15#page19#enu18#fld50" name="confirm password" type="password" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area15#page19#enu18#fld50#mnd18" name="Mandatory18"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area15#page19#enu18#fld41" name="new password" type="password" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area15#page19#enu18#fld41#mnd17" name="Mandatory17"/>
+          <CompareValidationRule id="sv1#area15#page19#enu18#fld41#cmp3" name="ComparePasswords" predicate="eq" valueField="sv1#area15#page19#enu18#fld50"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area15#page19#enu18#fld40" name="primary" type="integer" preloaded="true" hidden="true" modifiable="false" attribute="userOID"/>
+      <Link id="sv1#area15#page19#enu18#ln103" name="send" to="sv1#miu13" type="normal" validate="true" gr:bendpoints="184,-3,-61,87">
+        <LinkParameter id="sv1#area15#page19#enu18#ln103#par224" name="new password_new password" source="sv1#area15#page19#enu18#fld41" target="sv1#miu13.mov1#opm10#icu10#icp27"/>
+        <LinkParameter id="sv1#area15#page19#enu18#ln103#par225" name="primary_primary key" source="sv1#area15#page19#enu18#fld40" target="sv1#miu13.mov1#opm10#icu10#icp26"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell colspan="8">
+        <layout:Unit unitId="sv1#area15#page19#mssu6"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell colspan="8">
+        <layout:Unit unitId="sv1#area15#page19#enu18">
+          <layout:Link link="sv1#area15#page19#enu18#ln103"/>
+          <layout:Field field="sv1#area15#page19#enu18#fld41"/>
+          <layout:Field field="sv1#area15#page19#enu18#fld50"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

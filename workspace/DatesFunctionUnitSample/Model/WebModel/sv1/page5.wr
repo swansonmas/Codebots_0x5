@@ -1,0 +1,49 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="200" gr:y="1460" id="sv1#page5" name="From Date to String" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="80" id="sv1#page5#enu1" name="Form" linkOrder="sv1#page5#enu1#ln7">
+      <Field id="sv1#page5#enu1#fld5" name="date" type="date" modifiable="true"/>
+      <Field id="sv1#page5#enu1#fld6" name="pattern (of the result string)" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page5#enu1#fld6#mnd1q" name="Mandatory"/>
+        </VRules>
+      </Field>
+      <Link id="sv1#page5#enu1#ln7" name="convert to string" to="sv1#dfu11" type="normal" validate="true">
+        <LinkParameter id="sv1#page5#enu1#ln7#par26" name="date_Date(s)" source="sv1#page5#enu1#fld5" target="sv1#dfu11.dateArray"/>
+        <LinkParameter id="sv1#page5#enu1#ln7#par18" name="pattern (of the result string)_Pattern(s)" source="sv1#page5#enu1#fld6" target="sv1#dfu11.patternArray"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="0" gr:y="160" id="sv1#page5#mssu4" name="Result string"/>
+    <MultiMessageUnit id="sv1#page5#mssu6" name="Multi Message Unit" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">The &lt;b&gt;"From Date(s) to String(s)"&lt;/b&gt; unit mode converts a SQL date to a string, formatting it according to the specified pattern. &lt;br/&gt;
+In this example, you can specify a date and a pattern for the result string (e.g. dd/MM/yyyy). The result is the date, expressed as string and formatted with the given pattern.</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#page5#mssu6" layout:frameLayout="None">
+          <layout:LayoutParameter name="contentType" value="text/html" type="unit"/>
+        </layout:Unit>
+        <layout:Unit unitId="sv1#page5#enu1" layout:frameLayout="None">
+          <layout:Field field="sv1#page5#enu1#fld5"/>
+          <layout:Field field="sv1#page5#enu1#fld6"/>
+          <layout:Link link="sv1#page5#enu1#ln7"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell height="30"/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#page5#mssu4"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

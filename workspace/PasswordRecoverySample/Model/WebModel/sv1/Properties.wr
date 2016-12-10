@@ -1,0 +1,37 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Public" homePage="sv1#page3">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="1105" gr:y="235" id="sv1#miu3" action="true" name="Reset password" moduleId="mov1#opm3">
+      <KOLink id="sv1#miu3#kln6" name="KOFlow6" to="sv1#page2#mssu3" gr:bendpoints="-91,-151,264,-1">
+        <LinkParameter id="sv1#miu3#kln6#par46" name="The data provided does not match on our database, please check and _Shown Messages" sourceValue="The data provided does not match on our database, please check and " target="sv1#page2#mssu3.shownMessages"/>
+      </KOLink>
+      <OKLink id="sv1#miu3#oln25" name="OKFlow25" to="sv1#page2#mssu2" gr:bendpoints="-1,-246,354,-1">
+        <LinkParameter id="sv1#miu3#oln25#par10" name="Password reset done!_Shown Messages" sourceValue="Password reset done!" target="sv1#page2#mssu2.shownMessages"/>
+      </OKLink>
+      <Comment xml:space="preserve">Action that receives as input the user's oid. It checks for the existence of the user and updates the new password</Comment>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="440" gr:y="-10" id="sv1#miu4" action="true" moduleId="mov1#opm4" name="Check email">
+      <OKLink id="sv1#miu4#oln15" name="OKFlow15" to="sv1#page2#mssu2">
+        <LinkParameter id="sv1#miu4#oln15#par5" name="Check your e-mail for instructions._Shown Messages" sourceValue="Check your e-mail for instructions." target="sv1#page2#mssu2.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv1#miu4#kln5" name="KOFlow5" to="sv1#page2#mssu2" gr:bendpoints="174,50,-146,50">
+        <LinkParameter id="sv1#miu4#kln5#par1" name="Check your e-mail for instructions._Shown Messages" sourceValue="Check your e-mail for instructions." target="sv1#page2#mssu2.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="865" gr:y="590" id="sv1#miu2" action="true" moduleId="mov1#opm5">
+      <OKLink id="sv1#miu2#oln20" name="OKFlow20" to="sv1#page5#enu3">
+        <LinkParameter id="sv1#miu2#oln20#par43" name="primary key_userKey" source="mov1#opm5#okcu2#ocp6" target="sv1#page5#enu3#fld7_slot"/>
+      </OKLink>
+      <KOLink id="sv1#miu2#kln11" name="KOFlow11" to="sv1#page2#mssu3" gr:bendpoints="-120,-148,0,422">
+        <LinkParameter id="sv1#miu2#kln11#par14" name="Message_Shown Messages" source="mov1#opm5#kocu2#ocp1" target="sv1#page2#mssu3.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ParameterCollectorUnit id="sv1#pcu2" name="reset url entry point" customDescriptor="false" customURLName="reset" gr:x="645" gr:y="585" urlFragment="sv1#pcu2#pcp1">
+      <CollectorParameter id="sv1#pcu2#pcp1" name="code"/>
+      <OKLink id="sv1#pcu2#oln1" name="check" to="sv1#miu2">
+        <LinkParameter id="sv1#pcu2#oln1#par9" name="code_code" source="sv1#pcu2#pcp1" target="sv1#miu2.mov1#opm5#icu2#icp2"/>
+      </OKLink>
+      <Comment xml:space="preserve">Parameter used as entry point when the user click on link "here" in the "Password reset" email it passes the code to the "Check reset cod" action</Comment>
+    </ParameterCollectorUnit>
+  </OperationUnits>
+  <layout:LayoutParameter name="application-name" value="Password recovery" type="page"/>
+</SiteView>

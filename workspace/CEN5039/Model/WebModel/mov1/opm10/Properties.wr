@@ -1,0 +1,20 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="725" gr:y="225" id="mov1#opm10" name="Reset Password">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm10#icu10" gr:x="30" gr:y="100" linkOrder="mov1#opm10#icu10#ln102">
+      <InputCollectorParameter id="mov1#opm10#icu10#icp26" name="primary key"/>
+      <InputCollectorParameter id="mov1#opm10#icu10#icp27" name="new password"/>
+      <OKLink id="mov1#opm10#icu10#oln49" name="OKFlow49" to="mov1#opm10#opg2#seu14">
+        <LinkParameter id="mov1#opm10#icu10#oln49#par219" name="primary key_KeyCondition31 [oid]" source="mov1#opm10#icu10#icp26" target="mov1#opm10#opg2#seu14#su37#kcond31.userOID"/>
+      </OKLink>
+      <Link id="mov1#opm10#icu10#ln102" name="Flow102" to="mov1#opm10#opg2#mfu9" type="transport" validate="true" gr:bendpoints="177,139,-248,-1">
+        <LinkParameter id="mov1#opm10#icu10#ln102#par220" name="new password_password" source="mov1#opm10#icu10#icp27" target="mov1#opm10#opg2#mfu9.password"/>
+      </Link>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="740" gr:y="240" id="mov1#opm10#okcu8" name="Success">
+      <OutputCollectorParameter id="mov1#opm10#okcu8#ocp12" name="Success Message" value="Congratulations. Procedure was a success. Return to login."/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="740" gr:y="100" id="mov1#opm10#kocu10" name="Failure">
+      <OutputCollectorParameter id="mov1#opm10#kocu10#ocp11" name="Error Message" value="Oops !!! Something Went wrong"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>

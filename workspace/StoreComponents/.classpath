@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<classpath> 
+  <classpathentry kind="src" path="src"/>  
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>  
+  <classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>  
+  <classpathentry kind="output" path="bin"/>  
+  <classpathentry kind="lib" path="lib/jodatime.jar" sourcepath="lib/jodatimesrc.zip"/>
+  <classpathentry kind="lib" path="lib/datecalc-common.jar" sourcepath="lib/datecalc-commonsrc.zip"/>
+  <classpathentry kind="lib" path="lib/datecalc-joda.jar" sourcepath="lib/datecalc-jodasrc.zip"/>
+</classpath>

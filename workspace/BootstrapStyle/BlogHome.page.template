@@ -295,6 +295,9 @@ def showPageTitle = params["show-page-title"] == "true"
 	</div>
 	
 </div>
+<footer>
+<div id="back-top"></div>
+</footer>
 </wr:PageForm>
 
 <script type="text/javascript">
@@ -310,6 +313,23 @@ $('.navbar-nav').find('li')[0].childNodes[0].innerHTML = "<i class='fa fa-plus' 
  		reply[i].innerHTML = "reply &nbsp;" + "<i class='fa fa-reply' aria-hidden='true'></i>";
  	}
  	
+ 	$(window).scroll(function(event){
+   	var st = $(this).scrollTop();
+	
+   	if(st > 50){
+   			$("#back-top").show();
+   		}
+   		else{
+   				$("#back-top").hide();
+   		}
+   	
+   	
+   	});
+   	
+   	document.getElementById("back-top").addEventListener("click", function(){
+   		$("html, body").animate({ scrollTop: 0 }, "slow");
+  			return false;
+   	});
  }
  catch(err){
  	console.log(err);
