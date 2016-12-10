@@ -55,32 +55,32 @@
 }
 
 .cb-slideshow li:nth-child(1) span {
-background-image: url(https://images.unsplash.com/uploads/14121985124429dd8eeb5/60431f5b?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=); 
+background-image: url("./imgs/HelpCampus.jpg");
       
 }
 .cb-slideshow li:nth-child(2) span {
 
-background-image: url(https://images.unsplash.com/photo-1450121982620-84a745035fa8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=2807d718ca2c7ed9f92e3691ea378d8c);
+background-image: url("./imgs/FollowEvents.jpg");
 
         animation-delay: 6s; 
 }
 .cb-slideshow li:nth-child(3) span {
-background-image: url(https://images.unsplash.com/photo-1461187655092-c5597dbaf59f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=72379b3d65adb82002ac14d6376db58f);  
+background-image: url("./imgs/CaptureMoment.jpg");
 
     animation-delay: 12s; 
 }
 .cb-slideshow li:nth-child(4) span {
-	background-image: url(https://images.unsplash.com/photo-1463171379579-3fdfb86d6285?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=36b5d305a2093a36eb93092aa6810e6f); 
+	background-image: url("./imgs/ShareWithOthers.jpg");
    
     animation-delay: 18s; 
 }
 .cb-slideshow li:nth-child(5) span {
- background-image: url(https://images.unsplash.com/photo-1470350576089-539d5a852bf7?dpr=1&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=); 
+ background-image: url("./imgs/PhoneInHand.jpg");
    
     animation-delay: 24s; 
 }
 .cb-slideshow li:nth-child(6) span { 
-    background-image: url(https://images.unsplash.com/photo-1451968362585-6f6b322071c7?dpr=1&auto=format&fit=crop&w=1500&h=844&q=80&cs=tinysrgb&crop=);
+    background-image: url("./imgs/JoinUs.jpg");
     animation-delay: 30s; 
 }
 
