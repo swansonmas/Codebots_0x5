@@ -1,0 +1,50 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area17#page21" name="Directions">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv2#area17#page21#enu19" name="Location" entity="ent1" gr:showAllParts="true">
+      <Field id="sv2#area17#page21#enu19#fld51" name="Location" type="string" modifiable="false" preloaded="true"/>
+    </EntryUnit>
+    <NoOpContentUnit gr:x="85" gr:y="95" id="sv2#area17#page21#gctu4" name="Directions"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell rowspan="2" colspan="10">
+        <layout:Grid containerType="cell">
+          <layout:Row>
+            <layout:Cell label="Map Cell">
+              <layout:Unit unitId="sv2#area17#page21#enu19">
+                <layout:Field field="sv2#area17#page21#enu19#fld51"/>
+              </layout:Unit>
+              <layout:Unit unitId="sv2#area17#page21#gctu4"/>
+            </layout:Cell>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:UnitConfiguration unitType="NoOpContentUnit" layout:unitLayout="BootstrapStyle/getDirectionsStudents"/>
+</Page>

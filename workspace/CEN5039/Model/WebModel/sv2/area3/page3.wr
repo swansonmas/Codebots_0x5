@@ -4,12 +4,12 @@
       <Field id="sv2#area3#page3#enu3#fld13" name="time" type="timestamp" preloaded="true" attribute="ent1#att6" hidden="true"/>
       <Field id="sv2#area3#page3#enu3#fld12" name="Description" type="text" modifiable="true" attribute="ent1#att5" contentType="text/html">
         <VRules>
-          <MandatoryValidationRule id="sv2#area3#page3#enu3#fld12#mnd3" name="MandatoryDesc" errorMessage="provide a description"/>
+          <MandatoryValidationRule id="sv2#area3#page3#enu3#fld12#mnd3" name="MandatoryDesc" errorMessage="Provide a description. "/>
         </VRules>
       </Field>
       <Field id="sv2#area3#page3#enu3#fld11" name="img" type="blob" contentType="image" modifiable="true" attribute="ent1#att4" ajaxUploadEnabled="false">
         <VRules>
-          <MandatoryValidationRule id="sv2#area3#page3#enu3#fld11#mnd2" name="MandatoryImage" errorMessage="please provide an image"/>
+          <MandatoryValidationRule id="sv2#area3#page3#enu3#fld11#mnd2" name="MandatoryImage" errorMessage="An image is worth more than a thousand words."/>
         </VRules>
       </Field>
       <Field id="sv2#area3#page3#enu3#fld10" name="Title" type="string" modifiable="true" attribute="ent1#att3">
@@ -38,7 +38,11 @@
       <Field id="sv2#area3#page3#enu3#fld20" name="Status" type="string" modifiable="false" preloaded="true" hidden="false" attribute="ent1#att14">
         <Slot id="sv2#area3#page3#enu3#fld20#slot2" name="Status" label="true" output="true" value="Open"/>
       </Field>
-      <Field id="sv2#area3#page3#enu3#fld21" name="Location" type="string" modifiable="true" attribute="ent1#att17"/>
+      <Field id="sv2#area3#page3#enu3#fld21" name="Location" type="string" modifiable="true" attribute="ent1#att17">
+        <VRules>
+          <MandatoryValidationRule id="sv2#area3#page3#enu3#fld21#mnd15" name="MandatoryLocation" errorMessage="Help others connect by providing a location"/>
+        </VRules>
+      </Field>
     </EntryUnit>
     <TimeUnit gr:x="290" gr:y="60" id="sv2#area3#page3#tmu1" name="time of post" gr:showAllParts="true">
       <Link id="sv2#area3#page3#tmu1#ln3" name="Flow3" to="sv2#area3#page3#enu3" type="transport" validate="true">

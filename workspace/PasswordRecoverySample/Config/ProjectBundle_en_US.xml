@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<Bundle>
-  <Entry key="MandatoryValidationRule.error">&lt;li&gt;please insert a valid ${fieldName}&lt;/li&gt;</Entry>
-</Bundle>

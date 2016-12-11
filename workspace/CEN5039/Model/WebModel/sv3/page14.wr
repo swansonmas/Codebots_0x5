@@ -8,12 +8,13 @@
         <LinkParameter id="sv3#page14#dau10#ln49#par119" name="oid_Key Condition [oid]" source="data.ent1#att1" target="sv3#page14#enu8.ent1#att1"/>
       </Link>
     </DataUnit>
-    <EntryUnit gr:x="170" gr:y="160" id="sv3#page14#enu8" name="Edit Status" entity="ent1" fieldOrder="sv3#page14#enu8#sfld4 sv3#page14#enu8#sfld8" linkOrder="sv3#page14#enu8#ln52">
+    <EntryUnit gr:x="180" gr:y="185" id="sv3#page14#enu8" name="Edit Status" entity="ent1" fieldOrder="sv3#page14#enu8#sfld4 sv3#page14#enu8#sfld8" linkOrder="sv3#page14#enu8#ln52 sv3#page14#enu8#ln97">
       <SelectionField id="sv3#page14#enu8#sfld4" type="string" preselectValue="Open" name="status" attribute="ent1#att14">
         <Slot id="sv3#page14#enu8#sfld4#slot3" name="Status" label="true" output="true" value="Open|In Progress|Closed"/>
       </SelectionField>
-      <Link id="sv3#page14#enu8#ln52" name="update" to="sv3#mfu3" automaticCoupling="true" type="normal" validate="true" ajaxOpenWaitingDialog="true" gr:bendpoints="-153,141,192,151"/>
+      <Link id="sv3#page14#enu8#ln52" name="delete" to="sv3#dlu3" automaticCoupling="true" type="normal" validate="true" ajaxOpenWaitingDialog="true" gr:bendpoints="-153,141,192,151;-272,86,43,131"/>
       <SelectionField id="sv3#page14#enu8#sfld8" name="Assigned To" type="string" role="rel6#role12"/>
+      <Link id="sv3#page14#enu8#ln97" name="update" to="sv3#mfu3" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-85,140,390,80;-323,139,152,79"/>
     </EntryUnit>
     <SelectorUnit gr:x="0" gr:y="155" id="sv3#page14#seu4" name="Staff Members" entity="User">
       <Link id="sv3#page14#seu4#ln66" name="Flow66" to="sv3#page14#enu8" type="transport" validate="true">
@@ -62,9 +63,10 @@ where s.group_oid = 3</QueryText>
       <layout:Cell/>
       <layout:Cell colspan="10">
         <layout:Unit unitId="sv3#page14#enu8">
-          <layout:Link link="sv3#page14#enu8#ln52"/>
           <layout:Field field="sv3#page14#enu8#sfld4"/>
           <layout:Field field="sv3#page14#enu8#sfld8"/>
+          <layout:Link link="sv3#page14#enu8#ln52"/>
+          <layout:Link link="sv3#page14#enu8#ln97"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

@@ -1,6 +1,6 @@
 <Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1295" gr:y="60" id="sv2#area3" name="NEW POST" landmark="true" defaultPage="sv2#area3#page3">
   <OperationUnits>
-    <ParameterCollectorUnit id="sv2#area3#pcu5" name="Show Messages" gr:x="0" gr:y="330" gr:showAllParts="false">
+    <ParameterCollectorUnit id="sv2#area3#pcu5" name="Show Messages" gr:x="0" gr:y="330" gr:showAllParts="true">
       <CollectorParameter id="sv2#area3#pcu5#pcp13" name="Error"/>
       <CollectorParameter id="sv2#area3#pcu5#pcp14" name="Warning"/>
       <CollectorParameter id="sv2#area3#pcu5#pcp15" name="Success"/>

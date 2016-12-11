@@ -9,16 +9,5 @@
   <Entry key="SuccessSub">Your post can now be seen in the home page</Entry> 
   <Entry key="Warning">This is a warning message</Entry>
   <Entry key="WarningSub">More details on the warning</Entry>
-  
-  
-  <Entry key="Error2">Oops... An error has occur</Entry>
-  <Entry key="Error2Sub">There was fatal error with database</Entry>
-  <Entry key="Info2">This is a general information message</Entry>
-  <Entry key="Info2Sub"></Entry>
-  <Entry key="Success2">Congratulations! Your Comment was submitted</Entry>
-  <Entry key="Success2Sub">Your comment can now be seen below page</Entry>
-  <Entry key="Warning2">This is a warning message</Entry>
-  <Entry key="Warning2Sub">More details on the warning</Entry>
-  
-  
+    
 </Bundle>

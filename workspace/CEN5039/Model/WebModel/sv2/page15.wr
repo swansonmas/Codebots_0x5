@@ -1,11 +1,14 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="825" gr:y="1285" id="sv2#page15" name="Edit Post">
   <ContentUnits>
-    <EntryUnit id="sv2#page15#enu14" name="Edit Post" linkOrder="sv2#page15#enu14#ln67" gr:showAllParts="true" gr:x="0" gr:y="0" fieldOrder="sv2#page15#enu14#fld44 sv2#page15#enu14#fld43 sv2#page15#enu14#fld42 sv2#page15#enu14#fld45" entity="ent1">
+    <EntryUnit id="sv2#page15#enu14" name="Edit Post" linkOrder="sv2#page15#enu14#ln67" gr:showAllParts="true" gr:x="0" gr:y="0" fieldOrder="sv2#page15#enu14#fld44 sv2#page15#enu14#fld43 sv2#page15#enu14#fld42 sv2#page15#enu14#sfld10" entity="ent1">
       <Field id="sv2#page15#enu14#fld42" name="Description" type="text" preloaded="true" modifiable="true" attribute="ent1#att5"/>
       <Field id="sv2#page15#enu14#fld43" name="img" type="blob" contentType="image" preloaded="true" modifiable="true" attribute="ent1#att4"/>
       <Field id="sv2#page15#enu14#fld44" name="Title" type="string" preloaded="true" modifiable="true" attribute="ent1#att3"/>
       <Link id="sv2#page15#enu14#ln67" name="update" to="sv2#mfu5" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-160,20,90,90"/>
-      <Field id="sv2#page15#enu14#fld45" name="edited Time" type="timestamp" modifiable="false" attribute="ent1#att6" preloaded="true"/>
+      <Field id="sv2#page15#enu14#fld45" name="edited Time" type="timestamp" modifiable="false" attribute="ent1#att6" preloaded="true" hidden="true"/>
+      <SelectionField id="sv2#page15#enu14#sfld10" type="string" name="Tag" attribute="ent1#att15">
+        <Slot id="sv2#page15#enu14#sfld10#slot5" name="Select One" label="true" output="true" value="Issue|Event"/>
+      </SelectionField>
     </EntryUnit>
     <TimeUnit gr:x="165" gr:y="65" id="sv2#page15#tmu3" name="edited Time">
       <Link id="sv2#page15#tmu3#ln69" name="Flow69" to="sv2#page15#enu14" type="transport" validate="true">
@@ -23,7 +26,7 @@
           <layout:Field field="sv2#page15#enu14#fld44"/>
           <layout:Field field="sv2#page15#enu14#fld43"/>
           <layout:Field field="sv2#page15#enu14#fld42"/>
-          <layout:Field field="sv2#page15#enu14#fld45"/>
+          <layout:Field field="sv2#page15#enu14#sfld10"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

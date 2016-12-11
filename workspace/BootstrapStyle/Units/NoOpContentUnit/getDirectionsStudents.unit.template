@@ -1,6 +1,6 @@
 #?delimiters [%, %], [%=, %]
 [%setHTMLOutput()%]
-<div id="floating-panel">
+<div id="input-panel">
       <strong>Start:</strong>
       <input type="text" id="start">
       <br>
@@ -12,14 +12,14 @@
      <input id="submitLocation" type="button" value="Directions">
       
     </div>
-    <div id="right-panel"></div>
-    <div id="map"></div>
+    <div id="direction-panel"></div>
+    <div id="map-direction"></div>
     <script>
     var markers = [];
       function initMap() {
         var directionsDisplay = new google.maps.DirectionsRenderer;
         var directionsService = new google.maps.DirectionsService;
-        var map = new google.maps.Map(document.getElementById('map'), {
+        var map = new google.maps.Map(document.getElementById('map-direction'), {
           zoom: 15,
           center: {lat:26.370617, lng:-80.1020161}
         });
@@ -38,16 +38,16 @@
         
         
         directionsDisplay.setMap(map);
-        directionsDisplay.setPanel(document.getElementById('right-panel'));
+        directionsDisplay.setPanel(document.getElementById('direction-panel'));
 
-        var control = document.getElementById('floating-panel');
+        var control = document.getElementById('input-panel');
         control.style.display = 'block';
         map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
 
         var onChangeHandler = function() {
           calculateAndDisplayRoute(directionsService, directionsDisplay);
         };
-        var Location = document.getElementById("fld38");
+        var Location = document.getElementById("fld51");
         document.getElementById('end').value = Location.value;
         
         document.getElementById('submitLocation').addEventListener('click', onChangeHandler);
@@ -96,36 +96,33 @@
           travelMode: 'DRIVING'
         }, function(response, status) {
           if (status === 'OK') {
-          
           if(window.innerWidth > 850){
-          	directionsDisplay.setDirections(response);
-            	$('#map').css({"width":"60%"});
-            	$('#right-panel').css({"width":"39%", "display":"block"});
-          }
-          else{
           		directionsDisplay.setDirections(response);
-           		 $('#map').css({"width":"100%"});
-             	$('#right-panel').css({"width":"100%", "display":"block"});
-          }
-            
-             
-             $(window).on('resize', function(){
+            	$('#map-direction').css({"width":"60%"});
+             	$('#direction-panel').css({"width":"39%", "display":"block"});
+             	}
+             	else{
+             		directionsDisplay.setDirections(response);
+            		$('#map-direction').css({"width":"100%"});
+             		$('#direction-panel').css({"width":"100%", "display":"block", "margin-bottom":"2%"});
+             	}
+             	
+          $(window).on('resize', function(){
           	if(window.innerWidth > 850){
           		
           		directionsDisplay.setDirections(response);
-            	$('#map').css({"width":"60%"});
-            	$('#right-panel').css({"width":"39%", "display":"block"});
+            	$('#map-direction').css({"width":"60%"});
+             	$('#direction-panel').css({"width":"39%", "display":"block"});
           		
           	}
           	else{
           		directionsDisplay.setDirections(response);
-           		 $('#map').css({"width":"100%"});
-             	$('#right-panel').css({"width":"100%", "display":"block"});
+            	$('#map-direction').css({"width":"100%"});
+             	$('#direction-panel').css({"width":"100%", "display":"block", "margin-bottom":"2%"});
           	}
           	
           });
-             
-             
+          
           } else {
             window.alert('Directions request failed due to ' + status);
           }
